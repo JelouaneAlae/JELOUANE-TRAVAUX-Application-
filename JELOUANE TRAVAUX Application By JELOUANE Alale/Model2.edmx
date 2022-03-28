@@ -1,0 +1,449 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="JELOUANE_TRAVAUXModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="ID_Client" />
+          </Key>
+          <Property Name="ID_Client" Type="int" Nullable="false" />
+          <Property Name="Nom_Client" Type="varchar" MaxLength="30" />
+          <Property Name="Prenom_Client" Type="varchar" MaxLength="30" />
+          <Property Name="CIN_Client" Type="varchar" MaxLength="8" />
+          <Property Name="Telephone_Client" Type="varchar" MaxLength="10" />
+          <Property Name="Adresse_Client" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Materiel">
+          <Key>
+            <PropertyRef Name="Id_Materiel" />
+          </Key>
+          <Property Name="Id_Materiel" Type="int" Nullable="false" />
+          <Property Name="Nom_Materiel" Type="varchar" MaxLength="30" />
+          <Property Name="Photo_Materiel" Type="varbinary(max)" />
+          <Property Name="Color_Materiel" Type="varchar" MaxLength="20" />
+          <Property Name="Genre_Materiel" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="Mur">
+          <Key>
+            <PropertyRef Name="ID_Mur" />
+          </Key>
+          <Property Name="ID_Mur" Type="int" Nullable="false" />
+          <Property Name="Numero_Mur" Type="int" />
+          <Property Name="Longeur_Mur" Type="int" />
+          <Property Name="Largeur_Mur" Type="int" />
+          <Property Name="couleur_Mur_AV" Type="varchar" MaxLength="50" />
+          <Property Name="couleur_Mur_AP" Type="varchar" MaxLength="50" />
+          <Property Name="Id_Salle" Type="int" />
+        </EntityType>
+        <EntityType Name="projet">
+          <Key>
+            <PropertyRef Name="ID_Projet" />
+          </Key>
+          <Property Name="ID_Projet" Type="int" Nullable="false" />
+          <Property Name="Datedebut_Projet" Type="date" />
+          <Property Name="DateFin_Projet" Type="date" />
+          <Property Name="Etat_Projet" Type="varchar(max)" />
+          <Property Name="ID_Client" Type="int" />
+        </EntityType>
+        <EntityType Name="Salle">
+          <Key>
+            <PropertyRef Name="Id_Salle" />
+          </Key>
+          <Property Name="Id_Salle" Type="int" Nullable="false" />
+          <Property Name="Nom_Salle" Type="varchar" MaxLength="60" />
+          <Property Name="ID_Projet" Type="int" />
+        </EntityType>
+        <EntityType Name="utilisateur">
+          <Key>
+            <PropertyRef Name="Email" />
+          </Key>
+          <Property Name="Email" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="Nom_utilisateur" Type="varchar" MaxLength="50" />
+          <Property Name="Prenom_utilisateur" Type="varchar" MaxLength="70" />
+          <Property Name="DateNaissance_utilisateur" Type="date" />
+          <Property Name="MotdePasse" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Utiliser">
+          <Key>
+            <PropertyRef Name="Id_Materiel" />
+            <PropertyRef Name="ID_Projet" />
+          </Key>
+          <Property Name="Id_Materiel" Type="int" Nullable="false" />
+          <Property Name="ID_Projet" Type="int" Nullable="false" />
+          <Property Name="Quantite_Utiliser" Type="int" />
+          <Property Name="PrixQuantite" Type="int" />
+        </EntityType>
+        <Association Name="FK__Mur__Id_Salle__47DBAE45">
+          <End Role="Salle" Type="Self.Salle" Multiplicity="0..1" />
+          <End Role="Mur" Type="Self.Mur" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Salle">
+              <PropertyRef Name="Id_Salle" />
+            </Principal>
+            <Dependent Role="Mur">
+              <PropertyRef Name="Id_Salle" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__projet__ID_Clien__3E52440B">
+          <End Role="Client" Type="Self.Client" Multiplicity="0..1" />
+          <End Role="projet" Type="Self.projet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Client">
+              <PropertyRef Name="ID_Client" />
+            </Principal>
+            <Dependent Role="projet">
+              <PropertyRef Name="ID_Client" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Salle__ID_Projet__44FF419A">
+          <End Role="projet" Type="Self.projet" Multiplicity="0..1" />
+          <End Role="Salle" Type="Self.Salle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="projet">
+              <PropertyRef Name="ID_Projet" />
+            </Principal>
+            <Dependent Role="Salle">
+              <PropertyRef Name="ID_Projet" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Utiliser__Id_Mat__412EB0B6">
+          <End Role="Materiel" Type="Self.Materiel" Multiplicity="1" />
+          <End Role="Utiliser" Type="Self.Utiliser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Materiel">
+              <PropertyRef Name="Id_Materiel" />
+            </Principal>
+            <Dependent Role="Utiliser">
+              <PropertyRef Name="Id_Materiel" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Utiliser__ID_Pro__4222D4EF">
+          <End Role="projet" Type="Self.projet" Multiplicity="1" />
+          <End Role="Utiliser" Type="Self.Utiliser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="projet">
+              <PropertyRef Name="ID_Projet" />
+            </Principal>
+            <Dependent Role="Utiliser">
+              <PropertyRef Name="ID_Projet" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="JELOUANE_TRAVAUXModel1StoreContainer">
+          <EntitySet Name="Client" EntityType="Self.Client" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Materiel" EntityType="Self.Materiel" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Mur" EntityType="Self.Mur" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="projet" EntityType="Self.projet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Salle" EntityType="Self.Salle" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="utilisateur" EntityType="Self.utilisateur" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Utiliser" EntityType="Self.Utiliser" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Mur__Id_Salle__47DBAE45" Association="Self.FK__Mur__Id_Salle__47DBAE45">
+            <End Role="Salle" EntitySet="Salle" />
+            <End Role="Mur" EntitySet="Mur" />
+          </AssociationSet>
+          <AssociationSet Name="FK__projet__ID_Clien__3E52440B" Association="Self.FK__projet__ID_Clien__3E52440B">
+            <End Role="Client" EntitySet="Client" />
+            <End Role="projet" EntitySet="projet" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Salle__ID_Projet__44FF419A" Association="Self.FK__Salle__ID_Projet__44FF419A">
+            <End Role="projet" EntitySet="projet" />
+            <End Role="Salle" EntitySet="Salle" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Utiliser__Id_Mat__412EB0B6" Association="Self.FK__Utiliser__Id_Mat__412EB0B6">
+            <End Role="Materiel" EntitySet="Materiel" />
+            <End Role="Utiliser" EntitySet="Utiliser" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Utiliser__ID_Pro__4222D4EF" Association="Self.FK__Utiliser__ID_Pro__4222D4EF">
+            <End Role="projet" EntitySet="projet" />
+            <End Role="Utiliser" EntitySet="Utiliser" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="JELOUANE_TRAVAUXModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="ID_Client" />
+          </Key>
+          <Property Name="ID_Client" Type="Int32" Nullable="false" />
+          <Property Name="Nom_Client" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Prenom_Client" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="CIN_Client" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="Telephone_Client" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Adresse_Client" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="projets" Relationship="Self.FK__projet__ID_Clien__3E52440B" FromRole="Client" ToRole="projet" />
+        </EntityType>
+        <EntityType Name="Materiel">
+          <Key>
+            <PropertyRef Name="Id_Materiel" />
+          </Key>
+          <Property Name="Id_Materiel" Type="Int32" Nullable="false" />
+          <Property Name="Nom_Materiel" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Photo_Materiel" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Color_Materiel" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Genre_Materiel" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Utilisers" Relationship="Self.FK__Utiliser__Id_Mat__412EB0B6" FromRole="Materiel" ToRole="Utiliser" />
+        </EntityType>
+        <EntityType Name="Mur">
+          <Key>
+            <PropertyRef Name="ID_Mur" />
+          </Key>
+          <Property Name="ID_Mur" Type="Int32" Nullable="false" />
+          <Property Name="Numero_Mur" Type="Int32" />
+          <Property Name="Longeur_Mur" Type="Int32" />
+          <Property Name="Largeur_Mur" Type="Int32" />
+          <Property Name="couleur_Mur_AV" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="couleur_Mur_AP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Id_Salle" Type="Int32" />
+          <NavigationProperty Name="Salle" Relationship="Self.FK__Mur__Id_Salle__47DBAE45" FromRole="Mur" ToRole="Salle" />
+        </EntityType>
+        <EntityType Name="projet">
+          <Key>
+            <PropertyRef Name="ID_Projet" />
+          </Key>
+          <Property Name="ID_Projet" Type="Int32" Nullable="false" />
+          <Property Name="Datedebut_Projet" Type="DateTime" Precision="0" />
+          <Property Name="DateFin_Projet" Type="DateTime" Precision="0" />
+          <Property Name="Etat_Projet" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ID_Client" Type="Int32" />
+          <NavigationProperty Name="Client" Relationship="Self.FK__projet__ID_Clien__3E52440B" FromRole="projet" ToRole="Client" />
+          <NavigationProperty Name="Salles" Relationship="Self.FK__Salle__ID_Projet__44FF419A" FromRole="projet" ToRole="Salle" />
+          <NavigationProperty Name="Utilisers" Relationship="Self.FK__Utiliser__ID_Pro__4222D4EF" FromRole="projet" ToRole="Utiliser" />
+        </EntityType>
+        <EntityType Name="Salle">
+          <Key>
+            <PropertyRef Name="Id_Salle" />
+          </Key>
+          <Property Name="Id_Salle" Type="Int32" Nullable="false" />
+          <Property Name="Nom_Salle" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="ID_Projet" Type="Int32" />
+          <NavigationProperty Name="Murs" Relationship="Self.FK__Mur__Id_Salle__47DBAE45" FromRole="Salle" ToRole="Mur" />
+          <NavigationProperty Name="projet" Relationship="Self.FK__Salle__ID_Projet__44FF419A" FromRole="Salle" ToRole="projet" />
+        </EntityType>
+        <EntityType Name="utilisateur">
+          <Key>
+            <PropertyRef Name="Email" />
+          </Key>
+          <Property Name="Email" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Nom_utilisateur" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Prenom_utilisateur" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="DateNaissance_utilisateur" Type="DateTime" Precision="0" />
+          <Property Name="MotdePasse" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Utiliser">
+          <Key>
+            <PropertyRef Name="Id_Materiel" />
+            <PropertyRef Name="ID_Projet" />
+          </Key>
+          <Property Name="Id_Materiel" Type="Int32" Nullable="false" />
+          <Property Name="ID_Projet" Type="Int32" Nullable="false" />
+          <Property Name="Quantite_Utiliser" Type="Int32" />
+          <Property Name="PrixQuantite" Type="Int32" />
+          <NavigationProperty Name="Materiel" Relationship="Self.FK__Utiliser__Id_Mat__412EB0B6" FromRole="Utiliser" ToRole="Materiel" />
+          <NavigationProperty Name="projet" Relationship="Self.FK__Utiliser__ID_Pro__4222D4EF" FromRole="Utiliser" ToRole="projet" />
+        </EntityType>
+        <Association Name="FK__projet__ID_Clien__3E52440B">
+          <End Role="Client" Type="Self.Client" Multiplicity="0..1" />
+          <End Role="projet" Type="Self.projet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Client">
+              <PropertyRef Name="ID_Client" />
+            </Principal>
+            <Dependent Role="projet">
+              <PropertyRef Name="ID_Client" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Utiliser__Id_Mat__412EB0B6">
+          <End Role="Materiel" Type="Self.Materiel" Multiplicity="1" />
+          <End Role="Utiliser" Type="Self.Utiliser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Materiel">
+              <PropertyRef Name="Id_Materiel" />
+            </Principal>
+            <Dependent Role="Utiliser">
+              <PropertyRef Name="Id_Materiel" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Mur__Id_Salle__47DBAE45">
+          <End Role="Salle" Type="Self.Salle" Multiplicity="0..1" />
+          <End Role="Mur" Type="Self.Mur" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Salle">
+              <PropertyRef Name="Id_Salle" />
+            </Principal>
+            <Dependent Role="Mur">
+              <PropertyRef Name="Id_Salle" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Salle__ID_Projet__44FF419A">
+          <End Role="projet" Type="Self.projet" Multiplicity="0..1" />
+          <End Role="Salle" Type="Self.Salle" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="projet">
+              <PropertyRef Name="ID_Projet" />
+            </Principal>
+            <Dependent Role="Salle">
+              <PropertyRef Name="ID_Projet" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Utiliser__ID_Pro__4222D4EF">
+          <End Role="projet" Type="Self.projet" Multiplicity="1" />
+          <End Role="Utiliser" Type="Self.Utiliser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="projet">
+              <PropertyRef Name="ID_Projet" />
+            </Principal>
+            <Dependent Role="Utiliser">
+              <PropertyRef Name="ID_Projet" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="JELOUANE_TRAVAUXEntities2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Clients" EntityType="Self.Client" />
+          <EntitySet Name="Materiels" EntityType="Self.Materiel" />
+          <EntitySet Name="Murs" EntityType="Self.Mur" />
+          <EntitySet Name="projets" EntityType="Self.projet" />
+          <EntitySet Name="Salles" EntityType="Self.Salle" />
+          <EntitySet Name="utilisateurs" EntityType="Self.utilisateur" />
+          <EntitySet Name="Utilisers" EntityType="Self.Utiliser" />
+          <AssociationSet Name="FK__projet__ID_Clien__3E52440B" Association="Self.FK__projet__ID_Clien__3E52440B">
+            <End Role="Client" EntitySet="Clients" />
+            <End Role="projet" EntitySet="projets" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Utiliser__Id_Mat__412EB0B6" Association="Self.FK__Utiliser__Id_Mat__412EB0B6">
+            <End Role="Materiel" EntitySet="Materiels" />
+            <End Role="Utiliser" EntitySet="Utilisers" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Mur__Id_Salle__47DBAE45" Association="Self.FK__Mur__Id_Salle__47DBAE45">
+            <End Role="Salle" EntitySet="Salles" />
+            <End Role="Mur" EntitySet="Murs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Salle__ID_Projet__44FF419A" Association="Self.FK__Salle__ID_Projet__44FF419A">
+            <End Role="projet" EntitySet="projets" />
+            <End Role="Salle" EntitySet="Salles" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Utiliser__ID_Pro__4222D4EF" Association="Self.FK__Utiliser__ID_Pro__4222D4EF">
+            <End Role="projet" EntitySet="projets" />
+            <End Role="Utiliser" EntitySet="Utilisers" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="JELOUANE_TRAVAUXModel1StoreContainer" CdmEntityContainer="JELOUANE_TRAVAUXEntities2">
+          <EntitySetMapping Name="Clients">
+            <EntityTypeMapping TypeName="JELOUANE_TRAVAUXModel1.Client">
+              <MappingFragment StoreEntitySet="Client">
+                <ScalarProperty Name="ID_Client" ColumnName="ID_Client" />
+                <ScalarProperty Name="Nom_Client" ColumnName="Nom_Client" />
+                <ScalarProperty Name="Prenom_Client" ColumnName="Prenom_Client" />
+                <ScalarProperty Name="CIN_Client" ColumnName="CIN_Client" />
+                <ScalarProperty Name="Telephone_Client" ColumnName="Telephone_Client" />
+                <ScalarProperty Name="Adresse_Client" ColumnName="Adresse_Client" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Materiels">
+            <EntityTypeMapping TypeName="JELOUANE_TRAVAUXModel1.Materiel">
+              <MappingFragment StoreEntitySet="Materiel">
+                <ScalarProperty Name="Id_Materiel" ColumnName="Id_Materiel" />
+                <ScalarProperty Name="Nom_Materiel" ColumnName="Nom_Materiel" />
+                <ScalarProperty Name="Photo_Materiel" ColumnName="Photo_Materiel" />
+                <ScalarProperty Name="Color_Materiel" ColumnName="Color_Materiel" />
+                <ScalarProperty Name="Genre_Materiel" ColumnName="Genre_Materiel" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Murs">
+            <EntityTypeMapping TypeName="JELOUANE_TRAVAUXModel1.Mur">
+              <MappingFragment StoreEntitySet="Mur">
+                <ScalarProperty Name="ID_Mur" ColumnName="ID_Mur" />
+                <ScalarProperty Name="Numero_Mur" ColumnName="Numero_Mur" />
+                <ScalarProperty Name="Longeur_Mur" ColumnName="Longeur_Mur" />
+                <ScalarProperty Name="Largeur_Mur" ColumnName="Largeur_Mur" />
+                <ScalarProperty Name="couleur_Mur_AV" ColumnName="couleur_Mur_AV" />
+                <ScalarProperty Name="couleur_Mur_AP" ColumnName="couleur_Mur_AP" />
+                <ScalarProperty Name="Id_Salle" ColumnName="Id_Salle" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="projets">
+            <EntityTypeMapping TypeName="JELOUANE_TRAVAUXModel1.projet">
+              <MappingFragment StoreEntitySet="projet">
+                <ScalarProperty Name="ID_Projet" ColumnName="ID_Projet" />
+                <ScalarProperty Name="Datedebut_Projet" ColumnName="Datedebut_Projet" />
+                <ScalarProperty Name="DateFin_Projet" ColumnName="DateFin_Projet" />
+                <ScalarProperty Name="Etat_Projet" ColumnName="Etat_Projet" />
+                <ScalarProperty Name="ID_Client" ColumnName="ID_Client" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Salles">
+            <EntityTypeMapping TypeName="JELOUANE_TRAVAUXModel1.Salle">
+              <MappingFragment StoreEntitySet="Salle">
+                <ScalarProperty Name="Id_Salle" ColumnName="Id_Salle" />
+                <ScalarProperty Name="Nom_Salle" ColumnName="Nom_Salle" />
+                <ScalarProperty Name="ID_Projet" ColumnName="ID_Projet" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="utilisateurs">
+            <EntityTypeMapping TypeName="JELOUANE_TRAVAUXModel1.utilisateur">
+              <MappingFragment StoreEntitySet="utilisateur">
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Nom_utilisateur" ColumnName="Nom_utilisateur" />
+                <ScalarProperty Name="Prenom_utilisateur" ColumnName="Prenom_utilisateur" />
+                <ScalarProperty Name="DateNaissance_utilisateur" ColumnName="DateNaissance_utilisateur" />
+                <ScalarProperty Name="MotdePasse" ColumnName="MotdePasse" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Utilisers">
+            <EntityTypeMapping TypeName="JELOUANE_TRAVAUXModel1.Utiliser">
+              <MappingFragment StoreEntitySet="Utiliser">
+                <ScalarProperty Name="Id_Materiel" ColumnName="Id_Materiel" />
+                <ScalarProperty Name="ID_Projet" ColumnName="ID_Projet" />
+                <ScalarProperty Name="Quantite_Utiliser" ColumnName="Quantite_Utiliser" />
+                <ScalarProperty Name="PrixQuantite" ColumnName="PrixQuantite" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
