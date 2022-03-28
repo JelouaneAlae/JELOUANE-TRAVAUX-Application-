@@ -22,6 +22,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         int PartCode2;
         JELOUANE_TRAVAUXEntities2 db = new JELOUANE_TRAVAUXEntities2();
         string Email;
+        string codemail;
         public UCForgetPassword()
         {
             InitializeComponent();
@@ -44,9 +45,11 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
                     mssg.To.Add(new MailAddress(txtEmailFP.Text));
                     mssg.Subject = "Forget Pass";
                     mssg.IsBodyHtml = true;
+                    codemail = GenerateCodeFP();
                     string htmlbody = "<p><strong>Hello,</strong></p>" +
                         "<p>We have sent you this email in response to your request to reset your password on <strong>JELOUANE TRAVAUX</strong> .</p>" +
-                        "<p>Please use the code below code to <strong>reset the password</strong> :</p>" + GenerateCodeFP();
+                        "<p>Please use the code below code to <strong>reset the password</strong> :</p>" + codemail;
+                    GenerateCodeFP();
                     mssg.Body = htmlbody;
                     mssg.BodyEncoding = Encoding.UTF8;
                     mssg.Priority = MailPriority.Normal;
@@ -139,25 +142,34 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
         private void btnSubmitFP_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("code s7i7");
 
+            if (txtEmailcodeFP.Text == codemail)
+            {
+                frmNewPass frmnp = new frmNewPass();
+                frmnp.Show();
+                //F = 0;
+                MessageBox.Show("code s7i7");
 
-            //if (txtEmailcodeFP.Text == GenerateCodeFP())
-            //{
-            //    frmNewPass frmnp = new frmNewPass();
-            //    frmnp.Show();
-            //    F = 0;
-            //    MessageBox.Show("code s7i7");
-            //}
-            //else
-            //{
-            //    F++;
-            //    if (F >= 3)
-            //    {
-            //        MessageBox.Show("please enter the correct code exist in your email inbox", "ERROR", MessageBoxButtons.OK);
-            //    }
+                var form = Form.ActiveForm as FrmLogin;
+                if (form != null)
+                {
+                    form.hideform();
+                    var form1 = new frmNewPass();
+                    form1.Closed += (s, args) => form.closeform();
+                    form1.Show();
 
-            //}
+                }
+            }
+            else
+            {
+                //F++;
+                //if (F >= 3)
+                //{
+                //    MessageBox.Show("please enter the correct code exist in your email inbox", "ERROR", MessageBoxButtons.OK);
+                //}
+                MessageBox.Show("ERROR", "ERROR", MessageBoxButtons.OK);
+
+            }
         }
 
         private void txtCodeEmailFP_TextChanged(object sender, EventArgs e)
