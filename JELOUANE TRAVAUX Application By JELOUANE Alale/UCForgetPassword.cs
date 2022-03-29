@@ -21,7 +21,8 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         int partCode1;
         int PartCode2;
         JELOUANE_TRAVAUXEntities2 db = new JELOUANE_TRAVAUXEntities2();
-        string Email;
+        internal string Email;
+        string emailFP;
         string codemail;
         public UCForgetPassword()
         {
@@ -31,6 +32,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         private void btnLogin_Click(object sender, EventArgs e)
         {
             var exist = db.utilisateurs.Find(txtEmailFP.Text);
+            Email = exist.Email;
             if (exist != null)
             {
                 try
@@ -42,7 +44,8 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
                     client.Credentials = login;
                     client.Host = "smtp.gmail.com";
                     mssg = new MailMessage { From = new MailAddress("3al1original@gmail.com", "Reset your pasword", Encoding.UTF8) };
-                    mssg.To.Add(new MailAddress(txtEmailFP.Text));
+                    emailFP = txtEmailFP.Text;
+                    mssg.To.Add(new MailAddress(emailFP));
                     mssg.Subject = "Forget Pass";
                     mssg.IsBodyHtml = true;
                     codemail = GenerateCodeFP();
@@ -145,11 +148,9 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
             if (txtEmailcodeFP.Text == codemail)
             {
-                frmNewPass frmnp = new frmNewPass();
-                frmnp.Show();
-                //F = 0;
                 MessageBox.Show("code s7i7");
 
+                F = 0;
                 var form = Form.ActiveForm as FrmLogin;
                 if (form != null)
                 {
@@ -157,17 +158,54 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
                     var form1 = new frmNewPass();
                     form1.Closed += (s, args) => form.closeform();
                     form1.Show();
-
                 }
             }
             else
             {
-                //F++;
-                //if (F >= 3)
-                //{
-                //    MessageBox.Show("please enter the correct code exist in your email inbox", "ERROR", MessageBoxButtons.OK);
-                //}
-                MessageBox.Show("ERROR", "ERROR", MessageBoxButtons.OK);
+                F++;
+                if (F >= 3)
+                {
+                    DialogResult a =  MessageBox.Show("You entered the wrong code too many times, do you need to resend it", "ERROR", MessageBoxButtons.YesNo);
+                    if(a == DialogResult.Yes)
+                    {
+                        txtEmailcodeFP.Text = null;
+                        try
+                        {
+                            login = new NetworkCredential("3al1original@gmail.com", "ALAEORG31");
+                            client = new SmtpClient();
+                            client.Port = 587;
+                            client.EnableSsl = true;
+                            client.Credentials = login;
+                            client.Host = "smtp.gmail.com";
+                            mssg = new MailMessage { From = new MailAddress("3al1original@gmail.com", "Reset your pasword", Encoding.UTF8) };
+                            mssg.To.Add(new MailAddress(emailFP));
+                            mssg.Subject = "Forget Pass";
+                            mssg.IsBodyHtml = true;
+                            codemail = GenerateCodeFP();
+                            string htmlbody = "<p><strong>Hello,</strong></p>" +
+                                "<p>We have sent you this email in response to your request to reset your password on <strong>JELOUANE TRAVAUX</strong> .</p>" +
+                                "<p>Please use the code below code to <strong>reset the password</strong> :</p>" + codemail;
+                            GenerateCodeFP();
+                            mssg.Body = htmlbody;
+                            mssg.BodyEncoding = Encoding.UTF8;
+                            mssg.Priority = MailPriority.Normal;
+                            mssg.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
+                            client.SendCompleted += new SendCompletedEventHandler(SendCompletedCallback);
+                            string userstate = "sending..";
+
+                            client.SendAsync(mssg, userstate);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message, "ERROR");
+                        }
+                    }
+                   
+                }
+                else
+                {
+                    MessageBox.Show("please enter the correct code exist in your email inbox", "ERROR", MessageBoxButtons.OK);
+                }
 
             }
         }

@@ -228,6 +228,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.Name = "frmNewPass";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New Password";
+            this.Load += new System.EventHandler(this.frmNewPass_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picusername)).EndInit();

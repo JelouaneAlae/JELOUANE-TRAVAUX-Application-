@@ -24,5 +24,20 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             form1.Closed += (s, args) => this.Close();
             form1.Show();
         }
+
+        private void frmNewPass_Load(object sender, EventArgs e)
+        {
+
+        }
+        
+        internal void closeform()
+        {
+            this.Close();
+        }
+
+        internal void hideform()
+        {
+            this.Hide();
+        }
     }
 }
