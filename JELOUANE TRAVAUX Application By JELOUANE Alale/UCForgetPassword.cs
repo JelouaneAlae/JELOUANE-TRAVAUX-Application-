@@ -36,7 +36,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             {
                 try
                 {
-                    clsemail.email = exist.Email;
+                    clsemail.Email = exist.Email;
                     login = new NetworkCredential("3al1original@gmail.com", "3al1artistnadi");
                     client = new SmtpClient();
                     client.Port = 587;

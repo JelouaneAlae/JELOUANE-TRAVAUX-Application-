@@ -29,7 +29,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
         private void frmNewPass_Load(object sender, EventArgs e)
         {
-            label5.Text = clsemail.Email;
+
             PicShowPss1.Visible = true;
             PicShowPss2.Visible = true;
             txtNewPass1.PasswordChar = '*';
@@ -63,7 +63,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
                     if (txtNewPass1.Text == txtNewPass2.Text)
                     {
 
-                        var exist = db.utilisateurs.Find(label5.Text);
+                        var exist = db.utilisateurs.Find(clsemail.Email);
                         if(exist != null)
                         {
                             DialogResult dr = MessageBox.Show("Your password changed successfully \nPlease login with your new password to continue", "Done", MessageBoxButtons.OK);
@@ -74,7 +74,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
                             frml.Closed += (s, args) => this.Close();
                             frml.Show();
                         }
-
 
                     }
                     else

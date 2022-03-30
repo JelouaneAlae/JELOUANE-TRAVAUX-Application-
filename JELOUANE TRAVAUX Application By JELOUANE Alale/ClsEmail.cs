@@ -8,14 +8,10 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 {
     class ClsEmail
     {
-        public string email;
+        static string email;
 
-        public ClsEmail() { }
+        public  ClsEmail() { }
 
-        public ClsEmail(string Email)
-        {
-            this.email = Email;
-        }
 
         public string Email { get => email; set => email = value; }
 

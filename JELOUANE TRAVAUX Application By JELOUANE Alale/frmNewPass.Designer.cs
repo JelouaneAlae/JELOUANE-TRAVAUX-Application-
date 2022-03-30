@@ -50,7 +50,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.PicMaskPass2 = new System.Windows.Forms.Button();
             this.PicShowPss1 = new System.Windows.Forms.Button();
             this.PicShowPss2 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picusername)).BeginInit();
@@ -231,7 +230,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.PicMaskPass1.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PicMaskPass1.ForeColor = System.Drawing.Color.White;
             this.PicMaskPass1.Image = ((System.Drawing.Image)(resources.GetObject("PicMaskPass1.Image")));
-            this.PicMaskPass1.Location = new System.Drawing.Point(225, 234);
+            this.PicMaskPass1.Location = new System.Drawing.Point(212, 234);
             this.PicMaskPass1.Name = "PicMaskPass1";
             this.PicMaskPass1.Size = new System.Drawing.Size(25, 19);
             this.PicMaskPass1.TabIndex = 40;
@@ -246,7 +245,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.PicMaskPass2.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PicMaskPass2.ForeColor = System.Drawing.Color.White;
             this.PicMaskPass2.Image = ((System.Drawing.Image)(resources.GetObject("PicMaskPass2.Image")));
-            this.PicMaskPass2.Location = new System.Drawing.Point(224, 308);
+            this.PicMaskPass2.Location = new System.Drawing.Point(209, 308);
             this.PicMaskPass2.Name = "PicMaskPass2";
             this.PicMaskPass2.Size = new System.Drawing.Size(25, 19);
             this.PicMaskPass2.TabIndex = 41;
@@ -261,7 +260,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.PicShowPss1.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PicShowPss1.ForeColor = System.Drawing.Color.White;
             this.PicShowPss1.Image = ((System.Drawing.Image)(resources.GetObject("PicShowPss1.Image")));
-            this.PicShowPss1.Location = new System.Drawing.Point(225, 233);
+            this.PicShowPss1.Location = new System.Drawing.Point(211, 233);
             this.PicShowPss1.Name = "PicShowPss1";
             this.PicShowPss1.Size = new System.Drawing.Size(25, 19);
             this.PicShowPss1.TabIndex = 42;
@@ -276,28 +275,18 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.PicShowPss2.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PicShowPss2.ForeColor = System.Drawing.Color.White;
             this.PicShowPss2.Image = ((System.Drawing.Image)(resources.GetObject("PicShowPss2.Image")));
-            this.PicShowPss2.Location = new System.Drawing.Point(224, 307);
+            this.PicShowPss2.Location = new System.Drawing.Point(209, 307);
             this.PicShowPss2.Name = "PicShowPss2";
             this.PicShowPss2.Size = new System.Drawing.Size(25, 19);
             this.PicShowPss2.TabIndex = 43;
             this.PicShowPss2.UseVisualStyleBackColor = false;
             this.PicShowPss2.Click += new System.EventHandler(this.PicShowPss2_Click);
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(30, 200);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 44;
-            this.label5.Text = "label5";
-            // 
             // frmNewPass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(261, 447);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.PicShowPss2);
             this.Controls.Add(this.PicShowPss1);
             this.Controls.Add(this.PicMaskPass2);
@@ -350,6 +339,5 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         private System.Windows.Forms.Button PicShowPss1;
         private System.Windows.Forms.Button PicMaskPass2;
         private System.Windows.Forms.Button PicMaskPass1;
-        private System.Windows.Forms.Label label5;
     }
 }
