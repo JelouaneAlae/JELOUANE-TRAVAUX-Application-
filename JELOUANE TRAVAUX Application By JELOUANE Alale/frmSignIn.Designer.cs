@@ -177,9 +177,9 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Franklin Gothic Medium", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Franklin Gothic Medium", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(44)))), ((int)(((byte)(131)))));
-            this.button1.Location = new System.Drawing.Point(253, 360);
+            this.button1.Location = new System.Drawing.Point(252, 358);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(78, 32);
             this.button1.TabIndex = 40;
@@ -193,7 +193,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(44)))), ((int)(((byte)(131)))));
-            this.label6.Location = new System.Drawing.Point(86, 366);
+            this.label6.Location = new System.Drawing.Point(85, 364);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(175, 21);
             this.label6.TabIndex = 41;
@@ -220,7 +220,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmSignIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmSignIn";
+            this.Text = "Sign in";
             this.Load += new System.EventHandler(this.frmSignIn_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

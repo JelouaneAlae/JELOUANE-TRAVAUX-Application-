@@ -127,7 +127,10 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            var form1 = new FrmLogin();
+            form1.Closed += (s, args) => this.Close();
+            form1.Show();
         }
     }
 }

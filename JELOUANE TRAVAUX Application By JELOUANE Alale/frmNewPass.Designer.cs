@@ -29,24 +29,32 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNewPass));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblFP = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtNewPass1 = new System.Windows.Forms.TextBox();
             this.panelusername = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNewPass2 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnConfirmnewPass = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.picusername = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.PicMaskPass1 = new System.Windows.Forms.Button();
+            this.PicMaskPass2 = new System.Windows.Forms.Button();
+            this.PicShowPss1 = new System.Windows.Forms.Button();
+            this.PicShowPss2 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picusername)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -96,16 +104,18 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.label2.TabIndex = 29;
             this.label2.Text = "New password";
             // 
-            // txtEmail
+            // txtNewPass1
             // 
-            this.txtEmail.BackColor = System.Drawing.SystemColors.Control;
-            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEmail.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.ForeColor = System.Drawing.Color.Black;
-            this.txtEmail.Location = new System.Drawing.Point(52, 233);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(184, 19);
-            this.txtEmail.TabIndex = 32;
+            this.txtNewPass1.BackColor = System.Drawing.SystemColors.Control;
+            this.txtNewPass1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNewPass1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNewPass1.ForeColor = System.Drawing.Color.Black;
+            this.txtNewPass1.Location = new System.Drawing.Point(52, 235);
+            this.txtNewPass1.MaxLength = 8;
+            this.txtNewPass1.Name = "txtNewPass1";
+            this.txtNewPass1.Size = new System.Drawing.Size(184, 19);
+            this.txtNewPass1.TabIndex = 32;
+            this.txtNewPass1.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // panelusername
             // 
@@ -118,23 +128,25 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(12, 289);
+            this.pictureBox2.Location = new System.Drawing.Point(12, 291);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(33, 39);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 34;
             this.pictureBox2.TabStop = false;
             // 
-            // textBox1
+            // txtNewPass2
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(52, 306);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(184, 19);
-            this.textBox1.TabIndex = 36;
+            this.txtNewPass2.BackColor = System.Drawing.SystemColors.Control;
+            this.txtNewPass2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNewPass2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNewPass2.ForeColor = System.Drawing.Color.Black;
+            this.txtNewPass2.Location = new System.Drawing.Point(52, 308);
+            this.txtNewPass2.MaxLength = 8;
+            this.txtNewPass2.Name = "txtNewPass2";
+            this.txtNewPass2.Size = new System.Drawing.Size(184, 19);
+            this.txtNewPass2.TabIndex = 36;
+            this.txtNewPass2.TextChanged += new System.EventHandler(this.txtNewPass2_TextChanged);
             // 
             // panel1
             // 
@@ -156,18 +168,19 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.label3.TabIndex = 33;
             this.label3.Text = "Confirm password";
             // 
-            // btnLogin
+            // btnConfirmnewPass
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(44)))), ((int)(((byte)(131)))));
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(10, 356);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(241, 34);
-            this.btnLogin.TabIndex = 37;
-            this.btnLogin.Text = "Confirm";
-            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnConfirmnewPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(44)))), ((int)(((byte)(131)))));
+            this.btnConfirmnewPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirmnewPass.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmnewPass.ForeColor = System.Drawing.Color.White;
+            this.btnConfirmnewPass.Location = new System.Drawing.Point(10, 356);
+            this.btnConfirmnewPass.Name = "btnConfirmnewPass";
+            this.btnConfirmnewPass.Size = new System.Drawing.Size(241, 34);
+            this.btnConfirmnewPass.TabIndex = 37;
+            this.btnConfirmnewPass.Text = "Confirm";
+            this.btnConfirmnewPass.UseVisualStyleBackColor = false;
+            this.btnConfirmnewPass.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // label4
             // 
@@ -184,7 +197,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             // picusername
             // 
             this.picusername.Image = ((System.Drawing.Image)(resources.GetObject("picusername.Image")));
-            this.picusername.Location = new System.Drawing.Point(12, 216);
+            this.picusername.Location = new System.Drawing.Point(12, 218);
             this.picusername.Name = "picusername";
             this.picusername.Size = new System.Drawing.Size(33, 39);
             this.picusername.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -206,20 +219,98 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // PicMaskPass1
+            // 
+            this.PicMaskPass1.BackColor = System.Drawing.Color.Transparent;
+            this.PicMaskPass1.FlatAppearance.BorderSize = 0;
+            this.PicMaskPass1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PicMaskPass1.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PicMaskPass1.ForeColor = System.Drawing.Color.White;
+            this.PicMaskPass1.Image = ((System.Drawing.Image)(resources.GetObject("PicMaskPass1.Image")));
+            this.PicMaskPass1.Location = new System.Drawing.Point(225, 234);
+            this.PicMaskPass1.Name = "PicMaskPass1";
+            this.PicMaskPass1.Size = new System.Drawing.Size(25, 19);
+            this.PicMaskPass1.TabIndex = 40;
+            this.PicMaskPass1.UseVisualStyleBackColor = false;
+            this.PicMaskPass1.Click += new System.EventHandler(this.PicMaskPass1_Click);
+            // 
+            // PicMaskPass2
+            // 
+            this.PicMaskPass2.BackColor = System.Drawing.Color.Transparent;
+            this.PicMaskPass2.FlatAppearance.BorderSize = 0;
+            this.PicMaskPass2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PicMaskPass2.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PicMaskPass2.ForeColor = System.Drawing.Color.White;
+            this.PicMaskPass2.Image = ((System.Drawing.Image)(resources.GetObject("PicMaskPass2.Image")));
+            this.PicMaskPass2.Location = new System.Drawing.Point(224, 308);
+            this.PicMaskPass2.Name = "PicMaskPass2";
+            this.PicMaskPass2.Size = new System.Drawing.Size(25, 19);
+            this.PicMaskPass2.TabIndex = 41;
+            this.PicMaskPass2.UseVisualStyleBackColor = false;
+            this.PicMaskPass2.Click += new System.EventHandler(this.PicMaskPass2_Click);
+            // 
+            // PicShowPss1
+            // 
+            this.PicShowPss1.BackColor = System.Drawing.Color.Transparent;
+            this.PicShowPss1.FlatAppearance.BorderSize = 0;
+            this.PicShowPss1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PicShowPss1.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PicShowPss1.ForeColor = System.Drawing.Color.White;
+            this.PicShowPss1.Image = ((System.Drawing.Image)(resources.GetObject("PicShowPss1.Image")));
+            this.PicShowPss1.Location = new System.Drawing.Point(225, 233);
+            this.PicShowPss1.Name = "PicShowPss1";
+            this.PicShowPss1.Size = new System.Drawing.Size(25, 19);
+            this.PicShowPss1.TabIndex = 42;
+            this.PicShowPss1.UseVisualStyleBackColor = false;
+            this.PicShowPss1.Click += new System.EventHandler(this.PicShowPss1_Click);
+            // 
+            // PicShowPss2
+            // 
+            this.PicShowPss2.BackColor = System.Drawing.Color.Transparent;
+            this.PicShowPss2.FlatAppearance.BorderSize = 0;
+            this.PicShowPss2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PicShowPss2.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PicShowPss2.ForeColor = System.Drawing.Color.White;
+            this.PicShowPss2.Image = ((System.Drawing.Image)(resources.GetObject("PicShowPss2.Image")));
+            this.PicShowPss2.Location = new System.Drawing.Point(224, 307);
+            this.PicShowPss2.Name = "PicShowPss2";
+            this.PicShowPss2.Size = new System.Drawing.Size(25, 19);
+            this.PicShowPss2.TabIndex = 43;
+            this.PicShowPss2.UseVisualStyleBackColor = false;
+            this.PicShowPss2.Click += new System.EventHandler(this.PicShowPss2_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(30, 200);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.TabIndex = 44;
+            this.label5.Text = "label5";
+            // 
             // frmNewPass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(261, 447);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.PicShowPss2);
+            this.Controls.Add(this.PicShowPss1);
+            this.Controls.Add(this.PicMaskPass2);
+            this.Controls.Add(this.PicMaskPass1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.btnConfirmnewPass);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNewPass2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.picusername);
-            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtNewPass1);
             this.Controls.Add(this.panelusername);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -232,6 +323,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picusername)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -243,15 +335,21 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         private System.Windows.Forms.Label lblFP;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtNewPass1;
         private System.Windows.Forms.Panel panelusername;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNewPass2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button btnConfirmnewPass;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox picusername;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Button PicShowPss2;
+        private System.Windows.Forms.Button PicShowPss1;
+        private System.Windows.Forms.Button PicMaskPass2;
+        private System.Windows.Forms.Button PicMaskPass1;
+        private System.Windows.Forms.Label label5;
     }
 }

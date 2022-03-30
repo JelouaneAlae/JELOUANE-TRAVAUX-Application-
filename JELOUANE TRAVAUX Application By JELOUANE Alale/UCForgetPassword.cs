@@ -21,9 +21,8 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         int partCode1;
         int PartCode2;
         JELOUANE_TRAVAUXEntities2 db = new JELOUANE_TRAVAUXEntities2();
-        internal string Email;
-        string emailFP;
         string codemail;
+        ClsEmail clsemail = new ClsEmail();
         public UCForgetPassword()
         {
             InitializeComponent();
@@ -32,20 +31,20 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         private void btnLogin_Click(object sender, EventArgs e)
         {
             var exist = db.utilisateurs.Find(txtEmailFP.Text);
-            Email = exist.Email;
+            
             if (exist != null)
             {
                 try
                 {
-                    login = new NetworkCredential("3al1original@gmail.com", "ALAEORG31");
+                    clsemail.email = exist.Email;
+                    login = new NetworkCredential("3al1original@gmail.com", "3al1artistnadi");
                     client = new SmtpClient();
                     client.Port = 587;
                     client.EnableSsl = true;
                     client.Credentials = login;
                     client.Host = "smtp.gmail.com";
                     mssg = new MailMessage { From = new MailAddress("3al1original@gmail.com", "Reset your pasword", Encoding.UTF8) };
-                    emailFP = txtEmailFP.Text;
-                    mssg.To.Add(new MailAddress(emailFP));
+                    mssg.To.Add(new MailAddress(txtEmailFP.Text));
                     mssg.Subject = "Forget Pass";
                     mssg.IsBodyHtml = true;
                     codemail = GenerateCodeFP();
@@ -145,15 +144,15 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
         private void btnSubmitFP_Click(object sender, EventArgs e)
         {
-
             if (txtEmailcodeFP.Text == codemail)
             {
-                MessageBox.Show("code s7i7");
+                //MessageBox.Show("code s7i7");
 
                 F = 0;
                 var form = Form.ActiveForm as FrmLogin;
                 if (form != null)
                 {
+                    
                     form.hideform();
                     var form1 = new frmNewPass();
                     form1.Closed += (s, args) => form.closeform();
@@ -178,7 +177,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
                             client.Credentials = login;
                             client.Host = "smtp.gmail.com";
                             mssg = new MailMessage { From = new MailAddress("3al1original@gmail.com", "Reset your pasword", Encoding.UTF8) };
-                            mssg.To.Add(new MailAddress(emailFP));
+                            mssg.To.Add(new MailAddress(txtEmailFP.Text));
                             mssg.Subject = "Forget Pass";
                             mssg.IsBodyHtml = true;
                             codemail = GenerateCodeFP();

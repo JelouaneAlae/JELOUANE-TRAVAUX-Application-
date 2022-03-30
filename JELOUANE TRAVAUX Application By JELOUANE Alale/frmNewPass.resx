@@ -1537,4 +1537,55 @@
         EEIIIYQQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEEEIoGn3gA/8f3zFrGAJnrJ8AAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="errorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="PicShowPss2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAAKYAAACmAd19/zgAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
+        AAABOklEQVRIS7WUMW4CQQxFTUEJCAlOwgVSITpqamokmvQ5QdqcgIID0OQIqdKElooqTXpENv8Rs5pF
+        LscjPcn+9vzd9cBY0zSphGJNQrEmoViTUCzR6ouFeBZvDjFaP9pTEoqgNRKv4lsgwNW559ToGUUeEItm
+        S3EWJO+CN34SA4cYjRo99C5Dr05iNhF7QXIUc9cx3YqdQzzw2lzQS8LeScezDcym4kuQvIjbfLVm4iRI
+        fhxitJn3cE7sIcFj2vp6w1h8il+xaYv/b44RI+BQew4xGrXbl3j/RuCB19g1G4oPweGt781eZBQEi1L3
+        Gg8h2D7oa4EXnnjbQVzEqmz0ZubNSHpBjS+htgtqK4En3vkPyB2Ri3mHXBTzfqZtkvlH64hZV0WJVt5l
+        V6KVc13XIhRrEoo1CcV6NPYHcOWXvWiphCUAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="PicShowPss1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        pgAAAKYB3X3/OAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAE6SURBVEhLtZQx
+        bgJBDEVNQQkICU7CBVIhOmpqaiSa9DlB2pyAggPQ5Aip0oSWiipNekQ2/xGzmkUuxyM9yf72/N31wFjT
+        NKmEYk1CsSahWJNQLNHqi4V4Fm8OMVo/2lMSiqA1Eq/iWyDA1bnn1OgZRR4Qi2ZLcRYk74I3fhIDhxiN
+        Gj30LkOvTmI2EXtBchRz1zHdip1DPPDaXNBLwt5Jx7MNzKbiS5C8iNt8tWbiJEh+HGK0mfdwTuwhwWPa
+        +nrDWHyKX7Fpi/9vjhEj4FB7DjEatduXeP9G4IHX2DUbig/B4a3vzV5kFASLUvcaDyHYPuhrgReeeNtB
+        XMSqbPRm5s1IekGNL6G2C2orgSfe+Q/IHZGLeYdcFPN+pm2S+UfriFlXRYlW3mVXopVzXdciFGsSijUJ
+        xXo09gdw5Ze9aKmEJQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="PicMaskPass2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        sQAAALEBxi1JjQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFPSURBVEhL7dS7
+        SsRQFIXhCDbaiWMpaKMieMFCX0JR8NLZCD6LU3nDykJ8ABEF38BS7MQ3ULwUWor3f8Vs2HPYkQzoVLPg
+        m4RDzjqHJJOsnVZnqDj+S7bwhaYXqWEduzjFCVS2hh4om1C5xitnDMd4gyZHXnBRnFcu78YePpAWlrHy
+        juJYmkFcIy3QYvuYwxIO8QlfrvFLqCPMBG4Rlc/CR6W+fBl2Kx8wg4Zo4Bm+2GjnPmm5dv4KP0ddU8jT
+        B63qL/B0Wyxp+STKXoI7qDv/iW6NWYSSlivzSK8398gXUEahgehCPdCoXDlAer08YRoNGccjogmSli/A
+        3iTvBuoK049zpJOsXG+airXzqPwKA/g1ndiATbJy/yqm3rGNLlSKLWDlK4jKNXYEPcPKqcOX6++/Cv0f
+        zqAP3g70setFUxmBL//zaLfDP6fttCRZ9g3LG6sfVZDIkwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="PicMaskPass1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        sQAAALEBxi1JjQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFPSURBVEhL7dS7
+        SsRQFIXhCDbaiWMpaKMieMFCX0JR8NLZCD6LU3nDykJ8ABEF38BS7MQ3ULwUWor3f8Vs2HPYkQzoVLPg
+        m4RDzjqHJJOsnVZnqDj+S7bwhaYXqWEduzjFCVS2hh4om1C5xitnDMd4gyZHXnBRnFcu78YePpAWlrHy
+        juJYmkFcIy3QYvuYwxIO8QlfrvFLqCPMBG4Rlc/CR6W+fBl2Kx8wg4Zo4Bm+2GjnPmm5dv4KP0ddU8jT
+        B63qL/B0Wyxp+STKXoI7qDv/iW6NWYSSlivzSK8398gXUEahgehCPdCoXDlAer08YRoNGccjogmSli/A
+        3iTvBuoK049zpJOsXG+airXzqPwKA/g1ndiATbJy/yqm3rGNLlSKLWDlK4jKNXYEPcPKqcOX6++/Cv0f
+        zqAP3g70setFUxmBL//zaLfDP6fttCRZ9g3LG6sfVZDIkwAAAABJRU5ErkJggg==
+</value>
+  </data>
 </root>
