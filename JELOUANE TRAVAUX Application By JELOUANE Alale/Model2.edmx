@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="JELOUANE_TRAVAUXModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="JELOUANE_TRAVAUXModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Client">
           <Key>
             <PropertyRef Name="ID_Client" />
@@ -25,6 +25,9 @@
           <Property Name="Photo_Materiel" Type="varbinary(max)" />
           <Property Name="Color_Materiel" Type="varchar" MaxLength="20" />
           <Property Name="Genre_Materiel" Type="varchar" MaxLength="30" />
+          <Property Name="Fondateur_Materiel" Type="varchar" MaxLength="40" />
+          <Property Name="Quantity_Materiel" Type="int" />
+          <Property Name="Price_materiel" Type="int" />
         </EntityType>
         <EntityType Name="Mur">
           <Key>
@@ -165,8 +168,7 @@
             <End Role="Utiliser" EntitySet="Utiliser" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="JELOUANE_TRAVAUXModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -191,7 +193,9 @@
           <Property Name="Photo_Materiel" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="Color_Materiel" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="Genre_Materiel" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Utilisers" Relationship="Self.FK__Utiliser__Id_Mat__412EB0B6" FromRole="Materiel" ToRole="Utiliser" />
+          <Property Name="Fondateur_Materiel" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="Quantity_Materiel" Type="Int32" />
+          <Property Name="Price_materiel" Type="Int32" />
         </EntityType>
         <EntityType Name="Mur">
           <Key>
@@ -361,6 +365,9 @@
           <EntitySetMapping Name="Materiels">
             <EntityTypeMapping TypeName="JELOUANE_TRAVAUXModel1.Materiel">
               <MappingFragment StoreEntitySet="Materiel">
+                <ScalarProperty Name="Price_materiel" ColumnName="Price_materiel" />
+                <ScalarProperty Name="Quantity_Materiel" ColumnName="Quantity_Materiel" />
+                <ScalarProperty Name="Fondateur_Materiel" ColumnName="Fondateur_Materiel" />
                 <ScalarProperty Name="Id_Materiel" ColumnName="Id_Materiel" />
                 <ScalarProperty Name="Nom_Materiel" ColumnName="Nom_Materiel" />
                 <ScalarProperty Name="Photo_Materiel" ColumnName="Photo_Materiel" />

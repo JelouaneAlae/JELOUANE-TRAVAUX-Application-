@@ -32,7 +32,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMainForm));
             this.PnlMenu = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.LblFullName = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pnlverticalSetting = new System.Windows.Forms.Panel();
             this.pnlverticalSupport = new System.Windows.Forms.Panel();
@@ -50,18 +49,25 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pnlsetting = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.PnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlsetting.SuspendLayout();
             this.SuspendLayout();
             // 
             // PnlMenu
             // 
             this.PnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(44)))), ((int)(((byte)(131)))));
             this.PnlMenu.Controls.Add(this.button1);
-            this.PnlMenu.Controls.Add(this.LblFullName);
             this.PnlMenu.Controls.Add(this.pictureBox3);
             this.PnlMenu.Controls.Add(this.pnlverticalSetting);
             this.PnlMenu.Controls.Add(this.pnlverticalSupport);
@@ -94,17 +100,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.button1.TabIndex = 16;
             this.button1.Text = "?";
             this.button1.UseVisualStyleBackColor = false;
-            // 
-            // LblFullName
-            // 
-            this.LblFullName.AutoSize = true;
-            this.LblFullName.Font = new System.Drawing.Font("Century Gothic", 18F);
-            this.LblFullName.ForeColor = System.Drawing.Color.White;
-            this.LblFullName.Location = new System.Drawing.Point(25, 97);
-            this.LblFullName.Name = "LblFullName";
-            this.LblFullName.Size = new System.Drawing.Size(133, 30);
-            this.LblFullName.TabIndex = 11;
-            this.LblFullName.Text = "Full Name";
             // 
             // pictureBox3
             // 
@@ -310,12 +305,113 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
             // 
+            // pnlsetting
+            // 
+            this.pnlsetting.BackColor = System.Drawing.Color.White;
+            this.pnlsetting.Controls.Add(this.button2);
+            this.pnlsetting.Controls.Add(this.button3);
+            this.pnlsetting.Controls.Add(this.button10);
+            this.pnlsetting.Controls.Add(this.button11);
+            this.pnlsetting.Controls.Add(this.button12);
+            this.pnlsetting.Location = new System.Drawing.Point(193, 120);
+            this.pnlsetting.Name = "pnlsetting";
+            this.pnlsetting.Size = new System.Drawing.Size(160, 338);
+            this.pnlsetting.TabIndex = 25;
+            this.pnlsetting.Visible = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(44)))), ((int)(((byte)(131)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(11, 180);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(133, 36);
+            this.button2.TabIndex = 23;
+            this.button2.Text = "Helps";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(44)))), ((int)(((byte)(131)))));
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(11, 138);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(133, 36);
+            this.button3.TabIndex = 21;
+            this.button3.Text = "Privacy";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(44)))), ((int)(((byte)(131)))));
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.ForeColor = System.Drawing.Color.White;
+            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button10.Location = new System.Drawing.Point(11, 96);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(133, 36);
+            this.button10.TabIndex = 20;
+            this.button10.Text = "Notification";
+            this.button10.UseVisualStyleBackColor = false;
+            // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(44)))), ((int)(((byte)(131)))));
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button11.ForeColor = System.Drawing.Color.White;
+            this.button11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button11.Location = new System.Drawing.Point(11, 54);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(133, 36);
+            this.button11.TabIndex = 19;
+            this.button11.Text = "Account";
+            this.button11.UseVisualStyleBackColor = false;
+            // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(44)))), ((int)(((byte)(131)))));
+            this.button12.FlatAppearance.BorderSize = 0;
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button12.ForeColor = System.Drawing.Color.White;
+            this.button12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button12.Location = new System.Drawing.Point(11, 12);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(133, 36);
+            this.button12.TabIndex = 18;
+            this.button12.Text = "General";
+            this.button12.UseVisualStyleBackColor = false;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Location = new System.Drawing.Point(359, 120);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(556, 338);
+            this.panel3.TabIndex = 26;
+            this.panel3.Visible = false;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
             // FrmMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(927, 485);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.pnlsetting);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.PnlMenu);
@@ -326,11 +422,11 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.Text = "FrmMainForm";
             this.Load += new System.EventHandler(this.FrmMainForm_Load);
             this.PnlMenu.ResumeLayout(false);
-            this.PnlMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlsetting.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -349,12 +445,18 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         private System.Windows.Forms.Panel pnlverticalworkshop;
         private System.Windows.Forms.Panel pnlverticalhome;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label LblFullName;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button BtnInbox;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel pnlsetting;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Panel panel3;
     }
 }

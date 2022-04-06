@@ -63,6 +63,12 @@
       <DependentUpon>Model2.tt</DependentUpon>
     </Compile>
     <Compile Include="ClsEmail.cs" />
+    <Compile Include="FrmEditEqupement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditEqupement.Designer.cs">
+      <DependentUpon>FrmEditEqupement.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,12 @@
     </Compile>
     <Compile Include="FrmMainForm.Designer.cs">
       <DependentUpon>FrmMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewEquipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewEquipment.Designer.cs">
+      <DependentUpon>frmNewEquipment.cs</DependentUpon>
     </Compile>
     <Compile Include="frmNewPass.cs">
       <SubType>Form</SubType>
@@ -134,17 +146,17 @@
     <Compile Include="UCLogIn.Designer.cs">
       <DependentUpon>UCLogIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="UcSignUp.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UcSignUp.Designer.cs">
-      <DependentUpon>UcSignUp.cs</DependentUpon>
-    </Compile>
     <Compile Include="UC_Equipements.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UC_Equipements.Designer.cs">
       <DependentUpon>UC_Equipements.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_general_setting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_general_setting.Designer.cs">
+      <DependentUpon>UC_general_setting.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_Setting.cs">
       <SubType>UserControl</SubType>
@@ -164,11 +176,17 @@
     <Compile Include="Utiliser.cs">
       <DependentUpon>Model2.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FrmEditEqupement.resx">
+      <DependentUpon>FrmEditEqupement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMainForm.resx">
       <DependentUpon>FrmMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewEquipment.resx">
+      <DependentUpon>frmNewEquipment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNewPass.resx">
       <DependentUpon>frmNewPass.cs</DependentUpon>
@@ -197,6 +215,9 @@
     <EmbeddedResource Include="UC_Equipements.resx">
       <DependentUpon>UC_Equipements.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC_general_setting.resx">
+      <DependentUpon>UC_general_setting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_Setting.resx">
       <DependentUpon>UC_Setting.cs</DependentUpon>
     </EmbeddedResource>
@@ -211,6 +232,7 @@
       <DependentUpon>Model2.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Materiel.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

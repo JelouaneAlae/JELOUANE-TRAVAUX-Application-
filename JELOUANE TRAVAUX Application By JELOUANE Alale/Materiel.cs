@@ -14,19 +14,13 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
     
     public partial class Materiel
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Materiel()
-        {
-            this.Utilisers = new HashSet<Utiliser>();
-        }
-    
         public int Id_Materiel { get; set; }
         public string Nom_Materiel { get; set; }
         public byte[] Photo_Materiel { get; set; }
         public string Color_Materiel { get; set; }
         public string Genre_Materiel { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Utiliser> Utilisers { get; set; }
+        public string Fondateur_Materiel { get; set; }
+        public Nullable<int> Quantity_Materiel { get; set; }
+        public Nullable<int> Price_materiel { get; set; }
     }
 }

@@ -14,7 +14,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
     {
         int F = 0;
         JELOUANE_TRAVAUXEntities2 db = new JELOUANE_TRAVAUXEntities2();
-        
+        ClsEmail clsemail = new ClsEmail();
         public UCLogIn()
         {
             InitializeComponent();
@@ -42,6 +42,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
                     var form = Form.ActiveForm as FrmLogin;
                     if (form != null)
                     {
+                        clsemail.Email = txtEmail.Text;
                         form.hideform();
                         var form1 = new FrmMainForm();
                         form1.Closed += (s, args) => form.closeform();

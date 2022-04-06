@@ -1,7 +1,7 @@
 ﻿
 namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 {
-    partial class UcSignUp
+    partial class UC_general_setting
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,8 +29,17 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // UC_general_setting
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.Name = "UC_general_setting";
+            this.Size = new System.Drawing.Size(556, 338);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

@@ -16,8 +16,8 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         UC_Workshop UCWS = new UC_Workshop();
         UC_Equipements UCE = new UC_Equipements();
         UC_Setting UCS = new UC_Setting();
-        
-
+        JELOUANE_TRAVAUXEntities2 db = new JELOUANE_TRAVAUXEntities2();
+        ClsEmail clsmail = new ClsEmail();
 
         public FrmMainForm()
         {
@@ -41,6 +41,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
         private void button6_Click(object sender, EventArgs e)
         {
+            pnlsetting.Visible = false;
             PnlverticalMenu("pnlverticalhome");
 
             UC_controle("Home");
@@ -110,16 +111,10 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         private void FrmMainForm_Load(object sender, EventArgs e)
         {
             FrmLogin frml = new FrmLogin();
+            //panelProfile.Visible = false;
 
             frml.Visible = false;
-            //frml.Hide();
             PnlverticalMenu("pnlverticalhome");
-            //pnlverticalhome.Visible = false;
-            //pnlverticalworkshop.Visible = false;
-            //pnlverticalEquipment.Visible = false;
-            //pnlverticalSupport.Visible = false;
-            //pnlverticalSetting.Visible = false;
-
             UC_controle("Home");    
         }
 
@@ -141,7 +136,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         private void button7_Click(object sender, EventArgs e)
         {
             PnlverticalMenu("pnlverticalworkshop");
-
+            pnlsetting.Visible = false;
             UC_controle("Workshop");
 
 
@@ -151,18 +146,22 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         {
             PnlverticalMenu("pnlverticalEquipment");
             UC_controle("Equipements");
+            pnlsetting.Visible = false;
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
             PnlverticalMenu("pnlverticalSupport");
-            
+            pnlsetting.Visible = false;
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
             PnlverticalMenu("pnlverticalSetting");
             UC_controle("Setting");
+
+                pnlsetting.Visible = true;
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -220,8 +219,8 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
                     this.Controls.Remove(UCWS);
                     this.Controls.Remove(UCH);
                     this.Controls.Remove(UCE);
-                    this.Controls.Add(UCS);
-                    UCS.Location = new Point(199, 97);
+                    //this.Controls.Add(UCS);
+                    //UCS.Location = new Point(199, 97);
                     break;
             }
 
@@ -244,11 +243,27 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
-            FrmLogin frml = new FrmLogin();
-            frml.Show();
+            //UC_Profile UCP = new UC_Profile();
+            //this.Controls.Add(UCP);
+            //UCP.Location = new Point(790, 77);
+            //if (panelProfile.Visible == false)
+            //{
+            //    panelProfile.Visible = true;
+            //}
+            //else
+            //{
+            //    panelProfile.Visible = false;
+            //}
+            
+
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
         }
