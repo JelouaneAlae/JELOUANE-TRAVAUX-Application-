@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEditEqupement));
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.BtnCancel = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.cmbQuantity = new System.Windows.Forms.ComboBox();
@@ -76,20 +75,6 @@
             this.label8.Size = new System.Drawing.Size(57, 23);
             this.label8.TabIndex = 62;
             this.label8.Text = "State";
-            // 
-            // BtnCancel
-            // 
-            this.BtnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.BtnCancel.FlatAppearance.BorderSize = 0;
-            this.BtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCancel.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCancel.ForeColor = System.Drawing.Color.White;
-            this.BtnCancel.Image = ((System.Drawing.Image)(resources.GetObject("BtnCancel.Image")));
-            this.BtnCancel.Location = new System.Drawing.Point(154, 448);
-            this.BtnCancel.Name = "BtnCancel";
-            this.BtnCancel.Size = new System.Drawing.Size(40, 43);
-            this.BtnCancel.TabIndex = 61;
-            this.BtnCancel.UseVisualStyleBackColor = false;
             // 
             // label7
             // 
@@ -141,6 +126,7 @@
             this.btnConfirm.Size = new System.Drawing.Size(40, 43);
             this.btnConfirm.TabIndex = 56;
             this.btnConfirm.UseVisualStyleBackColor = false;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // picImageEquipement
             // 
@@ -198,6 +184,7 @@
             this.btnBrowse.TabIndex = 53;
             this.btnBrowse.Text = "Browse";
             this.btnBrowse.UseVisualStyleBackColor = false;
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
             // label2
             // 
@@ -280,7 +267,6 @@
             this.ClientSize = new System.Drawing.Size(251, 499);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.BtnCancel);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.cmbQuantity);
@@ -313,7 +299,6 @@
 
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button BtnCancel;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.ComboBox cmbQuantity;

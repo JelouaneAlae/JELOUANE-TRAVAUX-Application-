@@ -61,7 +61,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         private void BtnCancel_Click(object sender, EventArgs e)
         {
             txtID.Text = null;
-            txtID.Text = null;
+            txtnameM.Text = null;
             txtPrice.Text = null;
             txtProducer.Text = null;
             cmbColor.Text = null;
@@ -124,7 +124,8 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
                                     MT.Photo_Materiel = t;
                                     db.Materiels.Add(MT);
                                     db.SaveChanges();
-                                    MessageBox.Show("nadii");
+                                    MessageBox.Show("Successfully update");
+                                    this.Close();
                                 }
                             }
                         }

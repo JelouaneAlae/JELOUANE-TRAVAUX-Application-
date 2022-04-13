@@ -36,7 +36,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -47,6 +46,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
@@ -122,17 +122,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.label5.TabIndex = 6;
             this.label5.Text = "Total Profit";
             this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 17F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(44)))), ((int)(((byte)(131)))));
-            this.label6.Location = new System.Drawing.Point(268, 79);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 27);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Char";
             // 
             // label11
             // 
@@ -247,6 +236,17 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.panel2.Size = new System.Drawing.Size(367, 85);
             this.panel2.TabIndex = 11;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 17F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(44)))), ((int)(((byte)(131)))));
+            this.label6.Location = new System.Drawing.Point(268, 79);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(66, 27);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Char";
+            // 
             // UCHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -280,7 +280,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel5;
@@ -292,5 +291,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label6;
     }
 }

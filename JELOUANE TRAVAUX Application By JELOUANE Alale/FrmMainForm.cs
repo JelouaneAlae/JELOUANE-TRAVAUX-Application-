@@ -15,7 +15,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         UCHome UCH = new UCHome();
         UC_Workshop UCWS = new UC_Workshop();
         UC_Equipements UCE = new UC_Equipements();
-        UC_Setting UCS = new UC_Setting();
         JELOUANE_TRAVAUXEntities2 db = new JELOUANE_TRAVAUXEntities2();
         ClsEmail clsmail = new ClsEmail();
 
@@ -191,7 +190,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             {
                 case "Home":
                     this.Controls.Remove(UCE);
-                    this.Controls.Remove(UCS);
                     this.Controls.Remove(UCWS);
                     this.Controls.Add(UCH);
                     UCH.Location = new Point(199, 97);
@@ -199,7 +197,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
                 case "Workshop":
                     this.Controls.Remove(UCE);
-                    this.Controls.Remove(UCS);
 
                     this.Controls.Remove(UCH);
                     this.Controls.Add(UCWS);
@@ -208,7 +205,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
                 case "Equipements":
                     this.Controls.Remove(UCWS);
-                    this.Controls.Remove(UCS);
 
                     this.Controls.Remove(UCH);
                     this.Controls.Add(UCE);
@@ -264,6 +260,18 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            UC_Setting_Generale UCSG = new UC_Setting_Generale();
+            this.Controls.Add(UCSG);
+            UCSG.Location = new Point(359, 120);
+        }
+
+        private void pnlsetting_Paint(object sender, PaintEventArgs e)
         {
 
         }
