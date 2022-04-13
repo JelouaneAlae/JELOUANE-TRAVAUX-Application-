@@ -248,6 +248,12 @@
     <Compile Include="UCLogIn.Designer.cs">
       <DependentUpon>UCLogIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_AccountSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_AccountSetting.Designer.cs">
+      <DependentUpon>UC_AccountSetting.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_Equipements.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -314,6 +320,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UCLogIn.resx">
       <DependentUpon>UCLogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_AccountSetting.resx">
+      <DependentUpon>UC_AccountSetting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Equipements.resx">
       <DependentUpon>UC_Equipements.cs</DependentUpon>

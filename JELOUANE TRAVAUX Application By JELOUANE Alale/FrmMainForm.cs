@@ -275,5 +275,12 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         {
 
         }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            UC_AccountSetting UCAS = new UC_AccountSetting();
+            this.Controls.Add(UCAS);
+            UCAS.Location = new Point(359, 120);
+        }
     }
 }
