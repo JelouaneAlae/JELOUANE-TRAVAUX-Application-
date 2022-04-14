@@ -282,5 +282,12 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.Controls.Add(UCAS);
             UCAS.Location = new Point(359, 120);
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            UC_NotificationSetting UCNS = new UC_NotificationSetting();
+            this.Controls.Add(UCNS);
+            UCNS.Location = new Point(359, 120);
+        }
     }
 }

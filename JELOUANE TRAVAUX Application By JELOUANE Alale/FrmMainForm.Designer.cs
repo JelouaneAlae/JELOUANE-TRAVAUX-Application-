@@ -351,6 +351,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.button10.TabIndex = 20;
             this.button10.Text = "Notification";
             this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button3
             // 

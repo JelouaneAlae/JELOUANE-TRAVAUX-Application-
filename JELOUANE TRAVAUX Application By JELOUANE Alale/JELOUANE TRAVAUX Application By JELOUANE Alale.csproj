@@ -266,6 +266,12 @@
     <Compile Include="UC_general_setting.Designer.cs">
       <DependentUpon>UC_general_setting.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_NotificationSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_NotificationSetting.Designer.cs">
+      <DependentUpon>UC_NotificationSetting.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_Setting_Generale.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -329,6 +335,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_general_setting.resx">
       <DependentUpon>UC_general_setting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_NotificationSetting.resx">
+      <DependentUpon>UC_NotificationSetting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Setting_Generale.resx">
       <DependentUpon>UC_Setting_Generale.cs</DependentUpon>
