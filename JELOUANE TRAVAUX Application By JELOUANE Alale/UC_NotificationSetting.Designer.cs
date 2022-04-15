@@ -54,6 +54,11 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.CmbKeyLanguage = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.label13 = new System.Windows.Forms.Label();
+            this.bunifuRadioButton7 = new Bunifu.UI.WinForms.BunifuRadioButton();
+            this.label14 = new System.Windows.Forms.Label();
+            this.bunifuRadioButton8 = new Bunifu.UI.WinForms.BunifuRadioButton();
+            this.label15 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -117,7 +122,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(104)))), ((int)(((byte)(133)))));
-            this.label3.Location = new System.Drawing.Point(478, 50);
+            this.label3.Location = new System.Drawing.Point(460, 50);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(30, 19);
             this.label3.TabIndex = 23;
@@ -130,7 +135,7 @@
             this.bunifuRadioButton2.BindingControlPosition = Bunifu.UI.WinForms.BunifuRadioButton.BindingControlPositions.Right;
             this.bunifuRadioButton2.BorderThickness = 1;
             this.bunifuRadioButton2.Checked = false;
-            this.bunifuRadioButton2.Location = new System.Drawing.Point(509, 49);
+            this.bunifuRadioButton2.Location = new System.Drawing.Point(491, 49);
             this.bunifuRadioButton2.Name = "bunifuRadioButton2";
             this.bunifuRadioButton2.OutlineColor = System.Drawing.Color.DodgerBlue;
             this.bunifuRadioButton2.OutlineColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
@@ -283,7 +288,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(104)))), ((int)(((byte)(133)))));
-            this.label6.Location = new System.Drawing.Point(478, 177);
+            this.label6.Location = new System.Drawing.Point(460, 177);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(30, 19);
             this.label6.TabIndex = 31;
@@ -296,7 +301,7 @@
             this.bunifuRadioButton3.BindingControlPosition = Bunifu.UI.WinForms.BunifuRadioButton.BindingControlPositions.Right;
             this.bunifuRadioButton3.BorderThickness = 1;
             this.bunifuRadioButton3.Checked = false;
-            this.bunifuRadioButton3.Location = new System.Drawing.Point(509, 176);
+            this.bunifuRadioButton3.Location = new System.Drawing.Point(491, 176);
             this.bunifuRadioButton3.Name = "bunifuRadioButton3";
             this.bunifuRadioButton3.OutlineColor = System.Drawing.Color.DodgerBlue;
             this.bunifuRadioButton3.OutlineColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
@@ -355,7 +360,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(104)))), ((int)(((byte)(133)))));
-            this.label9.Location = new System.Drawing.Point(478, 210);
+            this.label9.Location = new System.Drawing.Point(460, 210);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(30, 19);
             this.label9.TabIndex = 36;
@@ -368,7 +373,7 @@
             this.bunifuRadioButton5.BindingControlPosition = Bunifu.UI.WinForms.BunifuRadioButton.BindingControlPositions.Right;
             this.bunifuRadioButton5.BorderThickness = 1;
             this.bunifuRadioButton5.Checked = false;
-            this.bunifuRadioButton5.Location = new System.Drawing.Point(509, 209);
+            this.bunifuRadioButton5.Location = new System.Drawing.Point(491, 209);
             this.bunifuRadioButton5.Name = "bunifuRadioButton5";
             this.bunifuRadioButton5.OutlineColor = System.Drawing.Color.DodgerBlue;
             this.bunifuRadioButton5.OutlineColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
@@ -397,7 +402,7 @@
             this.bunifuRadioButton6.BackColor = System.Drawing.Color.Transparent;
             this.bunifuRadioButton6.BindingControlPosition = Bunifu.UI.WinForms.BunifuRadioButton.BindingControlPositions.Right;
             this.bunifuRadioButton6.BorderThickness = 1;
-            this.bunifuRadioButton6.Checked = true;
+            this.bunifuRadioButton6.Checked = false;
             this.bunifuRadioButton6.Location = new System.Drawing.Point(424, 208);
             this.bunifuRadioButton6.Name = "bunifuRadioButton6";
             this.bunifuRadioButton6.OutlineColor = System.Drawing.Color.DodgerBlue;
@@ -478,14 +483,92 @@
             this.CmbKeyLanguage.Name = "CmbKeyLanguage";
             this.CmbKeyLanguage.Size = new System.Drawing.Size(77, 32);
             this.CmbKeyLanguage.TabIndex = 38;
+            this.CmbKeyLanguage.Text = null;
             this.CmbKeyLanguage.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.CmbKeyLanguage.TextLeftMargin = 5;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(104)))), ((int)(((byte)(133)))));
+            this.label13.Location = new System.Drawing.Point(460, 282);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(30, 19);
+            this.label13.TabIndex = 43;
+            this.label13.Text = "Off";
+            // 
+            // bunifuRadioButton7
+            // 
+            this.bunifuRadioButton7.AllowBindingControlLocation = false;
+            this.bunifuRadioButton7.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuRadioButton7.BindingControlPosition = Bunifu.UI.WinForms.BunifuRadioButton.BindingControlPositions.Right;
+            this.bunifuRadioButton7.BorderThickness = 1;
+            this.bunifuRadioButton7.Checked = false;
+            this.bunifuRadioButton7.Location = new System.Drawing.Point(491, 281);
+            this.bunifuRadioButton7.Name = "bunifuRadioButton7";
+            this.bunifuRadioButton7.OutlineColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuRadioButton7.OutlineColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.bunifuRadioButton7.OutlineColorUnchecked = System.Drawing.Color.DarkGray;
+            this.bunifuRadioButton7.RadioColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuRadioButton7.RadioColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.bunifuRadioButton7.Size = new System.Drawing.Size(21, 21);
+            this.bunifuRadioButton7.TabIndex = 42;
+            this.bunifuRadioButton7.Text = null;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(104)))), ((int)(((byte)(133)))));
+            this.label14.Location = new System.Drawing.Point(393, 281);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(32, 19);
+            this.label14.TabIndex = 41;
+            this.label14.Text = "On";
+            // 
+            // bunifuRadioButton8
+            // 
+            this.bunifuRadioButton8.AllowBindingControlLocation = false;
+            this.bunifuRadioButton8.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuRadioButton8.BindingControlPosition = Bunifu.UI.WinForms.BunifuRadioButton.BindingControlPositions.Right;
+            this.bunifuRadioButton8.BorderThickness = 1;
+            this.bunifuRadioButton8.Checked = true;
+            this.bunifuRadioButton8.Location = new System.Drawing.Point(424, 280);
+            this.bunifuRadioButton8.Name = "bunifuRadioButton8";
+            this.bunifuRadioButton8.OutlineColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuRadioButton8.OutlineColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.bunifuRadioButton8.OutlineColorUnchecked = System.Drawing.Color.DarkGray;
+            this.bunifuRadioButton8.RadioColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuRadioButton8.RadioColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.bunifuRadioButton8.Size = new System.Drawing.Size(21, 21);
+            this.bunifuRadioButton8.TabIndex = 40;
+            this.bunifuRadioButton8.Text = null;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label15.ForeColor = System.Drawing.Color.Black;
+            this.label15.Location = new System.Drawing.Point(13, 280);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(354, 19);
+            this.label15.TabIndex = 39;
+            this.label15.Text = "remind me for new project has been created";
             // 
             // UC_NotificationSetting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.bunifuRadioButton7);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.bunifuRadioButton8);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.CmbKeyLanguage);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label9);
@@ -542,5 +625,10 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bunifuButton22;
         private System.Windows.Forms.Label label12;
         private Bunifu.UI.WinForms.BunifuDropdown CmbKeyLanguage;
+        private System.Windows.Forms.Label label13;
+        private Bunifu.UI.WinForms.BunifuRadioButton bunifuRadioButton7;
+        private System.Windows.Forms.Label label14;
+        private Bunifu.UI.WinForms.BunifuRadioButton bunifuRadioButton8;
+        private System.Windows.Forms.Label label15;
     }
 }

@@ -248,6 +248,12 @@
     <Compile Include="UCLogIn.Designer.cs">
       <DependentUpon>UCLogIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_About_setting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_About_setting.Designer.cs">
+      <DependentUpon>UC_About_setting.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_AccountSetting.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -271,6 +277,12 @@
     </Compile>
     <Compile Include="UC_NotificationSetting.Designer.cs">
       <DependentUpon>UC_NotificationSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Privacy_Setting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Privacy_Setting.Designer.cs">
+      <DependentUpon>UC_Privacy_Setting.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_Setting_Generale.cs">
       <SubType>UserControl</SubType>
@@ -327,6 +339,9 @@
     <EmbeddedResource Include="UCLogIn.resx">
       <DependentUpon>UCLogIn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC_About_setting.resx">
+      <DependentUpon>UC_About_setting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_AccountSetting.resx">
       <DependentUpon>UC_AccountSetting.cs</DependentUpon>
     </EmbeddedResource>
@@ -338,6 +353,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_NotificationSetting.resx">
       <DependentUpon>UC_NotificationSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Privacy_Setting.resx">
+      <DependentUpon>UC_Privacy_Setting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Setting_Generale.resx">
       <DependentUpon>UC_Setting_Generale.cs</DependentUpon>

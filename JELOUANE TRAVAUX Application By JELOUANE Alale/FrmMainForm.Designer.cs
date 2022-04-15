@@ -55,6 +55,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.pnlsetting = new System.Windows.Forms.Panel();
+            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.PnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
@@ -275,6 +276,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel2.Controls.Add(this.bunifuLabel1);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.btnProfile);
@@ -380,7 +382,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(133, 36);
             this.button2.TabIndex = 23;
-            this.button2.Text = "Helps";
+            this.button2.Text = "About";
             this.button2.UseVisualStyleBackColor = false;
             // 
             // pnlsetting
@@ -397,6 +399,21 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.pnlsetting.TabIndex = 25;
             this.pnlsetting.Visible = false;
             this.pnlsetting.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlsetting_Paint);
+            // 
+            // bunifuLabel1
+            // 
+            this.bunifuLabel1.AllowParentOverrides = false;
+            this.bunifuLabel1.AutoEllipsis = false;
+            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.bunifuLabel1.Location = new System.Drawing.Point(400, 45);
+            this.bunifuLabel1.Name = "bunifuLabel1";
+            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel1.Size = new System.Drawing.Size(35, 21);
+            this.bunifuLabel1.TabIndex = 26;
+            this.bunifuLabel1.Text = "1.0.0";
+            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // FrmMainForm
             // 
@@ -417,6 +434,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.PnlMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlsetting.ResumeLayout(false);
@@ -450,5 +468,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel pnlsetting;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
     }
 }
