@@ -29,6 +29,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCHome));
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -38,7 +39,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.label5 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
@@ -46,10 +46,10 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.bunifuBarChart1 = new Bunifu.Charts.WinForms.ChartTypes.BunifuBarChart(this.components);
+            this.bunifuChartCanvas1 = new Bunifu.Charts.WinForms.BunifuChartCanvas();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -147,15 +147,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.label9.Text = "Finished";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(this.label6);
-            this.panel5.Location = new System.Drawing.Point(89, 97);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(563, 185);
-            this.panel5.TabIndex = 12;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -236,33 +227,98 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.panel2.Size = new System.Drawing.Size(367, 85);
             this.panel2.TabIndex = 11;
             // 
-            // label6
+            // bunifuBarChart1
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 17F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(44)))), ((int)(((byte)(131)))));
-            this.label6.Location = new System.Drawing.Point(268, 79);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 27);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Char";
+            this.bunifuBarChart1.BackgroundColor = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("bunifuBarChart1.BackgroundColor")));
+            this.bunifuBarChart1.BorderColor = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("bunifuBarChart1.BorderColor")));
+            this.bunifuBarChart1.BorderSkipped = null;
+            this.bunifuBarChart1.BorderWidth = 0;
+            this.bunifuBarChart1.Data = ((System.Collections.Generic.List<double>)(resources.GetObject("bunifuBarChart1.Data")));
+            this.bunifuBarChart1.HoverBackgroundColor = System.Drawing.Color.Empty;
+            this.bunifuBarChart1.HoverBorderColor = System.Drawing.Color.Empty;
+            this.bunifuBarChart1.HoverBorderWidth = 0;
+            this.bunifuBarChart1.Label = "Label here";
+            this.bunifuBarChart1.TargetCanvas = null;
+            // 
+            // bunifuChartCanvas1
+            // 
+            this.bunifuChartCanvas1.AnimationDuration = 100;
+            this.bunifuChartCanvas1.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeInQuad;
+            this.bunifuChartCanvas1.BackColor = System.Drawing.Color.White;
+            this.bunifuChartCanvas1.CanvasPadding = new System.Windows.Forms.Padding(0);
+            this.bunifuChartCanvas1.Labels = new string[] {
+        "Monday",
+        "t",
+        "w",
+        "th",
+        "f",
+        "s",
+        "sa"};
+            this.bunifuChartCanvas1.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.start;
+            this.bunifuChartCanvas1.LegendDisplay = true;
+            this.bunifuChartCanvas1.LegendFont = new System.Drawing.Font("Maiandra GD", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuChartCanvas1.LegendForeColor = System.Drawing.Color.White;
+            this.bunifuChartCanvas1.LegendFullWidth = true;
+            this.bunifuChartCanvas1.LegendPosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.top;
+            this.bunifuChartCanvas1.LegendRevese = false;
+            this.bunifuChartCanvas1.LegendRTL = false;
+            this.bunifuChartCanvas1.Location = new System.Drawing.Point(5, 97);
+            this.bunifuChartCanvas1.Name = "bunifuChartCanvas1";
+            this.bunifuChartCanvas1.ShowXAxis = true;
+            this.bunifuChartCanvas1.ShowYAxis = true;
+            this.bunifuChartCanvas1.Size = new System.Drawing.Size(457, 182);
+            this.bunifuChartCanvas1.TabIndex = 0;
+            this.bunifuChartCanvas1.Title = "";
+            this.bunifuChartCanvas1.TitleLineHeight = 1.2D;
+            this.bunifuChartCanvas1.TitlePadding = 10;
+            this.bunifuChartCanvas1.TitlePosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.top;
+            this.bunifuChartCanvas1.TooltipBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.bunifuChartCanvas1.TooltipFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.bunifuChartCanvas1.TooltipForeColor = System.Drawing.Color.WhiteSmoke;
+            this.bunifuChartCanvas1.TooltipMode = Bunifu.Charts.WinForms.BunifuChartCanvas.TooltipModeOptions.nearest;
+            this.bunifuChartCanvas1.TooltipsEnabled = true;
+            this.bunifuChartCanvas1.XAxesBeginAtZero = true;
+            this.bunifuChartCanvas1.XAxesDrawTicks = true;
+            this.bunifuChartCanvas1.XAxesFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.bunifuChartCanvas1.XAxesForeColor = System.Drawing.SystemColors.ControlText;
+            this.bunifuChartCanvas1.XAxesGridColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.bunifuChartCanvas1.XAxesGridLines = true;
+            this.bunifuChartCanvas1.XAxesLabel = "";
+            this.bunifuChartCanvas1.XAxesLabelFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.bunifuChartCanvas1.XAxesLabelForeColor = System.Drawing.SystemColors.ControlText;
+            this.bunifuChartCanvas1.XAxesLineWidth = 1;
+            this.bunifuChartCanvas1.XAxesStacked = false;
+            this.bunifuChartCanvas1.XAxesZeroLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.bunifuChartCanvas1.XAxesZeroLineWidth = 1;
+            this.bunifuChartCanvas1.YAxesBeginAtZero = true;
+            this.bunifuChartCanvas1.YAxesDrawTicks = true;
+            this.bunifuChartCanvas1.YAxesFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.bunifuChartCanvas1.YAxesForeColor = System.Drawing.SystemColors.ControlText;
+            this.bunifuChartCanvas1.YAxesGridColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.bunifuChartCanvas1.YAxesGridLines = true;
+            this.bunifuChartCanvas1.YAxesLabel = "";
+            this.bunifuChartCanvas1.YAxesLabelFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.bunifuChartCanvas1.YAxesLabelForeColor = System.Drawing.SystemColors.ControlText;
+            this.bunifuChartCanvas1.YAxesLineWidth = 1;
+            this.bunifuChartCanvas1.YAxesStacked = false;
+            this.bunifuChartCanvas1.YAxesZeroLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.bunifuChartCanvas1.YAxesZeroLineWidth = 1;
             // 
             // UCHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Controls.Add(this.bunifuChartCanvas1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel7);
             this.Name = "UCHome";
             this.Size = new System.Drawing.Size(723, 387);
+            this.Load += new System.EventHandler(this.UCHome_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -282,7 +338,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -291,6 +346,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label6;
+        private Bunifu.Charts.WinForms.ChartTypes.BunifuBarChart bunifuBarChart1;
+        private Bunifu.Charts.WinForms.BunifuChartCanvas bunifuChartCanvas1;
     }
 }

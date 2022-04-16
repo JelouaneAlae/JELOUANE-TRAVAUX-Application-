@@ -16,6 +16,15 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         UC_Workshop UCWS = new UC_Workshop();
         UC_Equipements UCE = new UC_Equipements();
         JELOUANE_TRAVAUXEntities2 db = new JELOUANE_TRAVAUXEntities2();
+
+        UC_Setting_Generale UCGS = new UC_Setting_Generale();
+        UC_AccountSetting UCAS = new UC_AccountSetting();
+        UC_NotificationSetting UCNS = new UC_NotificationSetting();
+        UC_Privacy_Setting UCPS = new UC_Privacy_Setting();
+        UC_About_setting UCASs = new UC_About_setting();
+        UC_Support UCS = new UC_Support();
+
+
         ClsEmail clsmail = new ClsEmail();
 
         public FrmMainForm()
@@ -42,13 +51,9 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         {
             pnlsetting.Visible = false;
             PnlverticalMenu("pnlverticalhome");
-
             UC_controle("Home");
-
-
-            //UCHome UCH = new UCHome();
-            //this.Controls.Add(UCH);
-            //UCH.Location = new Point(193, 104);
+            this.Controls.Remove(UCGS);
+            pnlHead.Size = new Size(734, 85);
         }
         public void PnlverticalMenu(string name)
         {
@@ -110,8 +115,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         private void FrmMainForm_Load(object sender, EventArgs e)
         {
             FrmLogin frml = new FrmLogin();
-            //panelProfile.Visible = false;
-
             frml.Visible = false;
             PnlverticalMenu("pnlverticalhome");
             UC_controle("Home");    
@@ -137,8 +140,8 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             PnlverticalMenu("pnlverticalworkshop");
             pnlsetting.Visible = false;
             UC_controle("Workshop");
-
-
+            this.Controls.Remove(UCGS);
+            pnlHead.Size = new Size(734, 88);
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -146,21 +149,26 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             PnlverticalMenu("pnlverticalEquipment");
             UC_controle("Equipements");
             pnlsetting.Visible = false;
+            this.Controls.Remove(UCGS);
+            pnlHead.Size = new Size(734, 85);
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
             PnlverticalMenu("pnlverticalSupport");
             pnlsetting.Visible = false;
+            this.Controls.Remove(UCGS);
+            pnlHead.Size = new Size(734, 85);
+            UC_controle("Support");
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
             PnlverticalMenu("pnlverticalSetting");
             UC_controle("Setting");
-
-                pnlsetting.Visible = true;
-
+            UC_seeting_Control("Generale");
+            pnlsetting.Visible = true;
+            pnlHead.Size = new Size(734, 103);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -190,6 +198,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             {
                 case "Home":
                     this.Controls.Remove(UCE);
+                    this.Controls.Remove(UCS);
                     this.Controls.Remove(UCWS);
                     this.Controls.Add(UCH);
                     UCH.Location = new Point(199, 97);
@@ -197,26 +206,33 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
                 case "Workshop":
                     this.Controls.Remove(UCE);
-
+                    this.Controls.Remove(UCS);
                     this.Controls.Remove(UCH);
                     this.Controls.Add(UCWS);
-                    UCWS.Location = new Point(199, 97);
+                    UCWS.Location = new Point(199, 105);
                     break;
 
                 case "Equipements":
                     this.Controls.Remove(UCWS);
-
+                    this.Controls.Remove(UCS);
                     this.Controls.Remove(UCH);
                     this.Controls.Add(UCE);
-                    UCE.Location = new Point(199, 97);
+                    UCE.Location = new Point(199, 102);
                     break;
 
                 case "Setting":
                     this.Controls.Remove(UCWS);
                     this.Controls.Remove(UCH);
                     this.Controls.Remove(UCE);
-                    //this.Controls.Add(UCS);
-                    //UCS.Location = new Point(199, 97);
+                    this.Controls.Remove(UCS);
+                    break;
+
+                case "Support":
+                    this.Controls.Remove(UCWS);
+                    this.Controls.Remove(UCH);
+                    this.Controls.Remove(UCE);
+                    this.Controls.Add(UCS);
+                    UCS.Location = new Point(199, 102);
                     break;
             }
 
@@ -266,28 +282,88 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
         private void button12_Click(object sender, EventArgs e)
         {
-            UC_Setting_Generale UCSG = new UC_Setting_Generale();
-            this.Controls.Add(UCSG);
-            UCSG.Location = new Point(359, 120);
+            this.Controls.Remove(UCAS);
+            this.Controls.Remove(UCASs);
+            this.Controls.Remove(UCNS);
+            this.Controls.Remove(UCPS);
+            UC_seeting_Control("Generale");
+
+        }
+
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            this.Controls.Remove(UCASs);
+            this.Controls.Remove(UCNS);
+            this.Controls.Remove(UCPS);
+            this.Controls.Remove(UCGS);
+            UC_seeting_Control("Account");
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            this.Controls.Remove(UCAS);
+            this.Controls.Remove(UCASs);
+            this.Controls.Remove(UCPS);
+            this.Controls.Remove(UCGS);
+            UC_seeting_Control("Notification");
+        }
+
+        public void UC_seeting_Control(string name)
+        {
+
+
+            switch (name)
+            {
+                case "Generale":
+                    this.Controls.Add(UCGS);
+                    UCGS.Location = new Point(359, 120);
+                    break;
+
+                case "Account":
+                    this.Controls.Add(UCAS);
+                    UCAS.Location = new Point(359, 120);
+                    break;
+
+                case "Notification":
+                    this.Controls.Add(UCNS);
+                    UCNS.Location = new Point(359, 120);
+                    break;
+
+                case "Security":
+                    this.Controls.Add(UCPS);
+                    UCPS.Location = new Point(359, 120);
+                    break;
+
+                case "About":
+                    this.Controls.Add(UCASs);
+                    UCASs.Location = new Point(359, 120);
+                    break;
+            }
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Controls.Remove(UCAS);
+            this.Controls.Remove(UCASs);
+            this.Controls.Remove(UCNS);
+            this.Controls.Remove(UCGS);
+            UC_seeting_Control("Security");
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            this.Controls.Remove(UCAS);
+            this.Controls.Remove(UCNS);
+            this.Controls.Remove(UCPS);
+            this.Controls.Remove(UCGS);
+            UC_seeting_Control("About");
         }
 
         private void pnlsetting_Paint(object sender, PaintEventArgs e)
         {
 
-        }
-
-        private void button11_Click(object sender, EventArgs e)
-        {
-            UC_AccountSetting UCAS = new UC_AccountSetting();
-            this.Controls.Add(UCAS);
-            UCAS.Location = new Point(359, 120);
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-            UC_NotificationSetting UCNS = new UC_NotificationSetting();
-            this.Controls.Add(UCNS);
-            UCNS.Location = new Point(359, 120);
         }
     }
 }

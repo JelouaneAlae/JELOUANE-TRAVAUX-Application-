@@ -56,5 +56,10 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         {
 
         }
+
+        private void UCHome_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

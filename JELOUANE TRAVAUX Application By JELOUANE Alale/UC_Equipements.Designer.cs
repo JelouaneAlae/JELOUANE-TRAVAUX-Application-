@@ -67,7 +67,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             // dgvEqupmenet
             // 
             this.dgvEqupmenet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEqupmenet.Location = new System.Drawing.Point(12, 70);
+            this.dgvEqupmenet.Location = new System.Drawing.Point(12, 63);
             this.dgvEqupmenet.Name = "dgvEqupmenet";
             this.dgvEqupmenet.Size = new System.Drawing.Size(698, 260);
             this.dgvEqupmenet.TabIndex = 19;
@@ -138,7 +138,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.btnDeleteEquipment.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteEquipment.ForeColor = System.Drawing.Color.White;
             this.btnDeleteEquipment.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteEquipment.Image")));
-            this.btnDeleteEquipment.Location = new System.Drawing.Point(673, 336);
+            this.btnDeleteEquipment.Location = new System.Drawing.Point(673, 331);
             this.btnDeleteEquipment.Name = "btnDeleteEquipment";
             this.btnDeleteEquipment.Size = new System.Drawing.Size(40, 37);
             this.btnDeleteEquipment.TabIndex = 24;
@@ -153,7 +153,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.btnEditEquipment.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditEquipment.ForeColor = System.Drawing.Color.White;
             this.btnEditEquipment.Image = ((System.Drawing.Image)(resources.GetObject("btnEditEquipment.Image")));
-            this.btnEditEquipment.Location = new System.Drawing.Point(627, 336);
+            this.btnEditEquipment.Location = new System.Drawing.Point(627, 331);
             this.btnEditEquipment.Name = "btnEditEquipment";
             this.btnEditEquipment.Size = new System.Drawing.Size(40, 37);
             this.btnEditEquipment.TabIndex = 25;
@@ -168,7 +168,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.btnAddEqupment.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddEqupment.ForeColor = System.Drawing.Color.White;
             this.btnAddEqupment.Image = ((System.Drawing.Image)(resources.GetObject("btnAddEqupment.Image")));
-            this.btnAddEqupment.Location = new System.Drawing.Point(581, 336);
+            this.btnAddEqupment.Location = new System.Drawing.Point(581, 331);
             this.btnAddEqupment.Name = "btnAddEqupment";
             this.btnAddEqupment.Size = new System.Drawing.Size(40, 37);
             this.btnAddEqupment.TabIndex = 26;
@@ -219,7 +219,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.btnRefresh.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.ForeColor = System.Drawing.Color.White;
             this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
-            this.btnRefresh.Location = new System.Drawing.Point(535, 333);
+            this.btnRefresh.Location = new System.Drawing.Point(535, 329);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(40, 43);
             this.btnRefresh.TabIndex = 44;
@@ -247,7 +247,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.Controls.Add(this.dgvEqupmenet);
             this.Controls.Add(this.label1);
             this.Name = "UC_Equipements";
-            this.Size = new System.Drawing.Size(723, 382);
+            this.Size = new System.Drawing.Size(723, 376);
             this.Load += new System.EventHandler(this.UC_Equipements_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEqupmenet)).EndInit();
             this.panel2.ResumeLayout(false);
