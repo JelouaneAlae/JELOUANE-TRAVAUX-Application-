@@ -10,12 +10,35 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
     {
         static string email;
         static int idEquipment;
+        static int ID_CLIENT;
+        static int ID_PROJECT;
+        static string Name_client;
+        static string Prenom_Client;
+        static string Project_name;
+
+        static DateTime Project_Starting_date;
+
+        static int ID_salle;
+        static string Nom_salle;
+
 
         public  ClsEmail() { }
 
+        public static string project_name { get => Project_name; set => Project_name = value; }
         public static int IdEquipment { get => idEquipment; set => idEquipment = value; }
 
+        public static int ID_CLIENt { get => ID_CLIENT; set => ID_CLIENT = value; }
+        public static string prenom_Client { get => Prenom_Client; set => Prenom_Client = value; }
+
+        public static string Name_Client { get => Name_client; set => Name_client = value; }
+        public static int ID_PROJECt { get => ID_PROJECT; set => ID_PROJECT = value; }
+
         public string Email { get => email; set => email = value; }
+
+        public static string nom_salle { get => Nom_salle; set => Nom_salle = value; }
+        public static int iD_salle { get => ID_salle; set => ID_salle = value; }
+
+        public static DateTime project_Starting_date { get => Project_Starting_date; set => Project_Starting_date = value; }
 
     }
 }

@@ -13,7 +13,8 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
     public partial class UCLogIn : UserControl
     {
         int F = 0;
-        JELOUANE_TRAVAUXEntities2 db = new JELOUANE_TRAVAUXEntities2();
+        //JELOUANE_TRAVAUXEntities4 db = new JELOUANE_TRAVAUXEntities4();
+        JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
         ClsEmail clsemail = new ClsEmail();
         public UCLogIn()
         {
@@ -22,12 +23,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
         private void btnForgetPass_Click(object sender, EventArgs e)
         {
-            //UCLogIn UCL = new UCLogIn();
-            //this.Controls.Remove(UCL);
-            //UCForgetPassword UCFP = new UCForgetPassword();
-            //this.Controls.Add(UCFP);
-            ////UCFP.Dock = DockStyle.Fill;
-            //UCFP.Location = new Point(0, 167);
+
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

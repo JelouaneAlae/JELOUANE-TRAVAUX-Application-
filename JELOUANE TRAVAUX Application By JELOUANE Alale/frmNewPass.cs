@@ -12,7 +12,8 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 {
     public partial class frmNewPass : Form
     {
-        JELOUANE_TRAVAUXEntities2 db = new JELOUANE_TRAVAUXEntities2();
+        //JELOUANE_TRAVAUXEntities4 db = new JELOUANE_TRAVAUXEntities4();
+        JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
         ClsEmail clsemail = new ClsEmail();
         public frmNewPass()
         {

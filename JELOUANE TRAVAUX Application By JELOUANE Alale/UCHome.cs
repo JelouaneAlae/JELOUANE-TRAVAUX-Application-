@@ -59,7 +59,33 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
         private void UCHome_Load(object sender, EventArgs e)
         {
-            
+            JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
+            lblOrder.Text = db.projets.ToList<projet>().Count.ToString();
+            int cptNotNull = 0;
+            int cptNull = 0;
+            for (int i =0;i < db.projets.ToList<projet>().Count; i++)
+            {
+                if (db.projets.ToList<projet>()[i].DateFin_Projet != null)
+                {
+                    cptNotNull++;
+                }
+            }
+            lblWorkshopFinished.Text = cptNotNull.ToString();
+
+            for (int i = 0; i < db.projets.ToList<projet>().Count; i++)
+            {
+                if (db.projets.ToList<projet>()[i].DateFin_Projet == null)
+                {
+                    cptNull++;
+                }
+            }
+            lblWorshopNotfinished.Text = cptNull.ToString();
+
+        }
+
+        private void bunifuChartCanvas1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

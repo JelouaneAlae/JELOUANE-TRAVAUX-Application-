@@ -8,15 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.IO;
+using System.Configuration;
 
 namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 {
     public partial class UC_Equipements : UserControl
     {
-        JELOUANE_TRAVAUXEntities2 db = new JELOUANE_TRAVAUXEntities2();
+        //JELOUANE_TRAVAUXEntities4 db = new JELOUANE_TRAVAUXEntities4();
+        JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
         int IDE;
         string NameE;
         string indexdatagv;
+        SqlConnection cn = new SqlConnection("Data Source=DESKTOP-3PA9N2V;Initial Catalog=JELOUANE_TRAVAUX;Integrated Security=True");
+        DataSet ds;
         public UC_Equipements()
         {
             InitializeComponent();
@@ -30,16 +35,14 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
         private void UC_Equipements_Load(object sender, EventArgs e)
         {
-            //JELOUANE_TRAVAUXEntities2 db1 = new JELOUANE_TRAVAUXEntities2();
-            //dgvEqupmenet.DataSource = db1.Materiels.ToList<Materiel>();
+            //JELOUANE_TRAVAUXEntities4 db = new JELOUANE_TRAVAUXEntities4();
+            JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
+            dgvEqupmenet.DataSource = db.Materiels.ToList<Materiel>();
         }
 
         private void dgvEqupmenet_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            indexdatagv = e.ToString();
-            IDE = int.Parse(dgvEqupmenet.CurrentRow.Cells[0].Value.ToString());
-            ClsEmail.IdEquipment = IDE;
-            NameE = dgvEqupmenet.CurrentRow.Cells[1].Value.ToString();
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -67,9 +70,10 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
         private void button7_Click(object sender, EventArgs e)
         {
-            JELOUANE_TRAVAUXEntities2 db2 = new JELOUANE_TRAVAUXEntities2();
+            //JELOUANE_TRAVAUXEntities4 db = new JELOUANE_TRAVAUXEntities4();
+            JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
             dgvEqupmenet.DataSource = null;
-            dgvEqupmenet.DataSource = db2.Materiels.ToList<Materiel>();
+            dgvEqupmenet.DataSource = db.Materiels.ToList<Materiel>();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -172,32 +176,53 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            dgvEqupmenet.DataSource = null;
-            //Materiel mt = new Materiel();
-            //mt = db.Materiels.Where(x => x.Nom_Materiel == txtSrearchEq.Text).First();
-            //if (mt == null)
-            //{
-            //    MessageBox.Show("matereil not found");
-            //}
-            //else
-            //{
-            //    DataSet ds = new DataSet();
-            //    ds.Tables.Add("resultSearsh");
-            //    ds.Tables[0].Columns.Add("ID");
-            //    ds.Tables[0].Columns.Add("Name");
-            //    ds.Tables[0].Columns.Add("fondateur");
-            //    ds.Tables[0].Columns.Add("Price");
-            //    ds.Tables[0].Columns.Add("picture");
-            //    ds.Tables[0].Columns.Add("Color");
-            //    ds.Tables[0].Columns.Add("genre");
-            //    ds.Tables[0].Columns.Add("Quantity");
-            //    ds.Tables[0].Rows.Add(mt.Id_Materiel, mt.Nom_Materiel, mt.Fondateur_Materiel, 
-            //        mt.Price_materiel, mt.Photo_Materiel, mt.Color_Materiel, mt.Genre_Materiel, mt.Quantity_Materiel);
+            //dgvEqupmenet.DataSource = null;
 
-            //    dgvEqupmenet.DataSource = ds.Tables[0];
-            //}
+        }
 
+        private void dgvEqupmenet_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            indexdatagv = e.ToString();
+            IDE = int.Parse(dgvEqupmenet.CurrentRow.Cells[0].Value.ToString());
+            ClsEmail.IdEquipment = IDE;
+            NameE = dgvEqupmenet.CurrentRow.Cells[1].Value.ToString();
+        }
 
+        private void txtSrearchEq_KeyUp(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            //JELOUANE_TRAVAUXEntities4 db = new JELOUANE_TRAVAUXEntities4();
+            JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
+            dgvEqupmenet.DataSource = db.Materiels.ToList<Materiel>();
+            DataTable dt = new DataTable("M");
+
+            for (int i = 0; i < dgvEqupmenet.Rows.Count; i++)
+            {
+                if (dgvEqupmenet.Rows[i].Cells[1].Value.ToString() == txtSrearchEq.Text)
+                {
+                    dt.Columns.Add("ID");
+                    dt.Columns.Add("Name");
+                    dt.Columns.Add("Picture");
+                    dt.Columns.Add("Color");
+                    dt.Columns.Add("Genre");
+                    dt.Columns.Add("Fondation");
+                    dt.Columns.Add("Quantity");
+                    dt.Columns.Add("Price");
+
+                    byte[] tabimg = (byte[])dgvEqupmenet.Rows[i].Cells[2].Value;
+
+                    MemoryStream ms = new MemoryStream(tabimg);
+                    dt.Rows.Add(dgvEqupmenet.Rows[i].Cells[0].Value, dgvEqupmenet.Rows[i].Cells[1].Value, Image.FromStream(ms),
+                        dgvEqupmenet.Rows[i].Cells[3].Value, dgvEqupmenet.Rows[i].Cells[4].Value, dgvEqupmenet.Rows[i].Cells[5].Value,
+                        dgvEqupmenet.Rows[i].Cells[6].Value, dgvEqupmenet.Rows[i].Cells[7].Value);
+                    
+                }
+            }
+            dgvEqupmenet.DataSource = dt;
 
         }
     }

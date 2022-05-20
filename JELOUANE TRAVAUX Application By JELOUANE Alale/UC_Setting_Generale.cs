@@ -28,5 +28,10 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             CmbKeyLanguage.Items.Add("Español");
             CmbKeyLanguage.Items.Add("Deutsch");
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

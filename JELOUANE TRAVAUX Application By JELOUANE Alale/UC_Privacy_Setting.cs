@@ -16,5 +16,15 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         {
             InitializeComponent();
         }
+
+        private void lblName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

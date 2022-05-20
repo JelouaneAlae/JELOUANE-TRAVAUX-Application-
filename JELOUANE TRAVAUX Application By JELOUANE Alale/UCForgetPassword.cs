@@ -20,7 +20,8 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         int F;
         int partCode1;
         int PartCode2;
-        JELOUANE_TRAVAUXEntities2 db = new JELOUANE_TRAVAUXEntities2();
+        //JELOUANE_TRAVAUXEntities4 db = new JELOUANE_TRAVAUXEntities4();
+        JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
         string codemail;
         ClsEmail clsemail = new ClsEmail();
         public UCForgetPassword()

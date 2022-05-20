@@ -15,13 +15,15 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         UCHome UCH = new UCHome();
         UC_Workshop UCWS = new UC_Workshop();
         UC_Equipements UCE = new UC_Equipements();
-        JELOUANE_TRAVAUXEntities2 db = new JELOUANE_TRAVAUXEntities2();
+        //JELOUANE_TRAVAUXEntities4 db = new JELOUANE_TRAVAUXEntities4();
+        JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
 
         UC_Setting_Generale UCGS = new UC_Setting_Generale();
         UC_AccountSetting UCAS = new UC_AccountSetting();
         UC_NotificationSetting UCNS = new UC_NotificationSetting();
         UC_Privacy_Setting UCPS = new UC_Privacy_Setting();
         UC_About_setting UCASs = new UC_About_setting();
+
         UC_Support UCS = new UC_Support();
 
 
@@ -47,6 +49,14 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             Application.Exit();
         }
 
+        public void removeSettingUC()
+        {
+            this.Controls.Remove(UCGS);
+            this.Controls.Remove(UCAS);
+            this.Controls.Remove(UCNS);
+            this.Controls.Remove(UCPS);
+            this.Controls.Remove(UCASs);
+        }
         private void button6_Click(object sender, EventArgs e)
         {
             pnlsetting.Visible = false;
@@ -54,6 +64,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             UC_controle("Home");
             this.Controls.Remove(UCGS);
             pnlHead.Size = new Size(734, 85);
+            removeSettingUC();
         }
         public void PnlverticalMenu(string name)
         {
@@ -142,6 +153,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             UC_controle("Workshop");
             this.Controls.Remove(UCGS);
             pnlHead.Size = new Size(734, 88);
+            removeSettingUC();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -151,6 +163,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             pnlsetting.Visible = false;
             this.Controls.Remove(UCGS);
             pnlHead.Size = new Size(734, 85);
+            removeSettingUC();
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -160,6 +173,8 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.Controls.Remove(UCGS);
             pnlHead.Size = new Size(734, 85);
             UC_controle("Support");
+
+            removeSettingUC();
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -169,25 +184,13 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             UC_seeting_Control("Generale");
             pnlsetting.Visible = true;
             pnlHead.Size = new Size(734, 103);
+            removeSettingUC();
+            UC_seeting_Control("Generale");
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //if(PnlMenu.Size == new Size(193, 498))
-            //{
-            //    PnlMenu.Size = new Size(45, 540);
-            //    btnoff.Location = new Point(833, 3);
-            //    btnProfile.Location = new Point(781, 3);
-            //    BtnInbox.Location = new Point(729 ,3);
 
-            //}
-            //else
-            //{
-            //    PnlMenu.Size = new Size(193, 498);
-            //    btnoff.Location = new Point(685, 3);
-            //    btnProfile.Location = new Point(633, 3);
-            //    BtnInbox.Location = new Point(581, 3);
-            //}
         }
 
         public void UC_controle(string name)
@@ -255,19 +258,8 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
-            //UC_Profile UCP = new UC_Profile();
-            //this.Controls.Add(UCP);
-            //UCP.Location = new Point(790, 77);
-            //if (panelProfile.Visible == false)
-            //{
-            //    panelProfile.Visible = true;
-            //}
-            //else
-            //{
-            //    panelProfile.Visible = false;
-            //}
-            
-
+            btnSetting.PerformClick();
+            btnAccountSetting.PerformClick();
         }
 
         private void label2_Click(object sender, EventArgs e)

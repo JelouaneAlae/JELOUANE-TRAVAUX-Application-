@@ -147,12 +147,18 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="Krypton, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <HintPath>..\packages\Krypton.2.0.0.0\lib\net40-Client\Krypton.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -168,6 +174,12 @@
       <DependentUpon>Model2.tt</DependentUpon>
     </Compile>
     <Compile Include="ClsEmail.cs" />
+    <Compile Include="FormNewWorkShop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNewWorkShop.Designer.cs">
+      <DependentUpon>FormNewWorkShop.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmEditEqupement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,6 +215,24 @@
     </Compile>
     <Compile Include="frmSignIn.Designer.cs">
       <DependentUpon>frmSignIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWalls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWalls.Designer.cs">
+      <DependentUpon>frmWalls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmworkshopHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmworkshopHistory.Designer.cs">
+      <DependentUpon>frmworkshopHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewWorkshop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewWorkshop.Designer.cs">
+      <DependentUpon>frmNewWorkshop.cs</DependentUpon>
     </Compile>
     <Compile Include="Materiel.cs">
       <DependentUpon>Model2.tt</DependentUpon>
@@ -269,12 +299,6 @@
     <Compile Include="UC_Equipements.Designer.cs">
       <DependentUpon>UC_Equipements.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_general_setting.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC_general_setting.Designer.cs">
-      <DependentUpon>UC_general_setting.cs</DependentUpon>
-    </Compile>
     <Compile Include="UC_NotificationSetting.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -305,12 +329,45 @@
     <Compile Include="UC_Workshop.Designer.cs">
       <DependentUpon>UC_Workshop.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_WorkshopNewClient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_WorkshopNewClient.Designer.cs">
+      <DependentUpon>UC_WorkshopNewClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Workshop_New_Material.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Workshop_New_Material.Designer.cs">
+      <DependentUpon>UC_Workshop_New_Material.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Workshop_New_Project.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Workshop_New_Project.Designer.cs">
+      <DependentUpon>UC_Workshop_New_Project.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Workshop_New_Room.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Workshop_New_Room.Designer.cs">
+      <DependentUpon>UC_Workshop_New_Room.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Workshop_New_Wall.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Workshop_New_Wall.Designer.cs">
+      <DependentUpon>UC_Workshop_New_Wall.cs</DependentUpon>
+    </Compile>
     <Compile Include="utilisateur.cs">
       <DependentUpon>Model2.tt</DependentUpon>
     </Compile>
     <Compile Include="Utiliser.cs">
       <DependentUpon>Model2.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormNewWorkShop.resx">
+      <DependentUpon>FormNewWorkShop.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmEditEqupement.resx">
       <DependentUpon>FrmEditEqupement.cs</DependentUpon>
     </EmbeddedResource>
@@ -328,6 +385,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSignIn.resx">
       <DependentUpon>frmSignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewWorkshop.resx">
+      <DependentUpon>frmNewWorkshop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWalls.resx">
+      <DependentUpon>frmWalls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmworkshopHistory.resx">
+      <DependentUpon>frmworkshopHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -357,9 +423,6 @@
     <EmbeddedResource Include="UC_Equipements.resx">
       <DependentUpon>UC_Equipements.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_general_setting.resx">
-      <DependentUpon>UC_general_setting.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UC_NotificationSetting.resx">
       <DependentUpon>UC_NotificationSetting.cs</DependentUpon>
     </EmbeddedResource>
@@ -374,6 +437,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Workshop.resx">
       <DependentUpon>UC_Workshop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_WorkshopNewClient.resx">
+      <DependentUpon>UC_WorkshopNewClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Workshop_New_Material.resx">
+      <DependentUpon>UC_Workshop_New_Material.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Workshop_New_Project.resx">
+      <DependentUpon>UC_Workshop_New_Project.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Workshop_New_Room.resx">
+      <DependentUpon>UC_Workshop_New_Room.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Workshop_New_Wall.resx">
+      <DependentUpon>UC_Workshop_New_Wall.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Model2.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

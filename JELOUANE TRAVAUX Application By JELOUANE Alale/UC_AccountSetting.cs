@@ -21,5 +21,18 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         {
 
         }
+
+        private void bunifuButton21_Click(object sender, EventArgs e)
+        {
+            var form = Form.ActiveForm as FrmMainForm;
+            if (form != null)
+            {
+                var form1 = new FrmLogin();
+                form.Hide();
+                form1.Closed += (s, args) => form.Close();
+                form1.Show();
+
+            }
+        }
     }
 }

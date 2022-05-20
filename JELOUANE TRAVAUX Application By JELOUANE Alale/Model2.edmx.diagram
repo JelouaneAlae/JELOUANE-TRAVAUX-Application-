@@ -4,19 +4,19 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="02cfe34d57ae4176abef4aeeaf1c3281" Name="Diagram1">
-        <EntityTypeShape EntityType="JELOUANE_TRAVAUXModel1.Client" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="JELOUANE_TRAVAUXModel1.Materiel" Width="1.5" PointX="3" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="JELOUANE_TRAVAUXModel1.Mur" Width="1.5" PointX="7.5" PointY="3.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="JELOUANE_TRAVAUXModel1.projet" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="JELOUANE_TRAVAUXModel1.Salle" Width="1.5" PointX="5.25" PointY="3.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="JELOUANE_TRAVAUXModel1.utilisateur" Width="1.5" PointX="5.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="JELOUANE_TRAVAUXModel1.Utiliser" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
-        <AssociationConnector Association="JELOUANE_TRAVAUXModel1.FK__projet__ID_Clien__3E52440B" ManuallyRouted="false" />
-        <AssociationConnector Association="JELOUANE_TRAVAUXModel1.FK__Utiliser__Id_Mat__412EB0B6" ManuallyRouted="false" />
-        <AssociationConnector Association="JELOUANE_TRAVAUXModel1.FK__Mur__Id_Salle__47DBAE45" ManuallyRouted="false" />
-        <AssociationConnector Association="JELOUANE_TRAVAUXModel1.FK__Salle__ID_Projet__44FF419A" ManuallyRouted="false" />
-        <AssociationConnector Association="JELOUANE_TRAVAUXModel1.FK__Utiliser__ID_Pro__4222D4EF" ManuallyRouted="false" />
+      <Diagram DiagramId="f1c491de43864cd79024fb648c54c74d" Name="Diagram1">
+        <EntityTypeShape EntityType="JELOUANE_TRAVAUX2Model.Client" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JELOUANE_TRAVAUX2Model.Materiel" Width="1.5" PointX="3" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="JELOUANE_TRAVAUX2Model.Mur" Width="1.5" PointX="7.5" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="JELOUANE_TRAVAUX2Model.projet" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="JELOUANE_TRAVAUX2Model.Salle" Width="1.5" PointX="5.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="JELOUANE_TRAVAUX2Model.utilisateur" Width="1.5" PointX="5.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JELOUANE_TRAVAUX2Model.Utiliser" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="JELOUANE_TRAVAUX2Model.FK__projet__ID_Clien__32E0915F" ManuallyRouted="false" />
+        <AssociationConnector Association="JELOUANE_TRAVAUX2Model.FK__Utiliser__Id_Mat__34C8D9D1" ManuallyRouted="false" />
+        <AssociationConnector Association="JELOUANE_TRAVAUX2Model.FK__Mur__Id_Salle__31EC6D26" ManuallyRouted="false" />
+        <AssociationConnector Association="JELOUANE_TRAVAUX2Model.FK__Salle__ID_Projet__33D4B598" ManuallyRouted="false" />
+        <AssociationConnector Association="JELOUANE_TRAVAUX2Model.FK__Utiliser__ID_Pro__35BCFE0A" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
