@@ -74,12 +74,12 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         {
             try
             {
-                if (string.IsNullOrEmpty(txtID.Text))
-                {
-                    MessageBox.Show("The ID can't be empty");
-                }
-                else
-                {
+                //if (string.IsNullOrEmpty(txtID.Text))
+                //{
+                //    MessageBox.Show("The ID can't be empty");
+                //}
+                //else
+                //{
                     if (string.IsNullOrEmpty(txtnameM.Text))
                     {
                         MessageBox.Show("The Name can't be empty");
@@ -108,7 +108,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
                                     Materiel MT = new Materiel();
                                     MT.Nom_Materiel = txtnameM.Text;
                                     MT.Fondateur_Materiel = txtProducer.Text;
-                                    MT.Id_Materiel = int.Parse(txtID.Text);
+                                    //MT.Id_Materiel = int.Parse(txtID.Text);
                                     MT.Color_Materiel = cmbColor.Text;
                                     MT.Price_materiel = int.Parse(txtPrice.Text);
                                     MT.Quantity_Materiel = int.Parse(cmbQuantity.Text);
@@ -131,7 +131,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
                             }
                         }
                     }
-                }
+                //}
             }
             catch (Exception ex)
             {
