@@ -69,6 +69,8 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         private void dgvExistingProject_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             lblProjectName.Text = dgvExistingProject.CurrentRow.Cells[1].Value.ToString();
+
+            ClsEmail.ID_PROJECt = int.Parse(dgvExistingProject.CurrentRow.Cells[0].Value.ToString());
         }
 
         private void bunifuButton21_Click(object sender, EventArgs e)

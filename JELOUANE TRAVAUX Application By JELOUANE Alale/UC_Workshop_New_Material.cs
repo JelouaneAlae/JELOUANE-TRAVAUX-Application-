@@ -69,7 +69,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
         private void dgvMatreial_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            index = e.RowIndex;
+            lblmaterialname.Text = dgvMatreial.CurrentRow.Cells[1].Value.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -80,31 +80,26 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
         private void btnadd_Click(object sender, EventArgs e)
         {
-            //if (string.IsNullOrEmpty(txtQte.Text))
-            //{
-            //    MessageBox.Show("Qte can't be empty", "ERROR");
-            //}
-            //else
-            //{
-            //    JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
 
-            //    Utiliser U = new Utiliser();
-            //    U.ID_Projet = ClsEmail.ID_PROJECt;
-            //    U.Quantite_Utiliser = int.Parse(txtQte.Text);
-
-            //    int materialprice = int.Parse(dgvMatreial.CurrentRow.Cells[3].Value.ToString());
-            //    U.PrixQuantite = int.Parse(txtQte.Text) * materialprice;
-            //    db.Utilisers.Add(U);
-            //    db.SaveChanges();
-
-            //    MessageBox.Show("yes");
-            //    Filldgutilisateur();
-            //}
         }
 
         private void btnDeleteEquipment_Click(object sender, EventArgs e)
         {
+            JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
 
+            int id = int.Parse(dgvMatreial.CurrentRow.Cells[0].Value.ToString());
+            var itemsDeleted = db.Utilisers.Where(o=> o.ID_Projet== ClsEmail.ID_PROJECt && o.Id_Materiel == id).ToList();
+            if (itemsDeleted != null)
+            {
+                db.Utilisers.Remove(itemsDeleted[0]);
+                db.SaveChanges();
+                MessageBox.Show("The product successfully deleted ");
+            }
+            else
+            {
+                MessageBox.Show("Please select the product you want to delete");
+            }
+            Filldgutiliser();
         }
 
         private void btnAddEqupment_Click(object sender, EventArgs e)
@@ -116,7 +111,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             }
 
             pnlMaterial.Visible = true;
-            pnlMaterial.Location = new Point(12, 8);
+            pnlMaterial.Location = new Point(12, 20);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -130,32 +125,140 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
         }
 
-        private void lblmaterialname_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtQte_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNameSearch_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtColorSearch_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnNext_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(txtQte.Text))
+                {
+                    MessageBox.Show("Qte can't be empty", "ERROR");
+                }
+                else
+                {
+                    JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
+
+
+                    var exsist = db.Utilisers.Find(int.Parse(dgvMatreial.CurrentRow.Cells[0].Value.ToString()), ClsEmail.ID_PROJECt);
+                    if (exsist != null)
+                    {
+                        MessageBox.Show("This material is already exist please select another one");
+                    }
+                    else
+                    {
+                        Utiliser U = new Utiliser();
+                        U.Id_Materiel = int.Parse(dgvMatreial.CurrentRow.Cells[0].Value.ToString());
+                        U.ID_Projet = ClsEmail.ID_PROJECt;
+                        U.Quantite_Utiliser = int.Parse(txtQte.Text);
+
+                        int materialprice = int.Parse(dgvMatreial.CurrentRow.Cells[3].Value.ToString());
+                        U.PrixQuantite = int.Parse(txtQte.Text) * materialprice;
+                        db.Utilisers.Add(U);
+                        db.SaveChanges();
+
+                        MessageBox.Show("The Product successfully Added");
+                        Filldgutiliser();
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnLiquid_Click(object sender, EventArgs e)
+        {
+            //JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
+            //if (btnLiquid.BackColor == Color.White)
+            //{
+            //    btnLiquid.BackColor = Color.Pink;
+            //}
+            //else
+            //{
+            //    btnLiquid.BackColor = Color.White;
+            //}
+            //if (btnLiquid.BackColor == Color.Pink)
+            //{
+            //    btnSolid.BackColor = Color.White;
+            //}
+
+
+            //if (btnLiquid.BackColor == Color.Pink)
+            //{
+            //    FilldgvMaterial();
+
+            //    for (int i = 0; i < dgvMatreial.Rows.Count; i++)
+            //    {
+            //        if (dgvMatreial.Rows[i].Cells[6].Value.ToString() == "Solid")
+            //        {
+            //            CurrencyManager currencyManager1 = (CurrencyManager)BindingContext[dgvMatreial.DataSource];
+            //            currencyManager1.SuspendBinding();
+            //            dgvMatreial.Rows[i].Visible = false;
+            //            currencyManager1.ResumeBinding();
+            //        }
+            //    }
+            //}
+            //else
+            //{
+            //    FilldgvMaterial();
+            //}
+        }
+
+        private void btnSolid_Click(object sender, EventArgs e)
+        {
+            //JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
+            //FilldgvMaterial();
+            
+            //if (btnSolid.BackColor == Color.White)
+            //{
+            //    btnSolid.BackColor = Color.Pink;
+            //}
+            //else
+            //{
+            //    btnSolid.BackColor = Color.White;
+            //}
+
+            //if (btnSolid.BackColor == Color.Pink)
+            //{
+            //    btnLiquid.BackColor = Color.White;
+            //}
+
+            //if (btnSolid.BackColor == Color.Pink)
+            //{
+            //    dgvMatreial.DataSource = db.Materiels.ToList<Materiel>();
+            //    for (int i = 0; i < dgvMatreial.Rows.Count; i++)
+            //    {
+            //        if (dgvMatreial.Rows[i].Cells[6].Value.ToString() == "Liquid")
+            //        {
+            //            //CurrencyManager currencyManager1 = (CurrencyManager)BindingContext[FilldgvMaterial()];
+            //            //currencyManager1.SuspendBinding();
+            //            dgvMatreial.Rows[i].Visible = false;
+            //            //currencyManager1.ResumeBinding();
+            //        }
+            //    }
+            //}
+            //else
+            //{
+            //    FilldgvMaterial();
+            //}
+        }
+
+        private void txtSreachMa_KeyUp(object sender, KeyEventArgs e)
+        {
+            JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
+            dgvMatreial.Rows.Clear();
+
+            var list = db.Materiels.Where(o => o.Nom_Materiel.StartsWith(txtSreachMa.Text)).ToList();
+            if (list != null)
+            {
+                for (int i = 0; i < list.Count; i++)
+                {
+                    dgvMatreial.Rows.Add(list[i].Id_Materiel, list[i].Nom_Materiel, list[i].Fondateur_Materiel, list[i].Price_materiel, list[i].Photo_Materiel, list[i].Color_Materiel, list[i].Genre_Materiel);
+                }
+            }
+        }
+
+        private void bunifuTextBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

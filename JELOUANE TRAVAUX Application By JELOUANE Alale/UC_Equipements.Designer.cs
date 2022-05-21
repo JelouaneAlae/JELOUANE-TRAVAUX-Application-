@@ -31,9 +31,13 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Equipements));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.label1 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.btnLiquid = new System.Windows.Forms.Button();
@@ -42,16 +46,11 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.btnDeleteEquipment = new System.Windows.Forms.Button();
             this.btnEditEquipment = new System.Windows.Forms.Button();
             this.btnAddEqupment = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtSrearchEq = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.materielBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dgvEqupmenet = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.txtSreachMa = new Bunifu.UI.WinForms.BunifuTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.materielBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEqupmenet)).BeginInit();
             this.SuspendLayout();
@@ -89,7 +88,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.btnLiquid.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(44)))), ((int)(((byte)(131)))));
             this.btnLiquid.FlatAppearance.BorderSize = 0;
             this.btnLiquid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLiquid.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLiquid.Font = new System.Drawing.Font("Bahnschrift Light", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLiquid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(44)))), ((int)(((byte)(131)))));
             this.btnLiquid.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLiquid.Location = new System.Drawing.Point(528, 14);
@@ -106,7 +105,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.btnSolid.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(44)))), ((int)(((byte)(131)))));
             this.btnSolid.FlatAppearance.BorderSize = 0;
             this.btnSolid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSolid.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSolid.Font = new System.Drawing.Font("Bahnschrift Light", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSolid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(44)))), ((int)(((byte)(131)))));
             this.btnSolid.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSolid.Location = new System.Drawing.Point(620, 14);
@@ -170,40 +169,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.btnAddEqupment.UseVisualStyleBackColor = false;
             this.btnAddEqupment.Click += new System.EventHandler(this.button5_Click);
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.txtSrearchEq);
-            this.panel2.Location = new System.Drawing.Point(310, 14);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(209, 30);
-            this.panel2.TabIndex = 29;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(22, 29);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 31;
-            this.pictureBox1.TabStop = false;
-            // 
-            // txtSrearchEq
-            // 
-            this.txtSrearchEq.BackColor = System.Drawing.Color.White;
-            this.txtSrearchEq.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSrearchEq.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSrearchEq.Location = new System.Drawing.Point(39, 6);
-            this.txtSrearchEq.Name = "txtSrearchEq";
-            this.txtSrearchEq.Size = new System.Drawing.Size(163, 16);
-            this.txtSrearchEq.TabIndex = 30;
-            this.txtSrearchEq.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            this.txtSrearchEq.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSrearchEq_KeyUp);
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
@@ -226,21 +191,21 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             // dgvEqupmenet
             // 
             this.dgvEqupmenet.AllowCustomTheming = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dgvEqupmenet.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.dgvEqupmenet.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvEqupmenet.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvEqupmenet.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvEqupmenet.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvEqupmenet.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEqupmenet.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEqupmenet.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvEqupmenet.ColumnHeadersHeight = 40;
             this.dgvEqupmenet.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.dgvEqupmenet.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -260,14 +225,14 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.dgvEqupmenet.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.dgvEqupmenet.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.dgvEqupmenet.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvEqupmenet.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEqupmenet.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvEqupmenet.EnableHeadersVisualStyles = false;
             this.dgvEqupmenet.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.dgvEqupmenet.HeaderBackColor = System.Drawing.Color.DodgerBlue;
@@ -283,25 +248,91 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.dgvEqupmenet.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dgvEqupmenet.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEqupmenet_CellContentClick_1);
             // 
-            // button1
+            // txtSreachMa
             // 
-            this.button1.Location = new System.Drawing.Point(217, 336);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(240, 32);
-            this.button1.TabIndex = 46;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.txtSreachMa.AcceptsReturn = false;
+            this.txtSreachMa.AcceptsTab = false;
+            this.txtSreachMa.AnimationSpeed = 200;
+            this.txtSreachMa.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtSreachMa.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtSreachMa.AutoSizeHeight = true;
+            this.txtSreachMa.BackColor = System.Drawing.Color.Transparent;
+            this.txtSreachMa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtSreachMa.BackgroundImage")));
+            this.txtSreachMa.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.txtSreachMa.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txtSreachMa.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.txtSreachMa.BorderColorIdle = System.Drawing.Color.Silver;
+            this.txtSreachMa.BorderRadius = 15;
+            this.txtSreachMa.BorderThickness = 1;
+            this.txtSreachMa.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtSreachMa.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSreachMa.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.txtSreachMa.DefaultText = "";
+            this.txtSreachMa.FillColor = System.Drawing.Color.White;
+            this.txtSreachMa.HideSelection = true;
+            this.txtSreachMa.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtSreachMa.IconLeft")));
+            this.txtSreachMa.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSreachMa.IconPadding = 10;
+            this.txtSreachMa.IconRight = null;
+            this.txtSreachMa.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSreachMa.Lines = new string[0];
+            this.txtSreachMa.Location = new System.Drawing.Point(308, 15);
+            this.txtSreachMa.MaxLength = 32767;
+            this.txtSreachMa.MinimumSize = new System.Drawing.Size(1, 1);
+            this.txtSreachMa.Modified = false;
+            this.txtSreachMa.Multiline = false;
+            this.txtSreachMa.Name = "txtSreachMa";
+            stateProperties5.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties5.FillColor = System.Drawing.Color.Empty;
+            stateProperties5.ForeColor = System.Drawing.Color.Empty;
+            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSreachMa.OnActiveState = stateProperties5;
+            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtSreachMa.OnDisabledState = stateProperties6;
+            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties7.FillColor = System.Drawing.Color.Empty;
+            stateProperties7.ForeColor = System.Drawing.Color.Empty;
+            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSreachMa.OnHoverState = stateProperties7;
+            stateProperties8.BorderColor = System.Drawing.Color.Silver;
+            stateProperties8.FillColor = System.Drawing.Color.White;
+            stateProperties8.ForeColor = System.Drawing.Color.Empty;
+            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtSreachMa.OnIdleState = stateProperties8;
+            this.txtSreachMa.Padding = new System.Windows.Forms.Padding(3);
+            this.txtSreachMa.PasswordChar = '\0';
+            this.txtSreachMa.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.txtSreachMa.PlaceholderText = "     Search";
+            this.txtSreachMa.ReadOnly = false;
+            this.txtSreachMa.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtSreachMa.SelectedText = "";
+            this.txtSreachMa.SelectionLength = 0;
+            this.txtSreachMa.SelectionStart = 0;
+            this.txtSreachMa.ShortcutsEnabled = true;
+            this.txtSreachMa.Size = new System.Drawing.Size(198, 30);
+            this.txtSreachMa.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.txtSreachMa.TabIndex = 48;
+            this.txtSreachMa.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtSreachMa.TextMarginBottom = 0;
+            this.txtSreachMa.TextMarginLeft = 3;
+            this.txtSreachMa.TextMarginTop = 1;
+            this.txtSreachMa.TextPlaceholder = "     Search";
+            this.txtSreachMa.UseSystemPasswordChar = false;
+            this.txtSreachMa.WordWrap = true;
+            this.txtSreachMa.TextChanged += new System.EventHandler(this.bunifuTextBox1_TextChanged);
+            this.txtSreachMa.KeyUp += new System.Windows.Forms.KeyEventHandler(this.bunifuTextBox1_KeyUp);
             // 
             // UC_Equipements
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtSreachMa);
             this.Controls.Add(this.dgvEqupmenet);
             this.Controls.Add(this.btnRefresh);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnAddEqupment);
             this.Controls.Add(this.btnEditEquipment);
             this.Controls.Add(this.btnDeleteEquipment);
@@ -313,9 +344,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.Name = "UC_Equipements";
             this.Size = new System.Drawing.Size(723, 376);
             this.Load += new System.EventHandler(this.UC_Equipements_Load);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.materielBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEqupmenet)).EndInit();
             this.ResumeLayout(false);
@@ -333,13 +361,10 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         private System.Windows.Forms.Button btnDeleteEquipment;
         private System.Windows.Forms.Button btnEditEquipment;
         private System.Windows.Forms.Button btnAddEqupment;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox txtSrearchEq;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.BindingSource materielBindingSource;
         private System.Windows.Forms.Button btnRefresh;
         private Bunifu.UI.WinForms.BunifuDataGridView dgvEqupmenet;
-        private System.Windows.Forms.Button button1;
+        private Bunifu.UI.WinForms.BunifuTextBox txtSreachMa;
     }
 }
