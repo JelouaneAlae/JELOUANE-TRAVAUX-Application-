@@ -137,21 +137,22 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
             if(btnLiquid.BackColor == Color.Pink)
             {
-                filldMaterial();
-                for (int i = 0; i < dgvEqupmenet.Rows.Count; i++)
+                var list = (from Materiel in db.Materiels where Materiel.Genre_Materiel == "Liquid" select Materiel).ToList();
+                if (list != null)
                 {
-                    if (dgvEqupmenet.Rows[i].Cells[6].Value.ToString() == "Solid")
+                    dgvEqupmenet.Rows.Clear();
+                    for(int i = 0; i < list.Count;i++)
                     {
-                        CurrencyManager currencyManager1 = (CurrencyManager)BindingContext[db.Materiels.ToList()];
-                        currencyManager1.SuspendBinding();
-                        dgvEqupmenet.Rows[i].Visible = false;
-                        currencyManager1.ResumeBinding();
+                        dgvEqupmenet.Rows.Add(list[i].Id_Materiel, list[i].Nom_Materiel, list[i].Fondateur_Materiel,
+                            list[i].Price_materiel, list[i].Photo_Materiel, list[i].Color_Materiel,
+                            list[i].Genre_Materiel);
                     }
+
                 }
             }
             else
             {
-                dgvEqupmenet.DataSource = db.Materiels.ToList<Materiel>();
+                filldMaterial();
             }
         }
 
@@ -174,21 +175,22 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
             if (btnSolid.BackColor == Color.Pink)
             {
-                dgvEqupmenet.DataSource = db.Materiels.ToList<Materiel>();
-                for (int i = 0; i < dgvEqupmenet.Rows.Count; i++)
+                var list = (from Materiel in db.Materiels where Materiel.Genre_Materiel == "Solid" select Materiel).ToList();
+                if (list != null)
                 {
-                    if (dgvEqupmenet.Rows[i].Cells[4].Value.ToString() == "Liquid")
+                    dgvEqupmenet.Rows.Clear();
+                    for (int i = 0; i < list.Count; i++)
                     {
-                        CurrencyManager currencyManager1 = (CurrencyManager)BindingContext[dgvEqupmenet.DataSource];
-                        currencyManager1.SuspendBinding();
-                        dgvEqupmenet.Rows[i].Visible = false;
-                        currencyManager1.ResumeBinding();
+                        dgvEqupmenet.Rows.Add(list[i].Id_Materiel, list[i].Nom_Materiel, list[i].Fondateur_Materiel,
+                            list[i].Price_materiel, list[i].Photo_Materiel, list[i].Color_Materiel,
+                            list[i].Genre_Materiel);
                     }
+
                 }
             }
             else
             {
-                dgvEqupmenet.DataSource = db.Materiels.ToList<Materiel>();
+                filldMaterial();
             }
         }
 

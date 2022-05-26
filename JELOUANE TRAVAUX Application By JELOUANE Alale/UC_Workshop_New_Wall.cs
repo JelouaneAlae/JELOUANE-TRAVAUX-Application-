@@ -28,12 +28,14 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
         private void UC_Workshop_New_Wall_Load(object sender, EventArgs e)
         {
+            dgvwalls.Columns.Add("ID", "ID");
+            dgvwalls.Columns.Add("Legth", "Legth");
+            dgvwalls.Columns.Add("Width", "Width");
+            dgvwalls.Columns.Add("Cuurent C", "Current C");
+            dgvwalls.Columns.Add("Futuristic", "Futuristic");
+
             FillcmbRooms();
-            //dgvwalls.Columns.Add("ID","ID");
-            //dgvwalls.Columns.Add("Length", "Length");
-            //dgvwalls.Columns.Add("Width", "Width");
-            //dgvwalls.Columns.Add("Current C", "Current C");
-            //dgvwalls.Columns.Add("Futuristic C", "Futursitic C");
+            FilldgvWall(cmbRooms.Text);
 
         }
         public void FillcmbRooms()
@@ -48,31 +50,29 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         private void btnrefreshwall_Click(object sender, EventArgs e)
         {
             FillcmbRooms();
+            ClearTxt();
+            
         }
         
-        public void FilldgvWall()
+        public void FilldgvWall(string RoomName)
         {
             JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
             
             var query = (from salle in db.Salles
-                         where salle.Nom_Salle == cmbRooms.SelectedText && salle.ID_Projet == ClsEmail.ID_PROJECt
-                         select salle.ID_Projet).ToList();
+                         where salle.Nom_Salle == RoomName && salle.ID_Projet == ClsEmail.ID_PROJECt
+                         select salle.Id_Salle).ToList();
 
-            var Mu = db.Murs.Where(o => o.Id_Salle == query[0]);
+            int i = query[0];
+            var Mu = (from Mur in db.Murs where Mur.Id_Salle == i select Mur).ToList();
 
             if (Mu != null)
             {
-                //dgvwalls.Rows.Clear();
-                //for (int i = 0; i < query.Count; i++)
-                //{
-                //    dgvwalls.Rows.Add(Mu[i].ID_Mur, Mu[i].Longeur_Mur, Mu[i].Largeur_Mur, Mu[i].couleur_Mur_AV, Mu[i].couleur_Mur_AP);
-                //}
-
-                dgvwalls.DataSource = null;
-                dgvwalls.DataSource = Mu.ToList();
+                dgvwalls.Rows.Clear();
+                for (int j = 0; j < Mu.Count; j++)
+                {
+                    dgvwalls.Rows.Add(Mu[j].ID_Mur, Mu[j].Longeur_Mur, Mu[j].Largeur_Mur, Mu[j].couleur_Mur_AV, Mu[j].couleur_Mur_AP);
+                }
             }
-
-            
         }
 
         private void btnaddwall_Click(object sender, EventArgs e)
@@ -118,7 +118,8 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
                                 M.couleur_Mur_AP = txtWallColorAfter.Text;
                                 db.Murs.Add(M);
                                 db.SaveChanges();
-                                FilldgvWall();
+                                FilldgvWall(cmbRooms.Text);
+                                ClearTxt();
                             }
                         }
                     }
@@ -133,35 +134,89 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
         private void cmbRooms_SelectedValueChanged(object sender, EventArgs e)
         {
-            MessageBox.Show("yes");
+
+            //JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
+            //string Roomname = cmbRooms.Text;
+            //var roomid = db.Salles.Where(o => o.Nom_Salle == Roomname && o.ID_Projet == ClsEmail.ID_PROJECt).ToList();
+
+            //var query = from Salle in db.Salles
+            //            where Salle.Nom_Salle == Roomname && Salle.ID_Projet == ClsEmail.ID_PROJECt
+            //            select Salle.Id_Salle;
+
+            //if (roomid != null)
+            //{
+            //    //List<Mur> L = db.Murs.Where(o => o.Id_Salle == roomid[0].Id_Salle).ToList();
+
+
+            //    //var x = (from Mur in db.Murs
+            //    //         where Mur.Id_Salle == roomid[0].Id_Salle
+            //    //         select Mur).ToList();
+
+
+            //    //var x = (from Mur in db.Murs
+            //    //         where Mur.Id_Salle == query[0]
+            //    //         select Mur).ToList();
+
+
+            //    //dgvwalls.DataSource = x;
+            //    //dgvwalls.DataSource = db.Murs.Find(2);
+            //}
+
+            ////dgvwalls.DataSource = db.Murs.ToList();
+            ///
+        }
+
+        private void btndeletewall_Click(object sender, EventArgs e)
+        {
             JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
-            string Roomname = cmbRooms.Text;
-            var roomid = db.Salles.Where(o => o.Nom_Salle == Roomname && o.ID_Projet == ClsEmail.ID_PROJECt).ToList();
 
-            var query = from Salle in db.Salles
-                        where Salle.Nom_Salle == Roomname && Salle.ID_Projet == ClsEmail.ID_PROJECt
-                        select Salle.Id_Salle;
-
-            if (roomid != null)
+            var items = db.Murs.Find(dgvwalls.CurrentRow.Cells[0].Value);
+            DialogResult dr = MessageBox.Show("Are sure", "Delete", MessageBoxButtons.YesNo);
+            if (dr == DialogResult.Yes)
             {
-                //List<Mur> L = db.Murs.Where(o => o.Id_Salle == roomid[0].Id_Salle).ToList();
-
-
-                //var x = (from Mur in db.Murs
-                //         where Mur.Id_Salle == roomid[0].Id_Salle
-                //         select Mur).ToList();
-
-
-                //var x = (from Mur in db.Murs
-                //         where Mur.Id_Salle == query[0]
-                //         select Mur).ToList();
-
-
-                //dgvwalls.DataSource = x;
-                //dgvwalls.DataSource = db.Murs.Find(2);
+                if (items != null)
+                {
+                    db.Murs.Remove(items);
+                    db.SaveChanges();
+                    MessageBox.Show("Wall successfully deleted","Delete");
+                    ClearTxt();
+                }
+                else
+                {
+                    MessageBox.Show("Wall not exist");
+                }
             }
+            FilldgvWall(cmbRooms.Text);
+        }
 
-            //dgvwalls.DataSource = db.Murs.ToList();
+        private void dgvwalls_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtlongeur.Text = dgvwalls.CurrentRow.Cells[1].Value.ToString();
+            txtLargeur.Text = dgvwalls.CurrentRow.Cells[2].Value.ToString();
+            txtWallCurrentColor.Text = dgvwalls.CurrentRow.Cells[3].Value.ToString();
+            txtWallColorAfter.Text = dgvwalls.CurrentRow.Cells[4].Value.ToString();
+        }
+
+        public void ClearTxt()
+        {
+            txtlongeur.Text = null;
+            txtLargeur.Text = null;
+            txtWallCurrentColor.Text = null;
+            txtWallColorAfter.Text = null;
+        }
+        private void cmbRooms_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void cmbRooms_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbRooms_TabIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

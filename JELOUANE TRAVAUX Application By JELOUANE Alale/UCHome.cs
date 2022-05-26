@@ -15,6 +15,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         public UCHome()
         {
             InitializeComponent();
+            NotificationItems();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -85,6 +86,25 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
         private void bunifuChartCanvas1_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        public void NotificationItems()
+        {
+            JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
+            UC_NotificationItems[] Notification = new UC_NotificationItems[5];
+
+            for (int i = 0; i < Notification.Length; i++)
+            {
+                //Notification[i] = new UC_NotificationItems();
+                //Notification[i].ProjectName =
+                flowLayoutPanel1.Controls.Add(Notification[i]);
+            }
 
         }
     }

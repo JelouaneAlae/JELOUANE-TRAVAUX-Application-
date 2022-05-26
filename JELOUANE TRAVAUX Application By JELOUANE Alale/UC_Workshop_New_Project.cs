@@ -58,7 +58,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
         private void UC_Workshop_New_Project_Load(object sender, EventArgs e)
         {
-            //MessageBox.Show("open");
             dgvExistingProject.Columns.Add("ID", "ID");
             dgvExistingProject.Columns.Add("Name", "Name");
             dgvExistingProject.Columns.Add("Starting D", "Starting D");
@@ -99,23 +98,26 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
                         pr.DateFin_Projet = dtpExpiryDate.Value;
                         pr.Nom_projet = txtProjectName.Text;
 
-                        var exist = db.Clients.Where(s => s.ID_Client == ClsEmail.ID_CLIENt).ToList();
-                        if (exist != null)
-                        {
-                            pr.ID_Client = exist[0].ID_Client;
-                            db.projets.Add(pr);
-                            db.SaveChanges();
-                            List<int> id = (from projet in db.projets
-                                  where projet.ID_Client == exist[0].ID_Client && projet.Nom_projet == txtProjectName.Text
-                                  select projet.ID_Projet).ToList();
+                        //var exist = db.Clients.Where(s => s.ID_Client == ClsEmail.ID_CLIENt).ToList();
+                        //if (exist != null)
+                        //{
+                        pr.ID_Client = ClsEmail.ID_CLIENt;
+                        db.projets.Add(pr);
+                        db.SaveChanges();
+                        //var id = (from projet in db.projets
+                        //      where projet.ID_Client == exist[0].ID_Client && projet.Nom_projet == txtProjectName.Text
+                        //      select projet.ID_Projet).ToList();
 
-                            ClsEmail.ID_PROJECt = id[0];
-                            var form = Form.ActiveForm as FormNewWorkShop;
-                                if (form != null)
-                                {
-                                    form.btnRoom.PerformClick();
-                                }
-                        }
+                        var a = db.projets.Where(o => o.ID_Client == ClsEmail.ID_CLIENt && o.Nom_projet == txtProjectName.Text).ToList();
+
+                            
+                        ClsEmail.ID_PROJECt = a[0].ID_Projet;
+                        var form = Form.ActiveForm as FormNewWorkShop;
+                            if (form != null)
+                            {
+                                form.btnRoom.PerformClick();
+                            }
+                        
                     
                 }
             }

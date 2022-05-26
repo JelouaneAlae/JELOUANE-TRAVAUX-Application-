@@ -168,79 +168,12 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
         private void btnLiquid_Click(object sender, EventArgs e)
         {
-            //JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
-            //if (btnLiquid.BackColor == Color.White)
-            //{
-            //    btnLiquid.BackColor = Color.Pink;
-            //}
-            //else
-            //{
-            //    btnLiquid.BackColor = Color.White;
-            //}
-            //if (btnLiquid.BackColor == Color.Pink)
-            //{
-            //    btnSolid.BackColor = Color.White;
-            //}
 
-
-            //if (btnLiquid.BackColor == Color.Pink)
-            //{
-            //    FilldgvMaterial();
-
-            //    for (int i = 0; i < dgvMatreial.Rows.Count; i++)
-            //    {
-            //        if (dgvMatreial.Rows[i].Cells[6].Value.ToString() == "Solid")
-            //        {
-            //            CurrencyManager currencyManager1 = (CurrencyManager)BindingContext[dgvMatreial.DataSource];
-            //            currencyManager1.SuspendBinding();
-            //            dgvMatreial.Rows[i].Visible = false;
-            //            currencyManager1.ResumeBinding();
-            //        }
-            //    }
-            //}
-            //else
-            //{
-            //    FilldgvMaterial();
-            //}
         }
 
         private void btnSolid_Click(object sender, EventArgs e)
         {
-            //JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
-            //FilldgvMaterial();
-            
-            //if (btnSolid.BackColor == Color.White)
-            //{
-            //    btnSolid.BackColor = Color.Pink;
-            //}
-            //else
-            //{
-            //    btnSolid.BackColor = Color.White;
-            //}
 
-            //if (btnSolid.BackColor == Color.Pink)
-            //{
-            //    btnLiquid.BackColor = Color.White;
-            //}
-
-            //if (btnSolid.BackColor == Color.Pink)
-            //{
-            //    dgvMatreial.DataSource = db.Materiels.ToList<Materiel>();
-            //    for (int i = 0; i < dgvMatreial.Rows.Count; i++)
-            //    {
-            //        if (dgvMatreial.Rows[i].Cells[6].Value.ToString() == "Liquid")
-            //        {
-            //            //CurrencyManager currencyManager1 = (CurrencyManager)BindingContext[FilldgvMaterial()];
-            //            //currencyManager1.SuspendBinding();
-            //            dgvMatreial.Rows[i].Visible = false;
-            //            //currencyManager1.ResumeBinding();
-            //        }
-            //    }
-            //}
-            //else
-            //{
-            //    FilldgvMaterial();
-            //}
         }
 
         private void txtSreachMa_KeyUp(object sender, KeyEventArgs e)
@@ -259,6 +192,87 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         }
 
         private void bunifuTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLiquid_Click_1(object sender, EventArgs e)
+        {
+            JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
+            if (btnLiquid.BackColor == Color.White)
+            {
+                btnLiquid.BackColor = Color.Pink;
+            }
+            else
+            {
+                btnLiquid.BackColor = Color.White;
+            }
+            if (btnLiquid.BackColor == Color.Pink)
+            {
+                btnSolid.BackColor = Color.White;
+            }
+
+
+            if (btnLiquid.BackColor == Color.Pink)
+            {
+                var list = (from Materiel in db.Materiels where Materiel.Genre_Materiel == "Liquid" select Materiel).ToList();
+                if (list != null)
+                {
+                    dgvMatreial.Rows.Clear();
+                    for (int i = 0; i < list.Count; i++)
+                    {
+                        dgvMatreial.Rows.Add(list[i].Id_Materiel, list[i].Nom_Materiel, list[i].Fondateur_Materiel,
+                            list[i].Price_materiel, list[i].Photo_Materiel, list[i].Color_Materiel,
+                            list[i].Genre_Materiel);
+                    }
+
+                }
+            }
+            else
+            {
+                FilldgvMaterial();
+            }
+        }
+
+        private void btnSolid_Click_1(object sender, EventArgs e)
+        {
+            JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
+            if (btnSolid.BackColor == Color.White)
+            {
+                btnSolid.BackColor = Color.Pink;
+            }
+            else
+            {
+                btnSolid.BackColor = Color.White;
+            }
+
+            if (btnSolid.BackColor == Color.Pink)
+            {
+                btnLiquid.BackColor = Color.White;
+            }
+
+            if (btnSolid.BackColor == Color.Pink)
+            {
+                var list = (from Materiel in db.Materiels where Materiel.Genre_Materiel == "Solid" select Materiel).ToList();
+                if (list != null)
+                {
+                    dgvMatreial.Rows.Clear();
+                    for (int i = 0; i < list.Count; i++)
+                    {
+                        dgvMatreial.Rows.Add(list[i].Id_Materiel, list[i].Nom_Materiel, list[i].Fondateur_Materiel,
+                            list[i].Price_materiel, list[i].Photo_Materiel, list[i].Color_Materiel,
+                            list[i].Genre_Materiel);
+                    }
+
+                }
+            }
+            else
+            {
+                FilldgvMaterial();
+            }
+        }
+
+        private void txtSreachMa_TextChanged(object sender, EventArgs e)
         {
 
         }

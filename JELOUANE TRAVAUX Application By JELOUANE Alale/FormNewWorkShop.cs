@@ -104,5 +104,20 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         {
             UC_controle_Workshop("Material");
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //var form = Form.ActiveForm as FormNewWorkShop;
+            //if (form != null)
+            //{
+
+            //    form.Hide();
+            //    var form1 = new FrmMainForm();
+            //    form1.Closed += (s, args) => form.Close();
+            //    form1.Show();
+            //}
+
+            this.Close();
+        }
     }
 }

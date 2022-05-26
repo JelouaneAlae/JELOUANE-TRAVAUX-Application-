@@ -228,12 +228,6 @@
     <Compile Include="frmworkshopHistory.Designer.cs">
       <DependentUpon>frmworkshopHistory.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNewWorkshop.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmNewWorkshop.Designer.cs">
-      <DependentUpon>frmNewWorkshop.cs</DependentUpon>
-    </Compile>
     <Compile Include="Materiel.cs">
       <DependentUpon>Model2.tt</DependentUpon>
     </Compile>
@@ -255,12 +249,24 @@
     <Compile Include="Mur.cs">
       <DependentUpon>Model2.tt</DependentUpon>
     </Compile>
+    <Compile Include="Notification.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="projet.cs">
       <DependentUpon>Model2.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Salle.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
       <DependentUpon>Model2.tt</DependentUpon>
     </Compile>
     <Compile Include="UCForgetPassword.cs">
@@ -298,6 +304,12 @@
     </Compile>
     <Compile Include="UC_Equipements.Designer.cs">
       <DependentUpon>UC_Equipements.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_NotificationItems.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_NotificationItems.Designer.cs">
+      <DependentUpon>UC_NotificationItems.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_NotificationSetting.cs">
       <SubType>UserControl</SubType>
@@ -386,9 +398,6 @@
     <EmbeddedResource Include="frmSignIn.resx">
       <DependentUpon>frmSignIn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNewWorkshop.resx">
-      <DependentUpon>frmNewWorkshop.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmWalls.resx">
       <DependentUpon>frmWalls.cs</DependentUpon>
     </EmbeddedResource>
@@ -422,6 +431,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Equipements.resx">
       <DependentUpon>UC_Equipements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_NotificationItems.resx">
+      <DependentUpon>UC_NotificationItems.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_NotificationSetting.resx">
       <DependentUpon>UC_NotificationSetting.cs</DependentUpon>

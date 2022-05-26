@@ -15,18 +15,13 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         UCHome UCH = new UCHome();
         UC_Workshop UCWS = new UC_Workshop();
         UC_Equipements UCE = new UC_Equipements();
-        //JELOUANE_TRAVAUXEntities4 db = new JELOUANE_TRAVAUXEntities4();
         JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
-
         UC_Setting_Generale UCGS = new UC_Setting_Generale();
         UC_AccountSetting UCAS = new UC_AccountSetting();
         UC_NotificationSetting UCNS = new UC_NotificationSetting();
         UC_Privacy_Setting UCPS = new UC_Privacy_Setting();
         UC_About_setting UCASs = new UC_About_setting();
-
         UC_Support UCS = new UC_Support();
-
-
         ClsEmail clsmail = new ClsEmail();
 
         public FrmMainForm()
@@ -131,6 +126,32 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             UC_controle("Home");    
         }
 
+        public void notificationControl(int time)
+        {
+            JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
+            for ( int i = 0; i < db.projets.ToList().Count; i++)
+            {
+                DateTime dateT = DateTime.Now;
+                if (db.projets.ToList()[i].DateFin_Projet == DateTime.Now)
+                {
+                    Notification N = new Notification();
+                    N.id_Project = db.projets.ToList()[i].ID_Projet;
+                    N.message_notification = "Delivery time has expired";
+                    N.type_notification = "Ended";
+                    db.Notifications.Add(N);
+                    db.SaveChanges();
+                }
+                if(db.projets.ToList()[i].DateFin_Projet == dateT.AddDays(time))
+                {
+                    Notification N = new Notification();
+                    N.id_Project = db.projets.ToList()[i].ID_Projet;
+                    N.message_notification = "Delivery time has expired";
+                    N.type_notification = "Close";
+                    db.Notifications.Add(N);
+                    db.SaveChanges();
+                }
+            }
+        }
         private void panel8_Paint(object sender, PaintEventArgs e)
         {
 
