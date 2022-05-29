@@ -154,6 +154,10 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             form2.btnRoom.PerformClick();
         }
 
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
 
+            filldgvProject();
+        }
     }
 }

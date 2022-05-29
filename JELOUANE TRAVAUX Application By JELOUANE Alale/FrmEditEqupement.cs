@@ -45,7 +45,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             var exist = db.Materiels.Find(ClsEmail.IdEquipment);
             if (exist != null)
             {
-                txtID.Text = exist.Id_Materiel.ToString();
                 txtnameM.Text = exist.Nom_Materiel;
                 txtPrice.Text = exist.Price_materiel.ToString();
                 txtProducer.Text = exist.Fondateur_Materiel;
@@ -78,12 +77,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         {
             try
             {
-                if (string.IsNullOrEmpty(txtID.Text))
-                {
-                    MessageBox.Show("The ID can't be empty");
-                }
-                else
-                {
                     if (string.IsNullOrEmpty(txtnameM.Text))
                     {
                         MessageBox.Show("The Name can't be empty");
@@ -112,7 +105,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
                                     var exist = db.Materiels.Find(ClsEmail.IdEquipment);
                                     if (exist != null)
                                     {
-                                        exist.Id_Materiel = int.Parse(txtID.Text);
                                         exist.Nom_Materiel = txtnameM.Text;
                                         exist.Fondateur_Materiel = txtProducer.Text;
                                         exist.Price_materiel = int.Parse(txtPrice.Text);
@@ -139,7 +131,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
                             }
                         }
                     }
-                }
+               
             }
             catch (Exception ex)
             {

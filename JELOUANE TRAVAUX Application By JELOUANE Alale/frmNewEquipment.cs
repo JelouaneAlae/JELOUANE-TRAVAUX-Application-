@@ -61,7 +61,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
         private void BtnCancel_Click(object sender, EventArgs e)
         {
-            txtID.Text = null;
             txtnameM.Text = null;
             txtPrice.Text = null;
             txtProducer.Text = null;
@@ -137,6 +136,16 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             {
                 MessageBox.Show(ex.Message,"EROOR");
             }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

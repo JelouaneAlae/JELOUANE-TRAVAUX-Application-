@@ -76,11 +76,11 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             // lblFP
             // 
             this.lblFP.AutoSize = true;
-            this.lblFP.Font = new System.Drawing.Font("Franklin Gothic Medium", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFP.Font = new System.Drawing.Font("Bahnschrift Light", 15.75F);
             this.lblFP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(44)))), ((int)(((byte)(131)))));
-            this.lblFP.Location = new System.Drawing.Point(6, 13);
+            this.lblFP.Location = new System.Drawing.Point(3, 9);
             this.lblFP.Name = "lblFP";
-            this.lblFP.Size = new System.Drawing.Size(246, 78);
+            this.lblFP.Size = new System.Drawing.Size(261, 75);
             this.lblFP.TabIndex = 26;
             this.lblFP.Text = "Please enter your current \r\nEmail address to generate\r\nnew password";
             this.lblFP.Click += new System.EventHandler(this.label1_Click);
@@ -95,6 +95,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.lblOR.Size = new System.Drawing.Size(26, 18);
             this.lblOR.TabIndex = 29;
             this.lblOR.Text = "OR";
+            this.lblOR.Click += new System.EventHandler(this.lblOR_Click);
             // 
             // picCodeFp
             // 
@@ -111,7 +112,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             // 
             this.btnSendEmailFP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(44)))), ((int)(((byte)(131)))));
             this.btnSendEmailFP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSendEmailFP.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSendEmailFP.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F);
             this.btnSendEmailFP.ForeColor = System.Drawing.Color.White;
             this.btnSendEmailFP.Location = new System.Drawing.Point(11, 163);
             this.btnSendEmailFP.Name = "btnSendEmailFP";
@@ -125,7 +126,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             // 
             this.btnSubmitFP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(44)))), ((int)(((byte)(131)))));
             this.btnSubmitFP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubmitFP.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmitFP.Font = new System.Drawing.Font("Franklin Gothic Medium", 14.25F);
             this.btnSubmitFP.ForeColor = System.Drawing.Color.White;
             this.btnSubmitFP.Location = new System.Drawing.Point(10, 184);
             this.btnSubmitFP.Name = "btnSubmitFP";

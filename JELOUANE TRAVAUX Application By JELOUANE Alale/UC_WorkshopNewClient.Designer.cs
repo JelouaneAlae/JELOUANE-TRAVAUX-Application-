@@ -457,7 +457,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.txtLastNameclient.IconRight = null;
             this.txtLastNameclient.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtLastNameclient.Lines = new string[0];
-            this.txtLastNameclient.Location = new System.Drawing.Point(418, 144);
+            this.txtLastNameclient.Location = new System.Drawing.Point(418, 108);
             this.txtLastNameclient.MaxLength = 32767;
             this.txtLastNameclient.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtLastNameclient.Modified = false;
@@ -641,7 +641,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.txtClientPhone.IconRight = null;
             this.txtClientPhone.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtClientPhone.Lines = new string[0];
-            this.txtClientPhone.Location = new System.Drawing.Point(418, 108);
+            this.txtClientPhone.Location = new System.Drawing.Point(418, 144);
             this.txtClientPhone.MaxLength = 32767;
             this.txtClientPhone.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtClientPhone.Modified = false;

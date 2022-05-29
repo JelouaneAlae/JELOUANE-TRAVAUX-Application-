@@ -24,15 +24,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
         private void bunifuButton21_Click(object sender, EventArgs e)
         {
-            var form = Form.ActiveForm as FrmMainForm;
-            if (form != null)
-            {
 
-                form.Hide();
-                var form1 = new frmworkshopHistory();
-                form1.Closed += (s, args) => form.Close();
-                form1.Show();
-            }
 
         }
 
@@ -78,12 +70,21 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
         private void btnNewWorkFull_Click(object sender, EventArgs e)
         {
-            //frmNewWorkshop frmnw = new frmNewWorkshop();
-            //frmnw.Show();
-
-
             FormNewWorkShop fnw = new FormNewWorkShop();
             fnw.Show();
+        }
+
+        private void bunifuButton21_Click_1(object sender, EventArgs e)
+        {
+            var form = Form.ActiveForm as FrmMainForm;
+            if (form != null)
+            {
+
+                form.Hide();
+                var form1 = new frmworkshopHistory();
+                form1.Closed += (s, args) => form.Close();
+                form1.Show();
+            }
         }
     }
 }

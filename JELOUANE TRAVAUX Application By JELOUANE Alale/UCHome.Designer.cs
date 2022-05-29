@@ -47,10 +47,11 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.bunifuChartCanvas1 = new Bunifu.Charts.WinForms.BunifuChartCanvas();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cmbMonth = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.label1 = new System.Windows.Forms.Label();
             this.bunifuPieChart1 = new Bunifu.Charts.WinForms.ChartTypes.BunifuPieChart(this.components);
-            this.bunifuBarChart1 = new Bunifu.Charts.WinForms.ChartTypes.BunifuBarChart(this.components);
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel7.SuspendLayout();
@@ -58,7 +59,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // lblOrder
@@ -97,11 +97,11 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Bahnschrift Light", 17.25F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(44)))), ((int)(((byte)(131)))));
             this.label2.Location = new System.Drawing.Point(75, 10);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 31);
+            this.label2.Size = new System.Drawing.Size(89, 28);
             this.label2.TabIndex = 4;
             this.label2.Text = "Orders";
             // 
@@ -110,7 +110,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.lblTotalProfit.AutoSize = true;
             this.lblTotalProfit.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalProfit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(44)))), ((int)(((byte)(131)))));
-            this.lblTotalProfit.Location = new System.Drawing.Point(91, 41);
+            this.lblTotalProfit.Location = new System.Drawing.Point(85, 42);
             this.lblTotalProfit.Name = "lblTotalProfit";
             this.lblTotalProfit.Size = new System.Drawing.Size(26, 29);
             this.lblTotalProfit.TabIndex = 8;
@@ -119,11 +119,11 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Bahnschrift Light", 17.25F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(44)))), ((int)(((byte)(131)))));
             this.label5.Location = new System.Drawing.Point(81, 8);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(135, 31);
+            this.label5.Size = new System.Drawing.Size(137, 28);
             this.label5.TabIndex = 6;
             this.label5.Text = "Total Profit";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -133,7 +133,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.lblWorkshopFinished.AutoSize = true;
             this.lblWorkshopFinished.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWorkshopFinished.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(44)))), ((int)(((byte)(131)))));
-            this.lblWorkshopFinished.Location = new System.Drawing.Point(184, 52);
+            this.lblWorkshopFinished.Location = new System.Drawing.Point(170, 51);
             this.lblWorkshopFinished.Name = "lblWorkshopFinished";
             this.lblWorkshopFinished.Size = new System.Drawing.Size(24, 26);
             this.lblWorkshopFinished.TabIndex = 6;
@@ -143,11 +143,11 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Bahnschrift Light", 15F);
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(44)))), ((int)(((byte)(131)))));
-            this.label9.Location = new System.Drawing.Point(75, 48);
+            this.label9.Location = new System.Drawing.Point(79, 51);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(99, 31);
+            this.label9.Size = new System.Drawing.Size(85, 24);
             this.label9.TabIndex = 7;
             this.label9.Text = "Finished";
             this.label9.Click += new System.EventHandler(this.label9_Click);
@@ -155,11 +155,11 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Bahnschrift Light", 17.25F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(44)))), ((int)(((byte)(131)))));
             this.label8.Location = new System.Drawing.Point(76, 10);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(201, 31);
+            this.label8.Size = new System.Drawing.Size(207, 28);
             this.label8.TabIndex = 6;
             this.label8.Text = "Workshop details";
             this.label8.Click += new System.EventHandler(this.label8_Click);
@@ -184,7 +184,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.lblWorshopNotfinished.AutoSize = true;
             this.lblWorshopNotfinished.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWorshopNotfinished.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(44)))), ((int)(((byte)(131)))));
-            this.lblWorshopNotfinished.Location = new System.Drawing.Point(536, 52);
+            this.lblWorshopNotfinished.Location = new System.Drawing.Point(501, 51);
             this.lblWorshopNotfinished.Name = "lblWorshopNotfinished";
             this.lblWorshopNotfinished.Size = new System.Drawing.Size(24, 26);
             this.lblWorshopNotfinished.TabIndex = 11;
@@ -193,11 +193,11 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Bahnschrift Light", 15F);
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(44)))), ((int)(((byte)(131)))));
-            this.label10.Location = new System.Drawing.Point(385, 48);
+            this.label10.Location = new System.Drawing.Point(378, 51);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(139, 31);
+            this.label10.Size = new System.Drawing.Size(117, 24);
             this.label10.TabIndex = 10;
             this.label10.Text = "Not finished";
             // 
@@ -235,21 +235,144 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.pictureBox4);
-            this.panel4.Location = new System.Drawing.Point(434, 96);
+            this.panel4.Controls.Add(this.bunifuChartCanvas1);
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.cmbMonth);
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Location = new System.Drawing.Point(3, 96);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(286, 186);
+            this.panel4.Size = new System.Drawing.Size(717, 186);
             this.panel4.TabIndex = 12;
             // 
-            // pictureBox4
+            // bunifuChartCanvas1
             // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(31, -4);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(249, 200);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
+            this.bunifuChartCanvas1.AnimationDuration = 1000;
+            this.bunifuChartCanvas1.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
+            this.bunifuChartCanvas1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bunifuChartCanvas1.CanvasPadding = new System.Windows.Forms.Padding(0);
+            this.bunifuChartCanvas1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.bunifuChartCanvas1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuChartCanvas1.Labels = new string[] {
+        "All workshop",
+        "Finished ",
+        "Not finished"};
+            this.bunifuChartCanvas1.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.center;
+            this.bunifuChartCanvas1.LegendDisplay = true;
+            this.bunifuChartCanvas1.LegendFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuChartCanvas1.LegendForeColor = System.Drawing.Color.DarkGray;
+            this.bunifuChartCanvas1.LegendFullWidth = true;
+            this.bunifuChartCanvas1.LegendPosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.top;
+            this.bunifuChartCanvas1.LegendRevese = false;
+            this.bunifuChartCanvas1.LegendRTL = false;
+            this.bunifuChartCanvas1.Location = new System.Drawing.Point(392, 0);
+            this.bunifuChartCanvas1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuChartCanvas1.Name = "bunifuChartCanvas1";
+            this.bunifuChartCanvas1.ShowXAxis = false;
+            this.bunifuChartCanvas1.ShowYAxis = false;
+            this.bunifuChartCanvas1.Size = new System.Drawing.Size(325, 186);
+            this.bunifuChartCanvas1.TabIndex = 21;
+            this.bunifuChartCanvas1.Title = "";
+            this.bunifuChartCanvas1.TitleLineHeight = 1.2D;
+            this.bunifuChartCanvas1.TitlePadding = 10;
+            this.bunifuChartCanvas1.TitlePosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.top;
+            this.bunifuChartCanvas1.TooltipBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.bunifuChartCanvas1.TooltipFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.bunifuChartCanvas1.TooltipForeColor = System.Drawing.Color.WhiteSmoke;
+            this.bunifuChartCanvas1.TooltipMode = Bunifu.Charts.WinForms.BunifuChartCanvas.TooltipModeOptions.nearest;
+            this.bunifuChartCanvas1.TooltipsEnabled = true;
+            this.bunifuChartCanvas1.XAxesBeginAtZero = true;
+            this.bunifuChartCanvas1.XAxesDrawTicks = true;
+            this.bunifuChartCanvas1.XAxesFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.bunifuChartCanvas1.XAxesForeColor = System.Drawing.SystemColors.ControlText;
+            this.bunifuChartCanvas1.XAxesGridColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.bunifuChartCanvas1.XAxesGridLines = false;
+            this.bunifuChartCanvas1.XAxesLabel = "";
+            this.bunifuChartCanvas1.XAxesLabelFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.bunifuChartCanvas1.XAxesLabelForeColor = System.Drawing.SystemColors.ControlText;
+            this.bunifuChartCanvas1.XAxesLineWidth = 1;
+            this.bunifuChartCanvas1.XAxesStacked = false;
+            this.bunifuChartCanvas1.XAxesZeroLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.bunifuChartCanvas1.XAxesZeroLineWidth = 1;
+            this.bunifuChartCanvas1.YAxesBeginAtZero = true;
+            this.bunifuChartCanvas1.YAxesDrawTicks = true;
+            this.bunifuChartCanvas1.YAxesFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.bunifuChartCanvas1.YAxesForeColor = System.Drawing.SystemColors.ControlText;
+            this.bunifuChartCanvas1.YAxesGridColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.bunifuChartCanvas1.YAxesGridLines = false;
+            this.bunifuChartCanvas1.YAxesLabel = "";
+            this.bunifuChartCanvas1.YAxesLabelFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.bunifuChartCanvas1.YAxesLabelForeColor = System.Drawing.SystemColors.ControlText;
+            this.bunifuChartCanvas1.YAxesLineWidth = 1;
+            this.bunifuChartCanvas1.YAxesStacked = false;
+            this.bunifuChartCanvas1.YAxesZeroLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.bunifuChartCanvas1.YAxesZeroLineWidth = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Bahnschrift Light", 15F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(44)))), ((int)(((byte)(131)))));
+            this.label3.Location = new System.Drawing.Point(8, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(370, 24);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Monthly recommendation analytics :";
+            // 
+            // cmbMonth
+            // 
+            this.cmbMonth.BackColor = System.Drawing.Color.Transparent;
+            this.cmbMonth.BackgroundColor = System.Drawing.Color.White;
+            this.cmbMonth.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(44)))), ((int)(((byte)(131)))));
+            this.cmbMonth.BorderRadius = 5;
+            this.cmbMonth.Color = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(44)))), ((int)(((byte)(131)))));
+            this.cmbMonth.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.cmbMonth.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.cmbMonth.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.cmbMonth.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.cmbMonth.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.cmbMonth.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.cmbMonth.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbMonth.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
+            this.cmbMonth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMonth.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.cmbMonth.FillDropDown = true;
+            this.cmbMonth.FillIndicator = false;
+            this.cmbMonth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbMonth.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cmbMonth.ForeColor = System.Drawing.Color.Black;
+            this.cmbMonth.FormattingEnabled = true;
+            this.cmbMonth.Icon = null;
+            this.cmbMonth.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.cmbMonth.IndicatorColor = System.Drawing.Color.DarkGray;
+            this.cmbMonth.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.cmbMonth.IndicatorThickness = 2;
+            this.cmbMonth.IsDropdownOpened = false;
+            this.cmbMonth.ItemBackColor = System.Drawing.Color.White;
+            this.cmbMonth.ItemBorderColor = System.Drawing.Color.White;
+            this.cmbMonth.ItemForeColor = System.Drawing.Color.Black;
+            this.cmbMonth.ItemHeight = 26;
+            this.cmbMonth.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
+            this.cmbMonth.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.cmbMonth.ItemTopMargin = 3;
+            this.cmbMonth.Location = new System.Drawing.Point(50, 112);
+            this.cmbMonth.Name = "cmbMonth";
+            this.cmbMonth.Size = new System.Drawing.Size(171, 32);
+            this.cmbMonth.TabIndex = 19;
+            this.cmbMonth.Text = null;
+            this.cmbMonth.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.cmbMonth.TextLeftMargin = 5;
+            this.cmbMonth.SelectedIndexChanged += new System.EventHandler(this.cmbMonth_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Bahnschrift Light", 13F);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(44)))), ((int)(((byte)(131)))));
+            this.label1.Location = new System.Drawing.Point(46, 81);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(259, 22);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Select month to view analystic";
             // 
             // bunifuPieChart1
             // 
@@ -260,37 +383,14 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.bunifuPieChart1.HoverBackgroundColor = System.Drawing.Color.Empty;
             this.bunifuPieChart1.HoverBorderColor = System.Drawing.Color.Empty;
             this.bunifuPieChart1.HoverBorderWidth = 0;
-            this.bunifuPieChart1.Label = "Label here";
-            this.bunifuPieChart1.TargetCanvas = null;
-            // 
-            // bunifuBarChart1
-            // 
-            this.bunifuBarChart1.BackgroundColor = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("bunifuBarChart1.BackgroundColor")));
-            this.bunifuBarChart1.BorderColor = ((System.Collections.Generic.List<System.Drawing.Color>)(resources.GetObject("bunifuBarChart1.BorderColor")));
-            this.bunifuBarChart1.BorderSkipped = null;
-            this.bunifuBarChart1.BorderWidth = 0;
-            this.bunifuBarChart1.Data = ((System.Collections.Generic.List<double>)(resources.GetObject("bunifuBarChart1.Data")));
-            this.bunifuBarChart1.HoverBackgroundColor = System.Drawing.Color.Empty;
-            this.bunifuBarChart1.HoverBorderColor = System.Drawing.Color.Empty;
-            this.bunifuBarChart1.HoverBorderWidth = 0;
-            this.bunifuBarChart1.Label = "Label here";
-            this.bunifuBarChart1.TargetCanvas = null;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 96);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(428, 186);
-            this.flowLayoutPanel1.TabIndex = 12;
-            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
+            this.bunifuPieChart1.Label = "pochart";
+            this.bunifuPieChart1.TargetCanvas = this.bunifuChartCanvas1;
             // 
             // UCHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -308,7 +408,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -331,9 +431,10 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         private System.Windows.Forms.Label lblWorshopNotfinished;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label1;
+        private Bunifu.Charts.WinForms.BunifuChartCanvas bunifuChartCanvas1;
+        private System.Windows.Forms.Label label3;
+        private Bunifu.UI.WinForms.BunifuDropdown cmbMonth;
         private Bunifu.Charts.WinForms.ChartTypes.BunifuPieChart bunifuPieChart1;
-        private Bunifu.Charts.WinForms.ChartTypes.BunifuBarChart bunifuBarChart1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

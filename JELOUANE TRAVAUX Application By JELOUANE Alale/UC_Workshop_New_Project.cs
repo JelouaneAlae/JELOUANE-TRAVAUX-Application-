@@ -94,29 +94,22 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
                 else
                 {
                     projet pr = new projet();
-                        pr.Datedebut_Projet = dtpStartingDate.Value;
-                        pr.DateFin_Projet = dtpExpiryDate.Value;
-                        pr.Nom_projet = txtProjectName.Text;
+                    pr.Datedebut_Projet = dtpStartingDate.Value;
+                    pr.DateFin_Projet = dtpExpiryDate.Value;
+                    pr.Nom_projet = txtProjectName.Text;
+                    pr.ID_Client = ClsEmail.ID_CLIENt;
+                    db.projets.Add(pr);
+                    db.SaveChanges();
 
-                        //var exist = db.Clients.Where(s => s.ID_Client == ClsEmail.ID_CLIENt).ToList();
-                        //if (exist != null)
-                        //{
-                        pr.ID_Client = ClsEmail.ID_CLIENt;
-                        db.projets.Add(pr);
-                        db.SaveChanges();
-                        //var id = (from projet in db.projets
-                        //      where projet.ID_Client == exist[0].ID_Client && projet.Nom_projet == txtProjectName.Text
-                        //      select projet.ID_Projet).ToList();
-
-                        var a = db.projets.Where(o => o.ID_Client == ClsEmail.ID_CLIENt && o.Nom_projet == txtProjectName.Text).ToList();
+                    var a = db.projets.Where(o => o.ID_Client == ClsEmail.ID_CLIENt && o.Nom_projet == txtProjectName.Text).ToList();
 
                             
-                        ClsEmail.ID_PROJECt = a[0].ID_Projet;
-                        var form = Form.ActiveForm as FormNewWorkShop;
-                            if (form != null)
-                            {
-                                form.btnRoom.PerformClick();
-                            }
+                    ClsEmail.ID_PROJECt = a[0].ID_Projet;
+                    var form = Form.ActiveForm as FormNewWorkShop;
+                    if (form != null)
+                    {
+                        form.btnRoom.PerformClick();
+                    }
                         
                     
                 }

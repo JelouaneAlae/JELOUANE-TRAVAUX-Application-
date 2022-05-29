@@ -38,9 +38,11 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
                 try
                 {
                     clsemail.Email = exist.Email;
-                    login = new NetworkCredential("3al1original@gmail.com", "3al1artistnadi");
                     client = new SmtpClient();
+                    client.UseDefaultCredentials = false;
                     client.Port = 587;
+                    login = new NetworkCredential("3al1original@gmail.com", "3al1@@37");
+
                     client.EnableSsl = true;
                     client.Credentials = login;
                     client.Host = "smtp.gmail.com";
@@ -48,6 +50,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
                     mssg.To.Add(new MailAddress(txtEmailFP.Text));
                     mssg.Subject = "Forget Pass";
                     mssg.IsBodyHtml = true;
+                    client.EnableSsl = true;
                     codemail = GenerateCodeFP();
                     string htmlbody = "<p><strong>Hello,</strong></p>" +
                         "<p>We have sent you this email in response to your request to reset your password on <strong>JELOUANE TRAVAUX</strong> .</p>" +
@@ -86,10 +89,10 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             if (e.Cancelled)
             {
                 MessageBox.Show("NO");
-            }              
+            }
             if (e.Error != null)
             {
-                MessageBox.Show("ERROR");
+                MessageBox.Show(e.Error.ToString());
             }
             else
             {
@@ -171,7 +174,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
                         txtEmailcodeFP.Text = null;
                         try
                         {
-                            login = new NetworkCredential("3al1original@gmail.com", "ALAEORG31");
+                            login = new NetworkCredential("3al1original@gmail.com", "A3J789#3al123");
                             client = new SmtpClient();
                             client.Port = 587;
                             client.EnableSsl = true;
@@ -216,6 +219,11 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         }
 
         private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblOR_Click(object sender, EventArgs e)
         {
 
         }

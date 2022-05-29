@@ -16,7 +16,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmMainForm());
+            Application.Run(new FrmLogin());
         }
     }
 }

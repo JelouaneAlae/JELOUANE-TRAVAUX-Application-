@@ -56,7 +56,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.btnForgetPass.BackColor = System.Drawing.Color.Transparent;
             this.btnForgetPass.FlatAppearance.BorderSize = 0;
             this.btnForgetPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnForgetPass.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnForgetPass.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
             this.btnForgetPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(44)))), ((int)(((byte)(131)))));
             this.btnForgetPass.Location = new System.Drawing.Point(25, 386);
             this.btnForgetPass.Name = "btnForgetPass";
