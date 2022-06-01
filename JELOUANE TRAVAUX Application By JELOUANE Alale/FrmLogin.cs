@@ -29,6 +29,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
         private void FrmLogin_Load(object sender, EventArgs e)
         {
+            ClsEmail.Email = null;
             btnLogin.Visible = false;
             this.Controls.Add(UCL);
             UCL.Location = new Point(0, 215);

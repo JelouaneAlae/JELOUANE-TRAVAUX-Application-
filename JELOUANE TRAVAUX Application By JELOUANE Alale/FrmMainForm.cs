@@ -269,7 +269,10 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
         private void BtnInbox_Click(object sender, EventArgs e)
         {
-
+            Panel pnlNotification = new Panel();
+            pnlNotification.BackColor = Color.White;
+            pnlNotification.Location = new Point(697, 76);
+            pnlNotification.Size = new Size(170, 242);
         }
 
         private void label1_Click(object sender, EventArgs e)

@@ -22,6 +22,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         static string Nom_salle;
 
 
+
         public  ClsEmail() { }
 
         public static string project_name { get => Project_name; set => Project_name = value; }
@@ -33,12 +34,13 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         public static string Name_Client { get => Name_client; set => Name_client = value; }
         public static int ID_PROJECt { get => ID_PROJECT; set => ID_PROJECT = value; }
 
-        public string Email { get => email; set => email = value; }
+        public static string Email { get => email; set => email = value; }
 
         public static string nom_salle { get => Nom_salle; set => Nom_salle = value; }
         public static int iD_salle { get => ID_salle; set => ID_salle = value; }
 
         public static DateTime project_Starting_date { get => Project_Starting_date; set => Project_Starting_date = value; }
+
 
     }
 }

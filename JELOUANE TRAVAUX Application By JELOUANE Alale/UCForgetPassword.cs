@@ -37,7 +37,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             {
                 try
                 {
-                    clsemail.Email = exist.Email;
+                    ClsEmail.Email= exist.Email;
                     client = new SmtpClient();
                     client.UseDefaultCredentials = false;
                     client.Port = 587;
