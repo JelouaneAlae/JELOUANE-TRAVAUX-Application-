@@ -8,65 +8,38 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Entity;
+using System.Globalization;
 
 namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 {
     public partial class UCHome : UserControl
     {
+        JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
         DataSet ds;
         public UCHome()
         {
             InitializeComponent();
-            NotificationItems();
+            
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel7_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void UCHome_Load(object sender, EventArgs e)
         {
             MainFormInfo();
-
-            //fillcmb();
-
+            JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
             lblTotalProfit.Text = CalculeTotalProfit().ToString()+"  DH" ;
+            bunifuPieChart1.Data.Add(8);
+            bunifuPieChart1.Data.Add(2);
+            bunifuPieChart1.Data.Add(6);
+
+
+            foreach (Control text in Controls)
+            {
+                ClsEmail.keyLang = "ar-MA";
+                CultureInfo la = new CultureInfo(ClsEmail.keyLang);
+                InputLanguage.CurrentInputLanguage = InputLanguage.FromCulture(la);
+            }
         }
 
         public void MainFormInfo()
@@ -94,110 +67,25 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             lblWorkshopFinished.Text = ProjectNotEnded.ToString();
             lblWorshopNotfinished.Text = ProjectEnded.ToString();
         }
-        public void PieChart()
+
+        public int chart(string Month)
         {
-            //var month = cmbMonth.Text; 
-            //JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
-            ////bunifuPieChart1.Data.Add(db.projets.Where(o=> DbFunctions.TruncateTime(
-            ////    o.Datedebut_Projet)==++ ).ToList().Count);
-            //////var no
-            //////bunifuPieChart1.Data.Add
-            /////
-            //int projectFinshed=0;
-            //int projectNotFinished = 0;
-
-            //for (int i = 0; i < db.projets.ToList().Count; i++)
-            //{
-            //    string mont = cmbMonth.Text;
-            //    switch (mont)
-            //    {
-            //        case "salam":
-            //            DateTime date = db.projets.ToList()[i].Datedebut_Projet.Value;
-            //            if (date.Month == 1)
-            //            {
-            //                if (db.projets.ToList()[i].DateFin_Projet.Value != null)
-            //                {
-            //                    projectFinshed += 1;
-            //                }
-            //                else
-            //                {
-            //                    projectNotFinished += 1;
-            //                }
-            //            }
-            //            break;
-            //        case "dd":
-
-            //    }
-
-            //}
-        }
-
-        private void bunifuChartCanvas1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        public void NotificationItems()
-        {
+            int cpt = 0;
             JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
-            UC_NotificationItems[] Notification = new UC_NotificationItems[5];
-
-            for (int i = 0; i < Notification.Length; i++)
+            for (int i = 0; i < db.projets.ToList().Count; i++)
             {
-                //Notification[i] = new UC_NotificationItems();
-                //Notification[i].ProjectName =
-                //flowLayoutPanel1.Controls.Add(Notification[i]);
+                if (Month.ToLower() == db.projets.ToList()[i].Datedebut_Projet.Value.ToString("MMMM").ToLower())
+                {
+                    cpt++;
+                }
             }
-
+            return cpt;
         }
 
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-
-
-        private void CmbKeyLanguage_SelectedValueChanged(object sender, EventArgs e)
-        {
-            MessageBox.Show("ff");
-
-        }
-
-        //public void fillcmb()
-        //{
-        //    //IDictionary<string, int> mount = new Dictionary<string, int>();
-        //    List<string> mount = new List<string>();
-        //    ds.Tables.Add("mois");
-        //    ds.Tables[0].Columns.Add("nom");
-        //    ds.Tables[0].Columns.Add("number");
-        //    ds.Tables[0].Rows.Add("January", 1);
-        //    ds.Tables[0].Rows.Add("February",2);
-        //    ds.Tables[0].Rows.Add("March", 3);
-        //    ds.Tables[0].Rows.Add("April", 4);
-        //    ds.Tables[0].Rows.Add("May", 5);
-        //    ds.Tables[0].Rows.Add("June", 6);
-        //    ds.Tables[0].Rows.Add("July",7);
-        //    ds.Tables[0].Rows.Add("August", 8);
-        //    ds.Tables[0].Rows.Add("September", 9);
-        //    ds.Tables[0].Rows.Add("October", 10);
-        //    ds.Tables[0].Rows.Add("November",11);
-        //    ds.Tables[0].Rows.Add("December",12);
-
-        //    cmbMonth.DataSource = ds.Tables[0];
-        //    cmbMonth.ValueMember = "number";
-        //    cmbMonth.DisplayMember = "nom";
-
-        //}
 
         private void cmbMonth_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            chart(cmbMonth.Text);
         }
 
         public double CalculeTotalProfit()
@@ -210,7 +98,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
                 Profit += db.Utilisers.ToList()[i].PrixQuantite.Value;
             }
             return Profit;
-
-        } 
+        }
     }
 }

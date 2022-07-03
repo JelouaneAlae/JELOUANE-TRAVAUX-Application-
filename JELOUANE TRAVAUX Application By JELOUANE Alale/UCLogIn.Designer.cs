@@ -46,6 +46,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             // picusername
             // 
             this.picusername.Image = ((System.Drawing.Image)(resources.GetObject("picusername.Image")));
+            this.picusername.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.picusername.Location = new System.Drawing.Point(12, 3);
             this.picusername.Name = "picusername";
             this.picusername.Size = new System.Drawing.Size(33, 39);
@@ -65,7 +66,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             // 
             this.txtPassword.BackColor = System.Drawing.SystemColors.Control;
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassword.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Font = new System.Drawing.Font("Cambria", 12F);
             this.txtPassword.ForeColor = System.Drawing.Color.Black;
             this.txtPassword.Location = new System.Drawing.Point(52, 74);
             this.txtPassword.Name = "txtPassword";
@@ -76,6 +77,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.pictureBox3.Location = new System.Drawing.Point(9, 62);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(35, 39);
@@ -89,6 +91,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F);
             this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnLogin.Location = new System.Drawing.Point(9, 120);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(241, 34);
@@ -104,28 +107,27 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(238, 5);
             this.panel2.TabIndex = 21;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // txtEmail
             // 
             this.txtEmail.BackColor = System.Drawing.SystemColors.Control;
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEmail.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Font = new System.Drawing.Font("Cambria", 12F);
             this.txtEmail.ForeColor = System.Drawing.Color.Black;
             this.txtEmail.Location = new System.Drawing.Point(52, 15);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(184, 19);
-            this.txtEmail.TabIndex = 22;
-            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
+            this.txtEmail.TabIndex = 22; 
             // 
             // btnShowPassword
             // 
             this.btnShowPassword.BackColor = System.Drawing.Color.Transparent;
             this.btnShowPassword.FlatAppearance.BorderSize = 0;
             this.btnShowPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShowPassword.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShowPassword.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
             this.btnShowPassword.ForeColor = System.Drawing.Color.White;
             this.btnShowPassword.Image = ((System.Drawing.Image)(resources.GetObject("btnShowPassword.Image")));
+            this.btnShowPassword.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnShowPassword.Location = new System.Drawing.Point(222, 68);
             this.btnShowPassword.Name = "btnShowPassword";
             this.btnShowPassword.Size = new System.Drawing.Size(25, 25);
@@ -138,9 +140,10 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.btnMaskPassword.BackColor = System.Drawing.Color.Transparent;
             this.btnMaskPassword.FlatAppearance.BorderSize = 0;
             this.btnMaskPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMaskPassword.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMaskPassword.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold);
             this.btnMaskPassword.ForeColor = System.Drawing.Color.White;
             this.btnMaskPassword.Image = ((System.Drawing.Image)(resources.GetObject("btnMaskPassword.Image")));
+            this.btnMaskPassword.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnMaskPassword.Location = new System.Drawing.Point(222, 73);
             this.btnMaskPassword.Name = "btnMaskPassword";
             this.btnMaskPassword.Size = new System.Drawing.Size(25, 19);

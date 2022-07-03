@@ -53,7 +53,7 @@
             this.bunifuRadioButton6 = new Bunifu.UI.WinForms.BunifuRadioButton();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.CmbKeyLanguage = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.cmbDatebefore = new Bunifu.UI.WinForms.BunifuDropdown();
             this.label13 = new System.Windows.Forms.Label();
             this.bunifuRadioButton7 = new Bunifu.UI.WinForms.BunifuRadioButton();
             this.label14 = new System.Windows.Forms.Label();
@@ -438,54 +438,54 @@
             this.label12.TabIndex = 37;
             this.label12.Text = "Reminder of the delivery date before\r\n";
             // 
-            // CmbKeyLanguage
+            // cmbDatebefore
             // 
-            this.CmbKeyLanguage.BackColor = System.Drawing.Color.Transparent;
-            this.CmbKeyLanguage.BackgroundColor = System.Drawing.Color.White;
-            this.CmbKeyLanguage.BorderColor = System.Drawing.Color.Silver;
-            this.CmbKeyLanguage.BorderRadius = 1;
-            this.CmbKeyLanguage.Color = System.Drawing.Color.Silver;
-            this.CmbKeyLanguage.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
-            this.CmbKeyLanguage.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.CmbKeyLanguage.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.CmbKeyLanguage.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.CmbKeyLanguage.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.CmbKeyLanguage.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
-            this.CmbKeyLanguage.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.CmbKeyLanguage.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
-            this.CmbKeyLanguage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CmbKeyLanguage.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.CmbKeyLanguage.FillDropDown = true;
-            this.CmbKeyLanguage.FillIndicator = false;
-            this.CmbKeyLanguage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CmbKeyLanguage.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.CmbKeyLanguage.ForeColor = System.Drawing.Color.Black;
-            this.CmbKeyLanguage.FormattingEnabled = true;
-            this.CmbKeyLanguage.Icon = null;
-            this.CmbKeyLanguage.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.CmbKeyLanguage.IndicatorColor = System.Drawing.Color.DarkGray;
-            this.CmbKeyLanguage.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.CmbKeyLanguage.IndicatorThickness = 2;
-            this.CmbKeyLanguage.IsDropdownOpened = false;
-            this.CmbKeyLanguage.ItemBackColor = System.Drawing.Color.White;
-            this.CmbKeyLanguage.ItemBorderColor = System.Drawing.Color.White;
-            this.CmbKeyLanguage.ItemForeColor = System.Drawing.Color.Black;
-            this.CmbKeyLanguage.ItemHeight = 26;
-            this.CmbKeyLanguage.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
-            this.CmbKeyLanguage.ItemHighLightForeColor = System.Drawing.Color.White;
-            this.CmbKeyLanguage.Items.AddRange(new object[] {
-            "24 H",
+            this.cmbDatebefore.BackColor = System.Drawing.Color.Transparent;
+            this.cmbDatebefore.BackgroundColor = System.Drawing.Color.White;
+            this.cmbDatebefore.BorderColor = System.Drawing.Color.Silver;
+            this.cmbDatebefore.BorderRadius = 1;
+            this.cmbDatebefore.Color = System.Drawing.Color.Silver;
+            this.cmbDatebefore.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.cmbDatebefore.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.cmbDatebefore.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.cmbDatebefore.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.cmbDatebefore.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.cmbDatebefore.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.cmbDatebefore.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbDatebefore.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
+            this.cmbDatebefore.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDatebefore.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.cmbDatebefore.FillDropDown = true;
+            this.cmbDatebefore.FillIndicator = false;
+            this.cmbDatebefore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbDatebefore.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cmbDatebefore.ForeColor = System.Drawing.Color.Black;
+            this.cmbDatebefore.FormattingEnabled = true;
+            this.cmbDatebefore.Icon = null;
+            this.cmbDatebefore.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.cmbDatebefore.IndicatorColor = System.Drawing.Color.DarkGray;
+            this.cmbDatebefore.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.cmbDatebefore.IndicatorThickness = 2;
+            this.cmbDatebefore.IsDropdownOpened = false;
+            this.cmbDatebefore.ItemBackColor = System.Drawing.Color.White;
+            this.cmbDatebefore.ItemBorderColor = System.Drawing.Color.White;
+            this.cmbDatebefore.ItemForeColor = System.Drawing.Color.Black;
+            this.cmbDatebefore.ItemHeight = 26;
+            this.cmbDatebefore.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
+            this.cmbDatebefore.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.cmbDatebefore.Items.AddRange(new object[] {
             "1 Day",
             "3 Day",
             "7 Day"});
-            this.CmbKeyLanguage.ItemTopMargin = 3;
-            this.CmbKeyLanguage.Location = new System.Drawing.Point(397, 234);
-            this.CmbKeyLanguage.Name = "CmbKeyLanguage";
-            this.CmbKeyLanguage.Size = new System.Drawing.Size(97, 32);
-            this.CmbKeyLanguage.TabIndex = 38;
-            this.CmbKeyLanguage.Text = null;
-            this.CmbKeyLanguage.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.CmbKeyLanguage.TextLeftMargin = 5;
+            this.cmbDatebefore.ItemTopMargin = 3;
+            this.cmbDatebefore.Location = new System.Drawing.Point(397, 234);
+            this.cmbDatebefore.Name = "cmbDatebefore";
+            this.cmbDatebefore.Size = new System.Drawing.Size(115, 32);
+            this.cmbDatebefore.TabIndex = 38;
+            this.cmbDatebefore.Text = "Select Date";
+            this.cmbDatebefore.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.cmbDatebefore.TextLeftMargin = 5;
+            this.cmbDatebefore.SelectedIndexChanged += new System.EventHandler(this.cmbDatebefore_SelectedIndexChanged);
             // 
             // label13
             // 
@@ -569,7 +569,7 @@
             this.Controls.Add(this.label14);
             this.Controls.Add(this.bunifuRadioButton8);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.CmbKeyLanguage);
+            this.Controls.Add(this.cmbDatebefore);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.bunifuRadioButton5);
@@ -593,6 +593,7 @@
             this.Controls.Add(this.label1);
             this.Name = "UC_NotificationSetting";
             this.Size = new System.Drawing.Size(562, 338);
+            this.Load += new System.EventHandler(this.UC_NotificationSetting_Load);
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -624,7 +625,7 @@
         private System.Windows.Forms.Label label8;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bunifuButton22;
         private System.Windows.Forms.Label label12;
-        private Bunifu.UI.WinForms.BunifuDropdown CmbKeyLanguage;
+        private Bunifu.UI.WinForms.BunifuDropdown cmbDatebefore;
         private System.Windows.Forms.Label label13;
         private Bunifu.UI.WinForms.BunifuRadioButton bunifuRadioButton7;
         private System.Windows.Forms.Label label14;

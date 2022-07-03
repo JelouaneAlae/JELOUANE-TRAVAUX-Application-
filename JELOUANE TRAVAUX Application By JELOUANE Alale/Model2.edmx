@@ -5,6 +5,16 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="JELOUANE_TRAVAUX2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AppSetting">
+          <Key>
+            <PropertyRef Name="id_s" />
+          </Key>
+          <Property Name="id_s" Type="int" Nullable="false" />
+          <Property Name="Theme" Type="varchar" MaxLength="30" />
+          <Property Name="appLang" Type="varchar" MaxLength="30" />
+          <Property Name="Keylang" Type="varchar" MaxLength="30" />
+          <Property Name="SaveLoginInfo" Type="bit" />
+        </EntityType>
         <EntityType Name="Client">
           <Key>
             <PropertyRef Name="ID_Client" />
@@ -43,7 +53,7 @@
           <Key>
             <PropertyRef Name="id_notification" />
           </Key>
-          <Property Name="id_notification" Type="int" Nullable="false" />
+          <Property Name="id_notification" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="id_Project" Type="int" />
           <Property Name="message_notification" Type="varchar(max)" />
           <Property Name="type_notification" Type="varchar" MaxLength="240" />
@@ -97,7 +107,7 @@
           <Property Name="Quantite_Utiliser" Type="int" />
           <Property Name="PrixQuantite" Type="int" />
         </EntityType>
-        <Association Name="FK__Notificat__id_Pr__60A75C0F">
+        <Association Name="FK__Notificat__id_Pr__6EF57B66">
           <End Role="projet" Type="Self.projet" Multiplicity="0..1" />
           <End Role="Notification" Type="Self.Notification" Multiplicity="*" />
           <ReferentialConstraint>
@@ -153,6 +163,7 @@
         </Function>
         <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="JELOUANE_TRAVAUX2ModelStoreContainer">
+          <EntitySet Name="AppSetting" EntityType="Self.AppSetting" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Client" EntityType="Self.Client" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Materiel" EntityType="Self.Materiel" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Mur" EntityType="Self.Mur" Schema="dbo" store:Type="Tables" />
@@ -162,7 +173,7 @@
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="utilisateur" EntityType="Self.utilisateur" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Utiliser" EntityType="Self.Utiliser" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__Notificat__id_Pr__60A75C0F" Association="Self.FK__Notificat__id_Pr__60A75C0F">
+          <AssociationSet Name="FK__Notificat__id_Pr__6EF57B66" Association="Self.FK__Notificat__id_Pr__6EF57B66">
             <End Role="projet" EntitySet="projet" />
             <End Role="Notification" EntitySet="Notification" />
           </AssociationSet>
@@ -383,6 +394,7 @@
             <Parameter Name="new_diagramname" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_upgraddiagrams" />
+          <EntitySet Name="AppSettings" EntityType="JELOUANE_TRAVAUX2Model.AppSetting" />
         </EntityContainer>
         <EntityType Name="Notification">
           <Key>
@@ -427,6 +439,16 @@
           <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
           <Property Type="Int32" Name="OwnerID" Nullable="false" />
         </ComplexType>
+        <EntityType Name="AppSetting">
+          <Key>
+            <PropertyRef Name="id_s" />
+          </Key>
+          <Property Name="id_s" Type="Int32" Nullable="false" />
+          <Property Name="Theme" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="appLang" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Keylang" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="SaveLoginInfo" Type="Boolean" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -557,6 +579,17 @@
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="JELOUANE_TRAVAUX2Model.Store.sp_renamediagram" />
           <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="JELOUANE_TRAVAUX2Model.Store.sp_upgraddiagrams" />
+          <EntitySetMapping Name="AppSettings">
+            <EntityTypeMapping TypeName="JELOUANE_TRAVAUX2Model.AppSetting">
+              <MappingFragment StoreEntitySet="AppSetting">
+                <ScalarProperty Name="SaveLoginInfo" ColumnName="SaveLoginInfo" />
+                <ScalarProperty Name="Keylang" ColumnName="Keylang" />
+                <ScalarProperty Name="appLang" ColumnName="appLang" />
+                <ScalarProperty Name="Theme" ColumnName="Theme" />
+                <ScalarProperty Name="id_s" ColumnName="id_s" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

@@ -48,6 +48,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.BtnInbox = new System.Windows.Forms.Button();
             this.pnlHead = new System.Windows.Forms.Panel();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button12 = new System.Windows.Forms.Button();
             this.btnAccountSetting = new System.Windows.Forms.Button();
@@ -55,13 +56,13 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.pnlsetting = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.PnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.pnlHead.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlsetting.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // PnlMenu
@@ -84,14 +85,13 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.PnlMenu.Name = "PnlMenu";
             this.PnlMenu.Size = new System.Drawing.Size(193, 485);
             this.PnlMenu.TabIndex = 2;
-            this.PnlMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(-1, 454);
@@ -118,7 +118,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.pnlverticalSetting.Name = "pnlverticalSetting";
             this.pnlverticalSetting.Size = new System.Drawing.Size(8, 48);
             this.pnlverticalSetting.TabIndex = 15;
-            this.pnlverticalSetting.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
             // 
             // pnlverticalSupport
             // 
@@ -127,7 +126,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.pnlverticalSupport.Name = "pnlverticalSupport";
             this.pnlverticalSupport.Size = new System.Drawing.Size(8, 48);
             this.pnlverticalSupport.TabIndex = 11;
-            this.pnlverticalSupport.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
             // 
             // pnlverticalEquipment
             // 
@@ -158,7 +156,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.btnSetting.BackColor = System.Drawing.Color.Transparent;
             this.btnSetting.FlatAppearance.BorderSize = 0;
             this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSetting.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSetting.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnSetting.ForeColor = System.Drawing.Color.White;
             this.btnSetting.Image = ((System.Drawing.Image)(resources.GetObject("btnSetting.Image")));
             this.btnSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -175,7 +173,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.button8.BackColor = System.Drawing.Color.Transparent;
             this.button8.FlatAppearance.BorderSize = 0;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
             this.button8.ForeColor = System.Drawing.Color.White;
             this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
             this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -192,7 +190,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.button7.BackColor = System.Drawing.Color.Transparent;
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
             this.button7.ForeColor = System.Drawing.Color.White;
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -209,7 +207,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.button6.BackColor = System.Drawing.Color.Transparent;
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
             this.button6.ForeColor = System.Drawing.Color.White;
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -226,7 +224,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.button5.BackColor = System.Drawing.Color.Transparent;
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -303,6 +301,16 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(190, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(221, 73);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 17;
+            this.pictureBox2.TabStop = false;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -318,7 +326,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(44)))), ((int)(((byte)(131)))));
             this.button12.FlatAppearance.BorderSize = 0;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.button12.ForeColor = System.Drawing.Color.White;
             this.button12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button12.Location = new System.Drawing.Point(11, 12);
@@ -334,7 +342,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.btnAccountSetting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(44)))), ((int)(((byte)(131)))));
             this.btnAccountSetting.FlatAppearance.BorderSize = 0;
             this.btnAccountSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAccountSetting.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccountSetting.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.btnAccountSetting.ForeColor = System.Drawing.Color.White;
             this.btnAccountSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAccountSetting.Location = new System.Drawing.Point(11, 54);
@@ -350,7 +358,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(44)))), ((int)(((byte)(131)))));
             this.button10.FlatAppearance.BorderSize = 0;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.button10.ForeColor = System.Drawing.Color.White;
             this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button10.Location = new System.Drawing.Point(11, 96);
@@ -366,7 +374,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(44)))), ((int)(((byte)(131)))));
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.Location = new System.Drawing.Point(11, 138);
@@ -382,7 +390,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(44)))), ((int)(((byte)(131)))));
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(11, 180);
@@ -406,17 +414,15 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.pnlsetting.Size = new System.Drawing.Size(155, 338);
             this.pnlsetting.TabIndex = 25;
             this.pnlsetting.Visible = false;
-            this.pnlsetting.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlsetting_Paint);
             // 
-            // pictureBox2
+            // flowLayoutPanel1
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(190, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(221, 73);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 17;
-            this.pictureBox2.TabStop = false;
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(658, 79);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(209, 169);
+            this.flowLayoutPanel1.TabIndex = 27;
+            this.flowLayoutPanel1.Visible = false;
             // 
             // FrmMainForm
             // 
@@ -424,6 +430,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(927, 485);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.pnlsetting);
             this.Controls.Add(this.pnlHead);
             this.Controls.Add(this.panel1);
@@ -438,9 +445,9 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.pnlHead.ResumeLayout(false);
             this.pnlHead.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlsetting.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -472,5 +479,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

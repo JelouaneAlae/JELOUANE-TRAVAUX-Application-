@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 {
@@ -58,6 +59,8 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
         private void UC_Workshop_New_Project_Load(object sender, EventArgs e)
         {
+            CultureInfo la = new CultureInfo(ClsEmail.keyLang);
+            InputLanguage.CurrentInputLanguage = InputLanguage.FromCulture(la);
             dgvExistingProject.Columns.Add("ID", "ID");
             dgvExistingProject.Columns.Add("Name", "Name");
             dgvExistingProject.Columns.Add("Starting D", "Starting D");

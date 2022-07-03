@@ -20,7 +20,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         int F;
         int partCode1;
         int PartCode2;
-        //JELOUANE_TRAVAUXEntities4 db = new JELOUANE_TRAVAUXEntities4();
         JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
         string codemail;
         ClsEmail clsemail = new ClsEmail();
@@ -122,7 +121,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         {
             txtEmailFP.Visible = true;
             picCodeFp.Visible = false;
-            //txtEmailF_P.Visible = false;
             var form = Form.ActiveForm as FrmLogin;
             if (form != null)
             {
@@ -150,8 +148,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         {
             if (txtEmailcodeFP.Text == codemail)
             {
-                //MessageBox.Show("code s7i7");
-
                 F = 0;
                 var form = Form.ActiveForm as FrmLogin;
                 if (form != null)
@@ -211,21 +207,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
                 }
 
             }
-        }
-
-        private void txtCodeEmailFP_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblOR_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

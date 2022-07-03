@@ -20,10 +20,20 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
         static int ID_salle;
         static string Nom_salle;
+        static string ExpiryreminderBefore;
+
+        static string KeyLang;
+        static string theme;
+        public static string Theme { get => theme; set => theme = value; }
+        static string applan;
+        public static string Applan { get => applan; set => applan = value; }
+
+        public static bool savelogininfo;
+        public static string Savelogininfo { set => savelogininfo = false; }
 
 
 
-        public  ClsEmail() { }
+        public ClsEmail() { }
 
         public static string project_name { get => Project_name; set => Project_name = value; }
         public static int IdEquipment { get => idEquipment; set => idEquipment = value; }
@@ -40,7 +50,9 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         public static int iD_salle { get => ID_salle; set => ID_salle = value; }
 
         public static DateTime project_Starting_date { get => Project_Starting_date; set => Project_Starting_date = value; }
+        public static string expiryreminderBefore { get => ExpiryreminderBefore; set => ExpiryreminderBefore = value; }
 
+        public static string keyLang { get => KeyLang; set => KeyLang= value; }
 
     }
 }

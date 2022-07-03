@@ -16,5 +16,15 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         {
             InitializeComponent();
         }
+
+        private void cmbDatebefore_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ClsEmail.Email = cmbDatebefore.Text;
+        }
+
+        private void UC_NotificationSetting_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -95,7 +95,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.lblOR.Size = new System.Drawing.Size(26, 18);
             this.lblOR.TabIndex = 29;
             this.lblOR.Text = "OR";
-            this.lblOR.Click += new System.EventHandler(this.lblOR_Click);
             // 
             // picCodeFp
             // 
@@ -148,7 +147,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.txtEmailcodeFP.Size = new System.Drawing.Size(196, 19);
             this.txtEmailcodeFP.TabIndex = 33;
             this.txtEmailcodeFP.Visible = false;
-            this.txtEmailcodeFP.TextChanged += new System.EventHandler(this.txtCodeEmailFP_TextChanged);
             // 
             // UCForgetPassword
             // 

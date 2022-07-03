@@ -40,7 +40,7 @@
             this.CmbKeyLanguage = new Bunifu.UI.WinForms.BunifuDropdown();
             this.pnlDefault = new Bunifu.UI.WinForms.BunifuPanel();
             this.pnldark = new Bunifu.UI.WinForms.BunifuPanel();
-            this.panelHighContrast = new Bunifu.UI.WinForms.BunifuPanel();
+            this.pnlHighContrast = new Bunifu.UI.WinForms.BunifuPanel();
             this.SuspendLayout();
             // 
             // label1
@@ -89,6 +89,7 @@
             this.button1.Text = "Dark";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -106,6 +107,7 @@
             this.button2.Text = "High contrast";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label2
             // 
@@ -154,14 +156,18 @@
             this.CmbAppLanguage.ItemHeight = 26;
             this.CmbAppLanguage.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
             this.CmbAppLanguage.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.CmbAppLanguage.Items.AddRange(new object[] {
+            "English",
+            "French"});
             this.CmbAppLanguage.ItemTopMargin = 3;
             this.CmbAppLanguage.Location = new System.Drawing.Point(13, 269);
             this.CmbAppLanguage.Name = "CmbAppLanguage";
-            this.CmbAppLanguage.Size = new System.Drawing.Size(171, 32);
+            this.CmbAppLanguage.Size = new System.Drawing.Size(175, 32);
             this.CmbAppLanguage.TabIndex = 16;
-            this.CmbAppLanguage.Text = null;
+            this.CmbAppLanguage.Text = "Choose the language";
             this.CmbAppLanguage.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.CmbAppLanguage.TextLeftMargin = 5;
+            this.CmbAppLanguage.SelectedIndexChanged += new System.EventHandler(this.CmbAppLanguage_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -222,14 +228,19 @@
             this.CmbKeyLanguage.ItemHeight = 26;
             this.CmbKeyLanguage.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
             this.CmbKeyLanguage.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.CmbKeyLanguage.Items.AddRange(new object[] {
+            "Arab",
+            "French",
+            "English"});
             this.CmbKeyLanguage.ItemTopMargin = 3;
             this.CmbKeyLanguage.Location = new System.Drawing.Point(226, 269);
             this.CmbKeyLanguage.Name = "CmbKeyLanguage";
             this.CmbKeyLanguage.Size = new System.Drawing.Size(171, 32);
             this.CmbKeyLanguage.TabIndex = 18;
-            this.CmbKeyLanguage.Text = null;
+            this.CmbKeyLanguage.Text = "Choose the language";
             this.CmbKeyLanguage.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.CmbKeyLanguage.TextLeftMargin = 5;
+            this.CmbKeyLanguage.SelectedIndexChanged += new System.EventHandler(this.CmbKeyLanguage_SelectedIndexChanged);
             // 
             // pnlDefault
             // 
@@ -244,6 +255,8 @@
             this.pnlDefault.ShowBorders = true;
             this.pnlDefault.Size = new System.Drawing.Size(175, 6);
             this.pnlDefault.TabIndex = 20;
+            this.pnlDefault.UseWaitCursor = true;
+            this.pnlDefault.Click += new System.EventHandler(this.pnlDefault_Click);
             // 
             // pnldark
             // 
@@ -259,28 +272,29 @@
             this.pnldark.Size = new System.Drawing.Size(175, 6);
             this.pnldark.TabIndex = 21;
             this.pnldark.Visible = false;
+            this.pnldark.Click += new System.EventHandler(this.pnldark_Click);
             // 
-            // panelHighContrast
+            // pnlHighContrast
             // 
-            this.panelHighContrast.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(44)))), ((int)(((byte)(131)))));
-            this.panelHighContrast.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelHighContrast.BackgroundImage")));
-            this.panelHighContrast.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelHighContrast.BorderColor = System.Drawing.Color.Transparent;
-            this.panelHighContrast.BorderRadius = 3;
-            this.panelHighContrast.BorderThickness = 1;
-            this.panelHighContrast.Location = new System.Drawing.Point(388, 163);
-            this.panelHighContrast.Name = "panelHighContrast";
-            this.panelHighContrast.ShowBorders = true;
-            this.panelHighContrast.Size = new System.Drawing.Size(175, 6);
-            this.panelHighContrast.TabIndex = 22;
-            this.panelHighContrast.Visible = false;
+            this.pnlHighContrast.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(44)))), ((int)(((byte)(131)))));
+            this.pnlHighContrast.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlHighContrast.BackgroundImage")));
+            this.pnlHighContrast.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlHighContrast.BorderColor = System.Drawing.Color.Transparent;
+            this.pnlHighContrast.BorderRadius = 3;
+            this.pnlHighContrast.BorderThickness = 1;
+            this.pnlHighContrast.Location = new System.Drawing.Point(388, 163);
+            this.pnlHighContrast.Name = "pnlHighContrast";
+            this.pnlHighContrast.ShowBorders = true;
+            this.pnlHighContrast.Size = new System.Drawing.Size(175, 6);
+            this.pnlHighContrast.TabIndex = 22;
+            this.pnlHighContrast.Visible = false;
             // 
             // UC_Setting_Generale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.panelHighContrast);
+            this.Controls.Add(this.pnlHighContrast);
             this.Controls.Add(this.pnldark);
             this.Controls.Add(this.pnlDefault);
             this.Controls.Add(this.label4);
@@ -313,6 +327,6 @@
         private Bunifu.UI.WinForms.BunifuDropdown CmbKeyLanguage;
         private Bunifu.UI.WinForms.BunifuPanel pnlDefault;
         private Bunifu.UI.WinForms.BunifuPanel pnldark;
-        private Bunifu.UI.WinForms.BunifuPanel panelHighContrast;
+        private Bunifu.UI.WinForms.BunifuPanel pnlHighContrast;
     }
 }

@@ -156,7 +156,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.btnNewWorkFull.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnNewWorkFull.UseDefaultRadiusAndThickness = true;
             this.btnNewWorkFull.Click += new System.EventHandler(this.btnNewWorkFull_Click);
-            this.btnNewWorkFull.MouseHover += new System.EventHandler(this.btnNewWorkFull_MouseHover);
             // 
             // panel5
             // 
@@ -188,7 +187,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(369, 370);
             this.panel2.TabIndex = 1;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel6
             // 

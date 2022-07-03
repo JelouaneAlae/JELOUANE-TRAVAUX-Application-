@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Globalization;
 namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 {
     public partial class FrmMainForm : Form
@@ -60,6 +60,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.Controls.Remove(UCGS);
             pnlHead.Size = new Size(734, 85);
             removeSettingUC();
+            
         }
         public void PnlverticalMenu(string name)
         {
@@ -120,52 +121,32 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
         private void FrmMainForm_Load(object sender, EventArgs e)
         {
-            FrmLogin frml = new FrmLogin();
+            FrmLogin frml = new FrmLogin(); 
             frml.Visible = false;
             PnlverticalMenu("pnlverticalhome");
-            UC_controle("Home");    
-        }
+            UC_controle("Home");
+            Notification();
 
-        public void notificationControl(int time)
+
+        }
+        public void Notification()
         {
+
+        }
+         public void NotificationItems()
+         {
             JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
-            for ( int i = 0; i < db.projets.ToList().Count; i++)
+            UC_NotificationItems[] list = new UC_NotificationItems[db.Notifications.ToList().Count()];
+
+            for (int i =0;i< list.ToList().Count; i++)
             {
-                DateTime dateT = DateTime.Now;
-                if (db.projets.ToList()[i].DateFin_Projet == DateTime.Now)
-                {
-                    Notification N = new Notification();
-                    N.id_Project = db.projets.ToList()[i].ID_Projet;
-                    N.message_notification = "Delivery time has expired";
-                    N.type_notification = "Ended";
-                    db.Notifications.Add(N);
-                    db.SaveChanges();
-                }
-                if(db.projets.ToList()[i].DateFin_Projet == dateT.AddDays(time))
-                {
-                    Notification N = new Notification();
-                    N.id_Project = db.projets.ToList()[i].ID_Projet;
-                    N.message_notification = "Delivery time has expired";
-                    N.type_notification = "Close";
-                    db.Notifications.Add(N);
-                    db.SaveChanges();
-                }
+                var nameproject = db.projets.Find(db.projets.ToList()[i].ID_Projet);
+                list[i].ProjectName = nameproject.ToString();
+                list[i].Notification_description = db.Notifications.ToList()[i].message_notification.ToString();
+                flowLayoutPanel1.Controls.Clear();
+                flowLayoutPanel1.Controls.Add(list[i]);
             }
-        }
-        private void panel8_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel9_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+         }
 
         private void button7_Click(object sender, EventArgs e)
         {
@@ -207,11 +188,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             pnlHead.Size = new Size(734, 103);
             removeSettingUC();
             UC_seeting_Control("Generale");
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
         }
 
         public void UC_controle(string name)
@@ -269,10 +245,15 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
         private void BtnInbox_Click(object sender, EventArgs e)
         {
-            Panel pnlNotification = new Panel();
-            pnlNotification.BackColor = Color.White;
-            pnlNotification.Location = new Point(697, 76);
-            pnlNotification.Size = new Size(170, 242);
+            if(flowLayoutPanel1.Visible == false)
+            {
+                flowLayoutPanel1.Visible = true;
+                NotificationItems();
+            }
+            else
+            {
+                flowLayoutPanel1.Visible = false;
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -286,15 +267,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             btnAccountSetting.PerformClick();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void button12_Click(object sender, EventArgs e)
         {
@@ -377,9 +349,5 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             UC_seeting_Control("About");
         }
 
-        private void pnlsetting_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

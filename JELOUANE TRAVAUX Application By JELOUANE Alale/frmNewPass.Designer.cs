@@ -114,7 +114,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.txtNewPass1.Name = "txtNewPass1";
             this.txtNewPass1.Size = new System.Drawing.Size(184, 19);
             this.txtNewPass1.TabIndex = 32;
-            this.txtNewPass1.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // panelusername
             // 
@@ -145,7 +144,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.txtNewPass2.Name = "txtNewPass2";
             this.txtNewPass2.Size = new System.Drawing.Size(184, 19);
             this.txtNewPass2.TabIndex = 36;
-            this.txtNewPass2.TextChanged += new System.EventHandler(this.txtNewPass2_TextChanged);
             // 
             // panel1
             // 

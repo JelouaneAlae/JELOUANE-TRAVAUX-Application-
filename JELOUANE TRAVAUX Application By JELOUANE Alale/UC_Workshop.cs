@@ -17,56 +17,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuButton21_Click(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button6_MouseHover(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnnewwork_MouseLeave(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuButton24_MouseHover(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuButton24_MouseLeave(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnNewWorkFull_MouseHover(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnNewWorkFull_Click(object sender, EventArgs e)
         {

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 {
@@ -20,6 +21,8 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
         private void UC_Workshop_New_Room_Load(object sender, EventArgs e)
         {
+            CultureInfo la = new CultureInfo(ClsEmail.keyLang);
+            InputLanguage.CurrentInputLanguage = InputLanguage.FromCulture(la);
             dgvRooms.Columns.Add("ID", "ID");
             dgvRooms.Columns.Add("Name", "Name");
             fillDgRoom();
@@ -50,9 +53,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
                 S.ID_Projet = ClsEmail.ID_PROJECt;
                 db.Salles.Add(S);
                 db.SaveChanges();
-                //var exist = db.Salles.Where(o => o.Nom_Salle == txtRoomName.Text).ToList();
-                //ClsEmail.iD_salle = exist[0].Id_Salle;
-                //ClsEmail.nom_salle = txtRoomName.Text;
                 fillDgRoom();
                 txtRoomName.Text = null;
             }

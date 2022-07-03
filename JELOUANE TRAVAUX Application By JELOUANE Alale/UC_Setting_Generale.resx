@@ -646,7 +646,7 @@
         h+v70MlsEdKYMR/9rK/LVAaWVAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="panelHighContrast.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pnlHighContrast.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAK8AAAAGCAYAAAC1gc5TAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABoSURBVFhH7dSxDYAgEIVhSrfQ0ugZ3eTABbB0CxTcWzFc

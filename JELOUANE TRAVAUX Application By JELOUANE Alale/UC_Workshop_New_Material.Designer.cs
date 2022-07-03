@@ -399,7 +399,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.txtQte.TextPlaceholder = "Quantity";
             this.txtQte.UseSystemPasswordChar = false;
             this.txtQte.WordWrap = true;
-            this.txtQte.TextChanged += new System.EventHandler(this.bunifuTextBox1_TextChanged);
             // 
             // txtSreachMa
             // 
@@ -475,7 +474,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.txtSreachMa.TextPlaceholder = "     Search";
             this.txtSreachMa.UseSystemPasswordChar = false;
             this.txtSreachMa.WordWrap = true;
-            this.txtSreachMa.TextChanged += new System.EventHandler(this.txtSreachMa_TextChanged);
             this.txtSreachMa.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSreachMa_KeyUp);
             // 
             // btnNext

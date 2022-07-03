@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Configuration;
+using System.Globalization;
 
 namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 {
     public partial class frmNewEquipment : Form
     {
-        //JELOUANE_TRAVAUXEntities4 db = new JELOUANE_TRAVAUXEntities4();
         JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
         Byte[] t = null;
         OpenFileDialog fd = new OpenFileDialog();
@@ -42,12 +42,14 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             cmbColor.Items.Add("Green");
             cmbColor.Items.Add("White");
             cmbColor.Items.Add("Black");
+            CultureInfo la = new CultureInfo(ClsEmail.keyLang);
+            InputLanguage.CurrentInputLanguage = InputLanguage.FromCulture(la);
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             fd.Title = "Choose image";
-            fd.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            fd.Filter = "Image Files| *.jpg; *.jpeg; *.png; *.gif; *.tif;";
             if (fd.ShowDialog() == DialogResult.OK)
             {
                 FileStream fl = new FileStream(fd.FileName, FileMode.Open);
@@ -73,12 +75,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         {
             try
             {
-                //if (string.IsNullOrEmpty(txtID.Text))
-                //{
-                //    MessageBox.Show("The ID can't be empty");
-                //}
-                //else
-                //{
                     if (string.IsNullOrEmpty(txtnameM.Text))
                     {
                         MessageBox.Show("The Name can't be empty");
@@ -107,7 +103,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
                                     Materiel MT = new Materiel();
                                     MT.Nom_Materiel = txtnameM.Text;
                                     MT.Fondateur_Materiel = txtProducer.Text;
-                                    //MT.Id_Materiel = int.Parse(txtID.Text);
                                     MT.Color_Materiel = cmbColor.Text;
                                     MT.Price_materiel = int.Parse(txtPrice.Text);
                                     MT.Quantity_Materiel = int.Parse(cmbQuantity.Text);
@@ -130,7 +125,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
                             }
                         }
                     }
-                //}
+                
             }
             catch (Exception ex)
             {
@@ -138,14 +133,5 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             }
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

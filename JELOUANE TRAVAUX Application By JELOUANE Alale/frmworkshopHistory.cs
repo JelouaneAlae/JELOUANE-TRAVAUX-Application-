@@ -87,11 +87,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
         }
 
-        private void dgvProject_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void btnAddEqupment_Click(object sender, EventArgs e)
         {
             var form = Form.ActiveForm as frmworkshopHistory;
@@ -107,8 +102,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
         private void bunifuDatePicker2_ValueChanged(object sender, EventArgs e)
         {
-            //MessageBox.Show("yes");
-
             JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
             var ProjectList = (from projet in db.projets
                                where (projet.Datedebut_Projet >= (DateTime)dtpStartingDate.Value && projet.Datedebut_Projet <= (DateTime)dtpEndingDate.Value)
@@ -156,7 +149,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-
             filldgvProject();
         }
     }

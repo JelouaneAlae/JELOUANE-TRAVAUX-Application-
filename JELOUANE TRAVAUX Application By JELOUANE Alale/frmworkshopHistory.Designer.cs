@@ -345,7 +345,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.dgvProject.Size = new System.Drawing.Size(752, 280);
             this.dgvProject.TabIndex = 58;
             this.dgvProject.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
-            this.dgvProject.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProject_CellContentClick);
             // 
             // btnRefresh
             // 

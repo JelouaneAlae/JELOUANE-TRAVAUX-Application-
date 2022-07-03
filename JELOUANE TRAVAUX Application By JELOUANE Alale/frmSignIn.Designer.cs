@@ -522,7 +522,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.Name = "frmSignIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sign in";
-            this.Load += new System.EventHandler(this.frmSignIn_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

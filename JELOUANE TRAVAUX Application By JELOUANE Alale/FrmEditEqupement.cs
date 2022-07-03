@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Configuration;
+using System.Globalization;
 
 namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 {
     public partial class FrmEditEqupement : Form
     {
-        //JELOUANE_TRAVAUXEntities4 db = new JELOUANE_TRAVAUXEntities4();
         JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
         byte[] t = null;
         public FrmEditEqupement()
@@ -71,6 +71,8 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
                 }
 
             }
+            CultureInfo la = new CultureInfo(ClsEmail.keyLang);
+            InputLanguage.CurrentInputLanguage = InputLanguage.FromCulture(la);
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)

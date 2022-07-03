@@ -109,17 +109,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.cmbRooms.Text = "Rooms";
             this.cmbRooms.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.cmbRooms.TextLeftMargin = 5;
-            this.cmbRooms.DropDown += new System.EventHandler(this.cmbRooms_DropDown);
-            this.cmbRooms.SelectedIndexChanged += new System.EventHandler(this.cmbRooms_SelectedIndexChanged);
             this.cmbRooms.DropDownClosed += new System.EventHandler(this.cmbRooms_DropDownClosed);
-            this.cmbRooms.SelectedValueChanged += new System.EventHandler(this.cmbRooms_SelectedValueChanged);
-            this.cmbRooms.TabIndexChanged += new System.EventHandler(this.cmbRooms_TabIndexChanged);
-            this.cmbRooms.TextChanged += new System.EventHandler(this.cmbRooms_TextChanged);
-            this.cmbRooms.Click += new System.EventHandler(this.cmbRooms_Click);
-            this.cmbRooms.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbRooms_KeyPress);
-            this.cmbRooms.KeyUp += new System.Windows.Forms.KeyEventHandler(this.cmbRooms_KeyUp);
-            this.cmbRooms.Leave += new System.EventHandler(this.cmbRooms_Leave);
-            // 
             // dgvwalls
             // 
             this.dgvwalls.AllowCustomTheming = false;

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 {
@@ -25,6 +26,9 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         private void FormNewWorkShop_Load(object sender, EventArgs e)
         {
             UC_controle_Workshop("Client");
+            
+            CultureInfo la = new CultureInfo(ClsEmail.keyLang);
+            InputLanguage.CurrentInputLanguage = InputLanguage.FromCulture(la);
         }
 
         public void UC_controle_Workshop(string name)
@@ -107,16 +111,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //var form = Form.ActiveForm as FormNewWorkShop;
-            //if (form != null)
-            //{
-
-            //    form.Hide();
-            //    var form1 = new FrmMainForm();
-            //    form1.Closed += (s, args) => form.Close();
-            //    form1.Show();
-            //}
-
             this.Close();
         }
     }

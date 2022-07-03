@@ -32,14 +32,14 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.bunifuPanel1.SuspendLayout();
@@ -86,6 +86,30 @@
             this.bunifuPanel1.Size = new System.Drawing.Size(327, 201);
             this.bunifuPanel1.TabIndex = 20;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(11, 147);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(75, 21);
+            this.label8.TabIndex = 28;
+            this.label8.Text = "Support:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(24, 172);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(221, 20);
+            this.label7.TabIndex = 27;
+            this.label7.Text = "-Jelouanealae.job@gmail.com";
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -109,6 +133,18 @@
             this.label5.Size = new System.Drawing.Size(221, 16);
             this.label5.TabIndex = 25;
             this.label5.Text = "-JELOUANE Alae (Custumer admin)";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(11, 71);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(150, 21);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "Application team :";
             // 
             // label3
             // 
@@ -146,42 +182,6 @@
             this.label1.TabIndex = 21;
             this.label1.Text = "Application team :";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(24, 172);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(221, 20);
-            this.label7.TabIndex = 27;
-            this.label7.Text = "-Jelouanealae.job@gmail.com";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(11, 71);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(150, 21);
-            this.label4.TabIndex = 24;
-            this.label4.Text = "Application team :";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(11, 147);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(75, 21);
-            this.label8.TabIndex = 28;
-            this.label8.Text = "Support:";
-            // 
             // UC_About_setting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -193,6 +193,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "UC_About_setting";
             this.Size = new System.Drawing.Size(571, 338);
+            this.Load += new System.EventHandler(this.UC_About_setting_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.bunifuPanel1.ResumeLayout(false);

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 {
@@ -28,6 +29,8 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
         private void UC_Workshop_New_Wall_Load(object sender, EventArgs e)
         {
+            CultureInfo la = new CultureInfo(ClsEmail.keyLang);
+            InputLanguage.CurrentInputLanguage = InputLanguage.FromCulture(la);
             dgvwalls.Columns.Add("ID", "ID");
             dgvwalls.Columns.Add("Legth", "Legth");
             dgvwalls.Columns.Add("Width", "Width");
@@ -133,14 +136,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             
         }
 
-        private void bunifuButton21_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void cmbRooms_SelectedValueChanged(object sender, EventArgs e)
-        {
-        }
-
         private void btndeletewall_Click(object sender, EventArgs e)
         {
             try
@@ -193,17 +188,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             txtWallCurrentColor.Text = null;
             txtWallColorAfter.Text = null;
         }
-        private void cmbRooms_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void cmbRooms_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void cmbRooms_TabIndexChanged(object sender, EventArgs e)
-        {
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -238,50 +222,8 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             
         }
 
-        private void cmbRooms_Click(object sender, EventArgs e)
-        {
-        
-        }
-
-        private void cmbRooms_KeyUp(object sender, KeyEventArgs e)
-        {
-        }
-
-        private void cmbRooms_KeyPress(object sender, KeyPressEventArgs e)
-        {
-        }
-
-        private void cmbRooms_Leave(object sender, EventArgs e)
-        {
-        }
-
-        private void cmbRooms_DropDown(object sender, EventArgs e)
-        {
-        }
-
         private void cmbRooms_DropDownClosed(object sender, EventArgs e)
         {
-            //MessageBox.Show("  ");
-
-            //JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
-            //string Roomname = cmbRooms.Text;
-            //var roomid = db.Salles.Where(o => o.Nom_Salle == Roomname && o.ID_Projet == ClsEmail.ID_PROJECt).ToList();
-            //int id = roomid[0].Id_Salle;
-
-            //if (id >0)
-            //{
-            //    List<Mur> L = db.Murs.Where(o => o.Id_Salle == id).ToList();
-
-
-            //    var x = (from Mur in db.Murs
-            //             where Mur.Id_Salle == id
-            //             select Mur).ToList();
-
-            //    dgvwalls.DataSource = x;
-            //}
-
-            //dgvwalls.DataSource = db.Murs.ToList();
-
             FilldgvWall(cmbRooms.Text);
         }
     }

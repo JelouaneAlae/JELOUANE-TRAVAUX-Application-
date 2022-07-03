@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 {
@@ -20,6 +21,8 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
         private void UC_Workshop_New_Material_Load(object sender, EventArgs e)
         {
+            CultureInfo la = new CultureInfo(ClsEmail.keyLang);
+            InputLanguage.CurrentInputLanguage = InputLanguage.FromCulture(la);
             dgvMatreial.Columns.Add("ID", "ID");
             dgvMatreial.Columns.Add("Name","Name");
             dgvMatreial.Columns.Add("Producer", "Producer");
@@ -166,15 +169,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             }
         }
 
-        private void btnLiquid_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSolid_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void txtSreachMa_KeyUp(object sender, KeyEventArgs e)
         {
@@ -189,11 +183,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
                     dgvMatreial.Rows.Add(list[i].Id_Materiel, list[i].Nom_Materiel, list[i].Fondateur_Materiel, list[i].Price_materiel, list[i].Photo_Materiel, list[i].Color_Materiel, list[i].Genre_Materiel);
                 }
             }
-        }
-
-        private void bunifuTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void btnLiquid_Click_1(object sender, EventArgs e)
@@ -272,9 +261,5 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             }
         }
 
-        private void txtSreachMa_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

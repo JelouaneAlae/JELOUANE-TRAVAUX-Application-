@@ -7,24 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MaterialSkin;
+using MaterialSkin.Controls;
 
 namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 {
     public partial class UCLogIn : UserControl
     {
+        MaterialSkinManager ThemeManager = MaterialSkinManager.Instance;
         int F = 0;
-        //JELOUANE_TRAVAUXEntities4 db = new JELOUANE_TRAVAUXEntities4();
         JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
         ClsEmail clsemail = new ClsEmail();
         public UCLogIn()
         {
             InitializeComponent();
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
         }
 
-        private void btnForgetPass_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -38,7 +39,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
                     var form = Form.ActiveForm as FrmLogin;
                     if (form != null)
                     {
-                        clsemail.Email = txtEmail.Text;
+                        ClsEmail.Email = txtEmail.Text;
                         form.hideform();
                         var form1 = new FrmMainForm();
                         form1.Closed += (s, args) => form.closeform();
@@ -76,16 +77,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             }
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void txtEmail_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtPassword_TextChanged(object sender, EventArgs e)
         {
             txtPassword.PasswordChar = '*';
@@ -100,7 +91,9 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
         private void UCLogIn_Load(object sender, EventArgs e)
         {
+            ThemeManager.Theme = MaterialSkinManager.Themes.DARK;
             btnMaskPassword.Visible = false;
+
         }
 
         private void btnMaskPassword_Click(object sender, EventArgs e)
@@ -110,14 +103,5 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             txtPassword.PasswordChar = '*';
         }
 
-        private void panel1_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

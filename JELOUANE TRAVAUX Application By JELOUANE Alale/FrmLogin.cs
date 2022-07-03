@@ -12,7 +12,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 {
     public partial class FrmLogin : Form
     {
-        //JELOUANE_TRAVAUXEntities4 db = new JELOUANE_TRAVAUXEntities4();
         JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
 
         UCLogIn UCL = new UCLogIn();
@@ -29,10 +28,20 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
         private void FrmLogin_Load(object sender, EventArgs e)
         {
+
             ClsEmail.Email = null;
             btnLogin.Visible = false;
             this.Controls.Add(UCL);
             UCL.Location = new Point(0, 215);
+
+            JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
+            var keyL = db.AppSettings.Find(1);
+
+            ClsEmail.keyLang = keyL.Keylang;
+            ClsEmail.Theme = keyL.Theme;
+            ClsEmail.Applan = keyL.appLang;
+            ClsEmail.savelogininfo = false;
+            
         }
 
         private void btnForgetPass_Click(object sender, EventArgs e)
@@ -83,8 +92,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         {
             this.Hide();
         }
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-        }
+
     }
 }

@@ -20,6 +20,7 @@
         <EntityTypeShape EntityType="JELOUANE_TRAVAUX2Model.Notification" Width="1.5" PointX="5.25" PointY="11" />
         <AssociationConnector Association="JELOUANE_TRAVAUX2Model.FK__Notificat__id_Pr__60A75C0F" />
         <EntityTypeShape EntityType="JELOUANE_TRAVAUX2Model.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="JELOUANE_TRAVAUX2Model.AppSetting" Width="1.5" PointX="7.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

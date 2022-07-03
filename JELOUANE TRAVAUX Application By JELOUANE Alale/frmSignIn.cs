@@ -12,7 +12,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 {
     public partial class frmSignIn : Form
     {
-        //JELOUANE_TRAVAUXEntities4 db = new JELOUANE_TRAVAUXEntities4();
         JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
         public frmSignIn()
         {
@@ -110,20 +109,9 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
                 {
                     MessageBox.Show(ex.Message, "ERROR");
                 }
-                //MessageBox.Show(ex.GetType().FullName, "ERROR");
 
             }
 
-        }
-
-        private void frmSignIn_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void txtFisrNameSI_TextChanged(object sender, EventArgs e)
-        {
-            
         }
 
         private void button1_Click(object sender, EventArgs e)

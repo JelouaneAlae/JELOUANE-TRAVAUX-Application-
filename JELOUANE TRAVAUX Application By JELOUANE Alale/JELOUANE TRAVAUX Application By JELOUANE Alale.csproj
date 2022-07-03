@@ -150,6 +150,9 @@
     <Reference Include="Krypton, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
       <HintPath>..\packages\Krypton.2.0.0.0\lib\net40-Client\Krypton.dll</HintPath>
     </Reference>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.Updated.0.2.2\lib\MaterialSkin.dll</HintPath>
+    </Reference>
     <Reference Include="System">
       <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
     </Reference>
@@ -170,6 +173,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppSetting.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
     <Compile Include="Client.cs">
       <DependentUpon>Model2.tt</DependentUpon>
     </Compile>
@@ -215,12 +221,6 @@
     </Compile>
     <Compile Include="frmSignIn.Designer.cs">
       <DependentUpon>frmSignIn.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmWalls.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmWalls.Designer.cs">
-      <DependentUpon>frmWalls.cs</DependentUpon>
     </Compile>
     <Compile Include="frmworkshopHistory.cs">
       <SubType>Form</SubType>
@@ -383,8 +383,26 @@
     <EmbeddedResource Include="FrmEditEqupement.resx">
       <DependentUpon>FrmEditEqupement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.aa-ET.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.ca.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.ceb-Latn.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.en-US.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.fr-FR.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMainForm.en-US.resx">
+      <DependentUpon>FrmMainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMainForm.resx">
       <DependentUpon>FrmMainForm.cs</DependentUpon>
@@ -397,9 +415,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSignIn.resx">
       <DependentUpon>frmSignIn.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmWalls.resx">
-      <DependentUpon>frmWalls.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmworkshopHistory.resx">
       <DependentUpon>frmworkshopHistory.cs</DependentUpon>
@@ -419,6 +434,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UCHome.resx">
       <DependentUpon>UCHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCLogIn.en-US.resx">
+      <DependentUpon>UCLogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCLogIn.fr-FR.resx">
+      <DependentUpon>UCLogIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCLogIn.resx">
       <DependentUpon>UCLogIn.cs</DependentUpon>

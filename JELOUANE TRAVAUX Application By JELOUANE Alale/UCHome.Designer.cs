@@ -92,7 +92,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label2
             // 
@@ -126,7 +125,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.label5.Size = new System.Drawing.Size(137, 28);
             this.label5.TabIndex = 6;
             this.label5.Text = "Total Profit";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // lblWorkshopFinished
             // 
@@ -138,7 +136,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.lblWorkshopFinished.Size = new System.Drawing.Size(24, 26);
             this.lblWorkshopFinished.TabIndex = 6;
             this.lblWorkshopFinished.Text = "0";
-            this.lblWorkshopFinished.Click += new System.EventHandler(this.label11_Click);
             // 
             // label9
             // 
@@ -150,7 +147,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.label9.Size = new System.Drawing.Size(85, 24);
             this.label9.TabIndex = 7;
             this.label9.Text = "Finished";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label8
             // 
@@ -162,7 +158,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.label8.Size = new System.Drawing.Size(207, 28);
             this.label8.TabIndex = 6;
             this.label8.Text = "Workshop details";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // panel7
             // 
@@ -177,7 +172,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(723, 95);
             this.panel7.TabIndex = 13;
-            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
             // lblWorshopNotfinished
             // 
@@ -248,14 +242,9 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             // 
             this.bunifuChartCanvas1.AnimationDuration = 1000;
             this.bunifuChartCanvas1.AnimationType = Bunifu.Charts.WinForms.BunifuChartCanvas.AnimationOptions.easeOutQuart;
-            this.bunifuChartCanvas1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bunifuChartCanvas1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuChartCanvas1.CanvasPadding = new System.Windows.Forms.Padding(0);
-            this.bunifuChartCanvas1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.bunifuChartCanvas1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuChartCanvas1.Labels = new string[] {
-        "All workshop",
-        "Finished ",
-        "Not finished"};
+            this.bunifuChartCanvas1.Labels = null;
             this.bunifuChartCanvas1.LegendAlignment = Bunifu.Charts.WinForms.BunifuChartCanvas.LegendAlignmentOptions.center;
             this.bunifuChartCanvas1.LegendDisplay = true;
             this.bunifuChartCanvas1.LegendFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -264,12 +253,11 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.bunifuChartCanvas1.LegendPosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.top;
             this.bunifuChartCanvas1.LegendRevese = false;
             this.bunifuChartCanvas1.LegendRTL = false;
-            this.bunifuChartCanvas1.Location = new System.Drawing.Point(392, 0);
-            this.bunifuChartCanvas1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuChartCanvas1.Location = new System.Drawing.Point(379, 9);
             this.bunifuChartCanvas1.Name = "bunifuChartCanvas1";
             this.bunifuChartCanvas1.ShowXAxis = false;
             this.bunifuChartCanvas1.ShowYAxis = false;
-            this.bunifuChartCanvas1.Size = new System.Drawing.Size(325, 186);
+            this.bunifuChartCanvas1.Size = new System.Drawing.Size(338, 174);
             this.bunifuChartCanvas1.TabIndex = 21;
             this.bunifuChartCanvas1.Title = "";
             this.bunifuChartCanvas1.TitleLineHeight = 1.2D;
@@ -353,12 +341,25 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.cmbMonth.ItemHeight = 26;
             this.cmbMonth.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
             this.cmbMonth.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.cmbMonth.Items.AddRange(new object[] {
+            "january",
+            "february",
+            "march",
+            "April",
+            "may",
+            "june",
+            "july",
+            "august",
+            "september",
+            "october",
+            "november",
+            "december"});
             this.cmbMonth.ItemTopMargin = 3;
             this.cmbMonth.Location = new System.Drawing.Point(50, 112);
             this.cmbMonth.Name = "cmbMonth";
             this.cmbMonth.Size = new System.Drawing.Size(171, 32);
             this.cmbMonth.TabIndex = 19;
-            this.cmbMonth.Text = null;
+            this.cmbMonth.Text = "Select Month";
             this.cmbMonth.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.cmbMonth.TextLeftMargin = 5;
             this.cmbMonth.SelectedIndexChanged += new System.EventHandler(this.cmbMonth_SelectedIndexChanged);
@@ -383,7 +384,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.bunifuPieChart1.HoverBackgroundColor = System.Drawing.Color.Empty;
             this.bunifuPieChart1.HoverBorderColor = System.Drawing.Color.Empty;
             this.bunifuPieChart1.HoverBorderWidth = 0;
-            this.bunifuPieChart1.Label = "pochart";
+            this.bunifuPieChart1.Label = "Label here";
             this.bunifuPieChart1.TargetCanvas = this.bunifuChartCanvas1;
             // 
             // UCHome
@@ -432,9 +433,9 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label1;
-        private Bunifu.Charts.WinForms.BunifuChartCanvas bunifuChartCanvas1;
         private System.Windows.Forms.Label label3;
         private Bunifu.UI.WinForms.BunifuDropdown cmbMonth;
+        private Bunifu.Charts.WinForms.BunifuChartCanvas bunifuChartCanvas1;
         private Bunifu.Charts.WinForms.ChartTypes.BunifuPieChart bunifuPieChart1;
     }
 }

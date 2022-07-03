@@ -12,7 +12,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 {
     public partial class frmNewPass : Form
     {
-        //JELOUANE_TRAVAUXEntities4 db = new JELOUANE_TRAVAUXEntities4();
         JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
         ClsEmail clsemail = new ClsEmail();
         public frmNewPass()
@@ -64,7 +63,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
                     if (txtNewPass1.Text == txtNewPass2.Text)
                     {
 
-                        var exist = db.utilisateurs.Find(clsemail.Email);
+                        var exist = db.utilisateurs.Find(ClsEmail.Email);
                         if(exist != null)
                         {
                             DialogResult dr = MessageBox.Show("Your password changed successfully \nPlease login with your new password to continue", "Done", MessageBoxButtons.OK);
@@ -84,15 +83,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
                 }
 
             }
-
-        }
-
-        private void txtEmail_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void txtNewPass2_TextChanged(object sender, EventArgs e)
-        {
 
         }
 

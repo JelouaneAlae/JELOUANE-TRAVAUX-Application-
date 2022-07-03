@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 {
@@ -53,13 +54,13 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         {
             JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
             dgvExistingClient2.Rows.Clear();
-            for (int i = 0; i < db.Clients.ToList().Count; i++)
+            for (int i = 0; i < db.Clients.ToList().Count; i++) 
             {
-                dgvExistingClient2.Rows.Add(db.Clients.ToList()[i].ID_Client.ToString()
-                  ,db.Clients.ToList()[i].Nom_Client.ToString(),
-                  db.Clients.ToList()[i].Prenom_Client.ToString(),
-                  db.Clients.ToList()[i].CIN_Client.ToString(),
-                  db.Clients.ToList()[i].Telephone_Client.ToString());
+                dgvExistingClient2.Rows.Add(db.Clients.ToList()[i].ID_Client.ToString());
+                db.Clients.ToList()[i].Nom_Client.ToString();
+                db.Clients.ToList()[i].Prenom_Client.ToString();
+                db.Clients.ToList()[i].CIN_Client.ToString();
+                db.Clients.ToList()[i].Telephone_Client.ToString();
 
             }
         }
@@ -67,11 +68,14 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
         private void UC_WorkshopNewClient_Load(object sender, EventArgs e)
         {
+            CultureInfo la = new CultureInfo(ClsEmail.keyLang);
+            InputLanguage.CurrentInputLanguage = InputLanguage.FromCulture(la);
             dgvExistingClient2.Columns.Add("ID", "ID");
             dgvExistingClient2.Columns.Add("F Name", "F Name");
             dgvExistingClient2.Columns.Add("L name", "L name");
             dgvExistingClient2.Columns.Add("Cin", "cin");
             dgvExistingClient2.Columns.Add("Phone", "Phone");
+
         }
 
         private void dgvExistingClient2_CellContentClick(object sender, DataGridViewCellEventArgs e)
