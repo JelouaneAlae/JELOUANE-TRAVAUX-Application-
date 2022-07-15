@@ -82,6 +82,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(350, 87);
             this.panel1.TabIndex = 10;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pictureBox1
             // 
@@ -253,7 +254,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.bunifuChartCanvas1.LegendPosition = Bunifu.Charts.WinForms.BunifuChartCanvas.PositionOptions.top;
             this.bunifuChartCanvas1.LegendRevese = false;
             this.bunifuChartCanvas1.LegendRTL = false;
-            this.bunifuChartCanvas1.Location = new System.Drawing.Point(379, 9);
+            this.bunifuChartCanvas1.Location = new System.Drawing.Point(379, 5);
             this.bunifuChartCanvas1.Name = "bunifuChartCanvas1";
             this.bunifuChartCanvas1.ShowXAxis = false;
             this.bunifuChartCanvas1.ShowYAxis = false;
@@ -436,6 +437,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         private System.Windows.Forms.Label label3;
         private Bunifu.UI.WinForms.BunifuDropdown cmbMonth;
         private Bunifu.Charts.WinForms.BunifuChartCanvas bunifuChartCanvas1;
-        private Bunifu.Charts.WinForms.ChartTypes.BunifuPieChart bunifuPieChart1;
+        public Bunifu.Charts.WinForms.ChartTypes.BunifuPieChart bunifuPieChart1;
     }
 }

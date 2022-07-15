@@ -26,6 +26,8 @@ public partial class Notification
 
     public string type_notification { get; set; }
 
+    public Nullable<bool> visibility { get; set; }
+
 
 
     public virtual projet projet { get; set; }

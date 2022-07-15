@@ -15,23 +15,21 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
     public partial class UCHome : UserControl
     {
         JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
-        DataSet ds;
         public UCHome()
         {
             InitializeComponent();
             
         }
 
-
-
         private void UCHome_Load(object sender, EventArgs e)
         {
             MainFormInfo();
             JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
             lblTotalProfit.Text = CalculeTotalProfit().ToString()+"  DH" ;
-            bunifuPieChart1.Data.Add(8);
+            bunifuPieChart1.Data.Add(1);
             bunifuPieChart1.Data.Add(2);
-            bunifuPieChart1.Data.Add(6);
+            bunifuPieChart1.Data.Add(8);
+
 
 
             foreach (Control text in Controls)
@@ -41,6 +39,28 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
                 InputLanguage.CurrentInputLanguage = InputLanguage.FromCulture(la);
             }
         }
+
+        public void chart(string Month)
+        {
+            JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
+
+            var projectFin = db.projets.ToList().Where(o => o.Datedebut_Projet.Value.ToString("MMMM").ToLower() == Month.ToLower() && o.DateFin_Projet >= DateTime.Now);
+
+            var projectNotFin = db.projets.ToList().Where(o => o.Datedebut_Projet.Value.ToString("MMMM").ToLower() == Month.ToLower() && o.DateFin_Projet <= DateTime.Now);
+
+            if(projectNotFin.ToList().Count() >=0)
+            {
+                bunifuPieChart1.Data[0] = projectNotFin.ToList().Count();
+            }
+
+            if (projectFin.ToList().Count() >= 0)
+            {
+                bunifuPieChart1.Data[0] = projectFin.ToList().Count();
+            }
+
+            //MessageBox.Show((projectNotFin.ToList().Count().ToString() +"//"+ projectFin.ToList().Count().ToString()));
+        }
+
 
         public void MainFormInfo()
         {
@@ -68,21 +88,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             lblWorshopNotfinished.Text = ProjectEnded.ToString();
         }
 
-        public int chart(string Month)
-        {
-            int cpt = 0;
-            JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
-            for (int i = 0; i < db.projets.ToList().Count; i++)
-            {
-                if (Month.ToLower() == db.projets.ToList()[i].Datedebut_Projet.Value.ToString("MMMM").ToLower())
-                {
-                    cpt++;
-                }
-            }
-            return cpt;
-        }
-
-
         private void cmbMonth_SelectedIndexChanged(object sender, EventArgs e)
         {
             chart(cmbMonth.Text);
@@ -98,6 +103,17 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
                 Profit += db.Utilisers.ToList()[i].PrixQuantite.Value;
             }
             return Profit;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            bunifuPieChart1.Data[0] = 12;
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

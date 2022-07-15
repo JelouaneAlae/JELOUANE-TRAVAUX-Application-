@@ -57,6 +57,7 @@
           <Property Name="id_Project" Type="int" />
           <Property Name="message_notification" Type="varchar(max)" />
           <Property Name="type_notification" Type="varchar" MaxLength="240" />
+          <Property Name="visibility" Type="bit" />
         </EntityType>
         <EntityType Name="projet">
           <Key>
@@ -405,6 +406,7 @@
           <Property Name="message_notification" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="type_notification" Type="String" MaxLength="240" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="projet" Relationship="JELOUANE_TRAVAUX2Model.FK__Notificat__id_Pr__60A75C0F" FromRole="Notification" ToRole="projet" />
+          <Property Name="visibility" Type="Boolean" />
         </EntityType>
         <Association Name="FK__Notificat__id_Pr__60A75C0F">
           <End Type="JELOUANE_TRAVAUX2Model.projet" Role="projet" Multiplicity="0..1" />
@@ -537,6 +539,7 @@
           <EntitySetMapping Name="Notifications">
             <EntityTypeMapping TypeName="JELOUANE_TRAVAUX2Model.Notification">
               <MappingFragment StoreEntitySet="Notification">
+                <ScalarProperty Name="visibility" ColumnName="visibility" />
                 <ScalarProperty Name="type_notification" ColumnName="type_notification" />
                 <ScalarProperty Name="message_notification" ColumnName="message_notification" />
                 <ScalarProperty Name="id_Project" ColumnName="id_Project" />

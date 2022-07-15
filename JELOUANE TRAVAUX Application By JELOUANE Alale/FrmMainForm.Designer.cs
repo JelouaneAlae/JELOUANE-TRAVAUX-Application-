@@ -29,6 +29,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMainForm));
             this.PnlMenu = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -47,6 +48,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.panel1 = new System.Windows.Forms.Panel();
             this.BtnInbox = new System.Windows.Forms.Button();
             this.pnlHead = new System.Windows.Forms.Panel();
+            this.lblNotificatonCount = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -57,6 +59,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.button2 = new System.Windows.Forms.Button();
             this.pnlsetting = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.n = new System.Windows.Forms.NotifyIcon(this.components);
             this.PnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.pnlHead.SuspendLayout();
@@ -274,6 +277,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             // pnlHead
             // 
             this.pnlHead.BackColor = System.Drawing.Color.White;
+            this.pnlHead.Controls.Add(this.lblNotificatonCount);
             this.pnlHead.Controls.Add(this.bunifuLabel1);
             this.pnlHead.Controls.Add(this.pictureBox2);
             this.pnlHead.Controls.Add(this.pictureBox1);
@@ -284,6 +288,25 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.pnlHead.Name = "pnlHead";
             this.pnlHead.Size = new System.Drawing.Size(734, 85);
             this.pnlHead.TabIndex = 23;
+            // 
+            // lblNotificatonCount
+            // 
+            this.lblNotificatonCount.AllowParentOverrides = false;
+            this.lblNotificatonCount.AutoEllipsis = false;
+            this.lblNotificatonCount.AutoSize = false;
+            this.lblNotificatonCount.BackColor = System.Drawing.Color.Red;
+            this.lblNotificatonCount.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblNotificatonCount.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lblNotificatonCount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.lblNotificatonCount.ForeColor = System.Drawing.Color.White;
+            this.lblNotificatonCount.Location = new System.Drawing.Point(635, 18);
+            this.lblNotificatonCount.Name = "lblNotificatonCount";
+            this.lblNotificatonCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblNotificatonCount.Size = new System.Drawing.Size(14, 20);
+            this.lblNotificatonCount.TabIndex = 28;
+            this.lblNotificatonCount.Text = "0";
+            this.lblNotificatonCount.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNotificatonCount.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // bunifuLabel1
             // 
@@ -417,12 +440,21 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(658, 79);
+            this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(645, 76);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(209, 169);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(227, 67);
             this.flowLayoutPanel1.TabIndex = 27;
             this.flowLayoutPanel1.Visible = false;
+            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
+            // 
+            // n
+            // 
+            this.n.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.n.Text = "notifyIcon1";
+            this.n.Visible = true;
             // 
             // FrmMainForm
             // 
@@ -479,6 +511,8 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        internal System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.NotifyIcon n;
+        private Bunifu.UI.WinForms.BunifuLabel lblNotificatonCount;
     }
 }

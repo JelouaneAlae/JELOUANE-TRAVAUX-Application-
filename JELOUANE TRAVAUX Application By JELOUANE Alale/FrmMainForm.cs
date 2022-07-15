@@ -125,28 +125,47 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             frml.Visible = false;
             PnlverticalMenu("pnlverticalhome");
             UC_controle("Home");
-            Notification();
-
-
-        }
-        public void Notification()
-        {
+            var N = db.Notifications.Where(o => o.visibility == false).ToList();
+            lblNotificatonCount.Text = N.Count.ToString();              
 
         }
+
          public void NotificationItems()
          {
             JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
-            UC_NotificationItems[] list = new UC_NotificationItems[db.Notifications.ToList().Count()];
-
-            for (int i =0;i< list.ToList().Count; i++)
+            var N = db.Notifications.Where(o => o.visibility == false).ToList();
+            if (N.Count > 0)
             {
-                var nameproject = db.projets.Find(db.projets.ToList()[i].ID_Projet);
-                list[i].ProjectName = nameproject.ToString();
-                list[i].Notification_description = db.Notifications.ToList()[i].message_notification.ToString();
+                UC_NotificationItems[] ls = new UC_NotificationItems[N.Count()];
+
                 flowLayoutPanel1.Controls.Clear();
-                flowLayoutPanel1.Controls.Add(list[i]);
+                for (int i = 0; i < ls.ToList().Count; i++)
+                {
+                    ls[i] = new UC_NotificationItems();
+
+                    var OBproject = (from projet in db.projets.ToList() where projet.ID_Projet == db.Notifications.ToList()[i].id_Project select projet.Nom_projet).ToList();
+                    var notification = db.Notifications.ToList()[i];
+                    ls[i]._ProjectName = OBproject[0]; ;
+                    ls[i]._Notification_description = notification.message_notification;
+                    flowLayoutPanel1.Controls.Add(ls[i]);
+                    var No = db.Notifications.Where(o => o.visibility == false).ToList();
+                    lblNotificatonCount.Text = No.Count.ToString();
+                }
             }
-         }
+            if(N.Count==0)
+            {
+                //Label l = new Label();
+                //l.Text = "No notification found";
+                //l.Font = new Font("Microsoft Sans Serif", 10);
+                //flowLayoutPanel1.Controls.Add(l);
+                MessageBox.Show("No notification found");
+                n.Text = "No notification found";
+                n.Visible = true;
+                flowLayoutPanel1.Visible = false;
+
+            }
+
+        }
 
         private void button7_Click(object sender, EventArgs e)
         {
@@ -349,5 +368,19 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             UC_seeting_Control("About");
         }
 
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

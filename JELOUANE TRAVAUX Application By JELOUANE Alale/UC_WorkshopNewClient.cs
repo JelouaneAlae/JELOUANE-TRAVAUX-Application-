@@ -13,7 +13,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 {
     public partial class UC_WorkshopNewClient : UserControl
     {
-        //internal int id_client;
         public UC_WorkshopNewClient()
         {
             InitializeComponent();
@@ -52,16 +51,20 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
         public void fillDgExistingClient()
         {
+            if (dgvExistingClient2.Columns.Count < 0)
+            {
+                dgvExistingClient2.Columns.Add("ID", "ID");
+                dgvExistingClient2.Columns.Add("First Name", "Last Name");
+                dgvExistingClient2.Columns.Add("L name", "L name");
+                dgvExistingClient2.Columns.Add("Cin", "cin");
+                dgvExistingClient2.Columns.Add("Phone", "Phone");
+            }
+
             JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
             dgvExistingClient2.Rows.Clear();
-            for (int i = 0; i < db.Clients.ToList().Count; i++) 
+            for (int i = 0; i < db.Clients.ToList().Count; i++)
             {
-                dgvExistingClient2.Rows.Add(db.Clients.ToList()[i].ID_Client.ToString());
-                db.Clients.ToList()[i].Nom_Client.ToString();
-                db.Clients.ToList()[i].Prenom_Client.ToString();
-                db.Clients.ToList()[i].CIN_Client.ToString();
-                db.Clients.ToList()[i].Telephone_Client.ToString();
-
+                dgvExistingClient2.Rows.Add(db.Clients.ToList()[i].ID_Client.ToString(), db.Clients.ToList()[i].Nom_Client.ToString(), db.Clients.ToList()[i].Prenom_Client.ToString(), db.Clients.ToList()[i].CIN_Client.ToString(), db.Clients.ToList()[i].Telephone_Client.ToString());
             }
         }
 
@@ -71,7 +74,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             CultureInfo la = new CultureInfo(ClsEmail.keyLang);
             InputLanguage.CurrentInputLanguage = InputLanguage.FromCulture(la);
             dgvExistingClient2.Columns.Add("ID", "ID");
-            dgvExistingClient2.Columns.Add("F Name", "F Name");
+            dgvExistingClient2.Columns.Add("First Name", "Last Name");
             dgvExistingClient2.Columns.Add("L name", "L name");
             dgvExistingClient2.Columns.Add("Cin", "cin");
             dgvExistingClient2.Columns.Add("Phone", "Phone");
@@ -158,5 +161,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         {
 
         }
+
     }
 }
