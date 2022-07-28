@@ -1,11 +1,4 @@
 {
-  "theme": "Default",
-  "keyboard_language": "english",
-  "NotificationInBreakMOde": "true",
-  "toneNotification": "file",
-  "expiryProject": "true",
-  "ProjectClose": "true",
-  "beforeEnd": "null",
-  "newProject": "true",
-  "saveInfologin": "false"
+  "saveLoginInfo": "false",
+  "Email": "jel.alae37@gmail.com"
 }

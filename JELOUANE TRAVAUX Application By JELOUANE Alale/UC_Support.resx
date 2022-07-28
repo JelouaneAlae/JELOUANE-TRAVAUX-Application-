@@ -273,16 +273,16 @@ to ask for content changes for legal reasons.</value>
         7HF2vm78zwrV7ex5tl5ymZl9xdYfgfez0xlAzeHwFwDfnrQaVdkmAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="txtPasswordGmail.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="button2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAQQAAAAnCAYAAADpRzYmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE8SURBVHhe7dTBCcMAEANBP/x1/8WljBSQWKwcSA3ageNA
-        BewhSX+u63rd7+N53ua1AT8fSbvSAFKAzpIWpQGkAJ0lLUoDSAE6S1qUBpACdJa0KA0gBegsaVEaQArQ
-        WdKiNIAUoLOkRWkAKUBnSYvSAFKAzpIWpQGkAJ0lLUoDSAE6S1qUBpACdJa0KA0gBegsaVEaQArQWdKi
-        NIAUoLOkRWkAKUBnSYvSAFKAzpIWpQGkAJ0lLUoDSAE6S1qUBpACdJa0KA0gBegsaVEaQArQWdKiNIAU
-        oLOkRWkAKUBnSYvSAFKAzpIWpQGkAJ0lLUoDSAE6S1qUBpACdJa0KA0gBegsaVEaQArQWdKiNIAUoLOk
-        RWkAKUBnSYvSAFKAzpIWpQGkAJ0lLUoDSMHtPM/3/Z7R87yxawMk6XEcX3hqxAClW/xaAAAAAElFTkSu
-        QmCC
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        pgAAAKYB3X3/OAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFHSURBVEhLvZbf
+        bcIwEIfzwAxFIhELVH1ji66RR2Zod8ocsEElCqi8tANACjL3uXGa2JeCaK+Rfii5P98l9tkmc84N6mU8
+        vnvN88ftZPK8yfNKtGtUYcNHjJYbpBrFPBLAk4BqkbugmlhyNFZiWE+n95uiWCignyU55Ma83sO2KEoJ
+        3ifJ12sPo8vswh8k4BAl3KIDrH4BGT9xLKPA32gJsy3QTGgS+DabufeyTOxB+IjRfH7iKUCbiSHpFhI/
+        Vyvnjkf3MZ/3fAgbPmIGitSwM3pZcfq3A+CvqEiAB9/QV8JmeFhEakAM4lmzabkIdiY3rFA1APWAp9OX
+        uC7AG1UUYOlrzla+SABzyf0VcLT7lwK2Q2Q+yeZtar7Q5B1stwp+zDc7/xWm2/V3EbsDJ8j0yGwl49dM
+        /N8f+l3RZvQyC0ZAN/xtcdkZmjFSCPyX9FAAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="btnConfirm.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -300,16 +300,16 @@ to ask for content changes for legal reasons.</value>
         plp1jTKkAi8+c+2wfDuD3JZl/QH5srXHkzjazgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="button2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="txtPasswordGmail.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAAKYAAACmAd19/zgAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
-        AAABR0lEQVRIS72W323CMBCH88AMRSIRC1R9Y4uukUdmaHfKHLBBJQqovLQDQAoy97lxmtiXgmivkX4o
-        uT/fJfbZJnPODeplPL57zfPH7WTyvMnzSrRrVGHDR4yWG6QaxTwSwJOAapG7oJpYcjRWYlhPp/ebolgo
-        oJ8lOeTGvN7DtihKCd4nyddrD6PL7MIfJOAQJdyiA6x+ARk/cSyjwN9oCbMt0ExoEvg2m7n3skzsQfiI
-        0Xx+4ilAm4kh6RYSP1cr545H9zGf93wIGz5iBorUsDN6WXH6twPgr6hIgAff0FfCZnhYRGpADOJZs2m5
-        CHYmN6xQNQD1gKfTl7guwBtVFGDpa85WvkgAc8n9FXC0+5cCtkNkPsnmbWq+0OQdbLcKfsw3O/8Vptv1
-        dxG7AyfI9MhsJePXTPzfH/pd0Wb0MgtGQDf8bXHZGZoxUgj8l/RQAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAQQAAAAnCAYAAADpRzYmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE8SURBVHhe7dTBCcMAEANBP/x1/8WljBSQWKwcSA3ageNA
+        BewhSX+u63rd7+N53ua1AT8fSbvSAFKAzpIWpQGkAJ0lLUoDSAE6S1qUBpACdJa0KA0gBegsaVEaQArQ
+        WdKiNIAUoLOkRWkAKUBnSYvSAFKAzpIWpQGkAJ0lLUoDSAE6S1qUBpACdJa0KA0gBegsaVEaQArQWdKi
+        NIAUoLOkRWkAKUBnSYvSAFKAzpIWpQGkAJ0lLUoDSAE6S1qUBpACdJa0KA0gBegsaVEaQArQWdKiNIAU
+        oLOkRWkAKUBnSYvSAFKAzpIWpQGkAJ0lLUoDSAE6S1qUBpACdJa0KA0gBegsaVEaQArQWdKiNIAUoLOk
+        RWkAKUBnSYvSAFKAzpIWpQGkAJ0lLUoDSMHtPM/3/Z7R87yxawMk6XEcX3hqxAClW/xaAAAAAElFTkSu
+        QmCC
 </value>
   </data>
 </root>

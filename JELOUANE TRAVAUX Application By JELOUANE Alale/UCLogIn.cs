@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MaterialSkin;
 using MaterialSkin.Controls;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 {
@@ -93,6 +96,26 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         {
             ThemeManager.Theme = MaterialSkinManager.Themes.DARK;
             btnMaskPassword.Visible = false;
+            CheckLogibninfo();
+        }
+        public void CheckLogibninfo()
+        {
+            using (StreamReader file = File.OpenText(@"C:\Users\jelal\OneDrive\Desktop\JELOUANE-TRAVAUX-Application-\Setting.json"))
+            using (JsonTextReader reader = new JsonTextReader(file))
+            {
+                JToken o2 = JToken.ReadFrom(reader);
+
+                if (o2["saveLoginInfo"].ToString() == "true")
+                {
+                    txtEmail.Text = o2["Email"].ToString();
+                    JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
+                    var pass = db.utilisateurs.Find(o2["Email"].ToString());
+                    if(pass != null)
+                    {
+                        txtPassword.Text = pass.MotdePasse;
+                    }
+                }
+            }
 
         }
 

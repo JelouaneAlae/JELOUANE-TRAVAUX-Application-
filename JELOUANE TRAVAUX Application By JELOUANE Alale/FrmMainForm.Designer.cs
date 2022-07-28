@@ -56,7 +56,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.btnAccountSetting = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnAbout = new System.Windows.Forms.Button();
             this.pnlsetting = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.n = new System.Windows.Forms.NotifyIcon(this.components);
@@ -408,26 +408,26 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button2
+            // btnAbout
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(44)))), ((int)(((byte)(131)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(11, 180);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(133, 36);
-            this.button2.TabIndex = 23;
-            this.button2.Text = "About";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            this.btnAbout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(44)))), ((int)(((byte)(131)))));
+            this.btnAbout.FlatAppearance.BorderSize = 0;
+            this.btnAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAbout.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.btnAbout.ForeColor = System.Drawing.Color.White;
+            this.btnAbout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAbout.Location = new System.Drawing.Point(11, 180);
+            this.btnAbout.Name = "btnAbout";
+            this.btnAbout.Size = new System.Drawing.Size(133, 36);
+            this.btnAbout.TabIndex = 23;
+            this.btnAbout.Text = "About";
+            this.btnAbout.UseVisualStyleBackColor = false;
+            this.btnAbout.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // pnlsetting
             // 
             this.pnlsetting.BackColor = System.Drawing.Color.White;
-            this.pnlsetting.Controls.Add(this.button2);
+            this.pnlsetting.Controls.Add(this.btnAbout);
             this.pnlsetting.Controls.Add(this.button3);
             this.pnlsetting.Controls.Add(this.button10);
             this.pnlsetting.Controls.Add(this.btnAccountSetting);
@@ -472,6 +472,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.Name = "FrmMainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmMainForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMainForm_FormClosing);
             this.Load += new System.EventHandler(this.FrmMainForm_Load);
             this.PnlMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -506,7 +507,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         private System.Windows.Forms.Button btnAccountSetting;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel pnlsetting;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -514,5 +514,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         internal System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.NotifyIcon n;
         private Bunifu.UI.WinForms.BunifuLabel lblNotificatonCount;
+        internal System.Windows.Forms.Button btnAbout;
     }
 }

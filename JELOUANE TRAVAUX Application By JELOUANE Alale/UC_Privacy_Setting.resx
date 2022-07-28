@@ -380,7 +380,7 @@
         MptV9ReA/o/BYPw2pJVAxv1mz7XheW+Qww88xPtlXwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="bunifuButton24.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnContactUs.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGoAAAAnCAYAAADn590lAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHJSURBVHhe7Zu/TgJBEIevpLS0tPQReARfwsTGxNJSOx/A
@@ -392,6 +392,21 @@
         x7HySFbent+kacqUshSZmYKorog68TxvKilG7EPGoeCo3YzeoAZehmH4ZvaIJaDSZegh7htJW+SuSpIk
         Z2bZASSVqHQvyKaWUfQN7N2Nx+NExnA44XF4ZCw3z/Om3EHS415JW7B5iuzqSach/TvjcIEz9xFPuztp
         h+N8ArXVQwxxRalqAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="bunifuButton24.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAIUAAAAnCAYAAAAhDovZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIfSURBVHhe7dy9S1tRGMfxO2Z0dHTs4NTFLC6dnAoOHSy0
+        CFYqpVAXoSKIpNDSqvhC2sEgNgTElyGDGOigSMHSNmiS+5Z7bxoTh1LoixF8Kzjcnud6E7HP+Qvu+R34
+        TDnJcr6cnDvco/0/arVaTOh3y9/eWbpTqNfrPkQLrWvZ8tJinYeEtnDp5UNMiFsl5zCb3jmZGVv3R/oW
+        /N7OFxAxtK6TI6v+SmrrzCw5P8W694QJ3Bymbo9+/lhsPO6Zk/4QRNPD7il/O/e1Ucibs2EKV4N2CApC
+        9iVQQ25t98ixKg+aQcRsw/0xcGdGOhnUcL/rtW8Und+ih3aKYjiT/PBXNhHUQudIesDQxC6x/urZsnQS
+        qIUOoPRkotmmd/D0blI6CdRCfyEVr3qu0XOrbAKoiXpAFHADogAGUQCDKIBBFMAgCmAQBTCIAhhEAQyi
+        AAZRAIMogEEUwCAKYBAFMIgCGEQBDKIABlEAgyiAQRTAIApggihcu/ILrwwCuXf7pV+tHlxqlu5ujz96
+        L50EaqGXwujlMHqX9Pni9OalbBKohe6soMtMKIoOfc9u0NYhmwjqoOsoRA/x4DoC13YHs5mdY9lEUEPq
+        zcaJUbCngiCag84WS7O5U+wY6nmbyF4U8tYnsUvEwhyuR9lyJ/a/GH/oagK8iR5tdI1V4kkm+MuwDW9e
+        GkRziA9v0Z0VdAqlZ1aIJrG+382Ss9k6Q7SGpv0D01BAzftDOBoAAAAASUVORK5CYII=
 </value>
   </data>
 </root>

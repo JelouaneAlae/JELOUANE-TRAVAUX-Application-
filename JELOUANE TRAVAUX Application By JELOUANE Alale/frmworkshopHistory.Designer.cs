@@ -44,11 +44,11 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.btnEditEquipment = new System.Windows.Forms.Button();
             this.btnDeleteEquipment = new System.Windows.Forms.Button();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.dtpEndingDate = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.dtpStartingDate = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.txtSreachWorkshop = new Bunifu.UI.WinForms.BunifuTextBox();
             this.dgvProject = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProject)).BeginInit();
@@ -158,6 +158,21 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.bunifuPanel1.ShowBorders = true;
             this.bunifuPanel1.Size = new System.Drawing.Size(776, 360);
             this.bunifuPanel1.TabIndex = 52;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackColor = System.Drawing.Color.Transparent;
+            this.btnRefresh.FlatAppearance.BorderSize = 0;
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.ForeColor = System.Drawing.Color.White;
+            this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
+            this.btnRefresh.Location = new System.Drawing.Point(614, 28);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(33, 33);
+            this.btnRefresh.TabIndex = 123;
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // dtpEndingDate
             // 
@@ -346,21 +361,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.dgvProject.TabIndex = 58;
             this.dgvProject.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
-            // btnRefresh
-            // 
-            this.btnRefresh.BackColor = System.Drawing.Color.Transparent;
-            this.btnRefresh.FlatAppearance.BorderSize = 0;
-            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
-            this.btnRefresh.Location = new System.Drawing.Point(614, 28);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(33, 33);
-            this.btnRefresh.TabIndex = 123;
-            this.btnRefresh.UseVisualStyleBackColor = false;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
             // frmworkshopHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -370,6 +370,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.Controls.Add(this.bunifuPanel1);
             this.Controls.Add(this.panel1);
             this.Name = "frmworkshopHistory";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmworkshopHistory";
             this.Load += new System.EventHandler(this.frmworkshopHistory_Load);
             this.panel1.ResumeLayout(false);

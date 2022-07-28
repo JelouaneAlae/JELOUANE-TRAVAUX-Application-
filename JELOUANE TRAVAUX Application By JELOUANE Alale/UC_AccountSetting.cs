@@ -34,5 +34,11 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
             }
         }
+
+        private void bunifuButton22_Click(object sender, EventArgs e)
+        {
+            FrmEditAcc F = new FrmEditAcc();
+            F.Show();
+        }
     }
 }

@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
+using System.IO;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+
 namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 {
     public partial class FrmMainForm : Form
@@ -37,8 +41,8 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             Application.Exit(); 
-        }
 
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -125,12 +129,79 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             frml.Visible = false;
             PnlverticalMenu("pnlverticalhome");
             UC_controle("Home");
+            //CloseToEndProjectNotification();
+            EndingProjectNotification();
             var N = db.Notifications.Where(o => o.visibility == false).ToList();
-            lblNotificatonCount.Text = N.Count.ToString();              
-
+            lblNotificatonCount.Text = N.Count.ToString();
         }
 
-         public void NotificationItems()
+        public void ReadSettingfromJSon()
+        {
+            // read JSON directly from a file
+            using (StreamReader file = File.OpenText(@"C:\Users\jelal\OneDrive\Desktop\JELOUANE-TRAVAUX-Application-\Setting.json"))
+            using (JsonTextReader reader = new JsonTextReader(file))
+            {
+                JToken o2 = JToken.ReadFrom(reader);
+                o2["saveLoginInfo"] = "false";
+                file.Close();
+                string output = Newtonsoft.Json.JsonConvert.SerializeObject(o2, Newtonsoft.Json.Formatting.Indented);
+                File.WriteAllText(@"C:\Users\jelal\OneDrive\Desktop\JELOUANE-TRAVAUX-Application-\Setting.json", output);
+            }
+                            
+        }
+        public void EndingProjectNotification()
+        {
+            JELOUANE_TRAVAUX2Entities db1 = new JELOUANE_TRAVAUX2Entities();
+            var ListProject = db1.projets.ToList();
+            Func:
+            for (int i = 0; i < ListProject.Count; i++)
+            {
+                //extract date from starting date 
+                DateTime date = Convert.ToDateTime(ListProject[i].DateFin_Projet);
+                if (date.Month == DateTime.Now.Month )
+                {
+                    for(int j = 0; j < db1.Notifications.ToList().Count; j++)
+                    {
+                        if(db1.Notifications.ToList()[i].id_Project == ListProject[i].ID_Projet && db1.Notifications.ToList()[i].type_notification == "Close")
+                        {
+                            i++;
+                            goto Func;
+                        }
+                    }
+                    Notification N = new Notification();
+                    N.id_Project = ListProject[i].ID_Projet;
+                    N.type_notification = "Ended";
+                    N.message_notification = "Project is ending";
+                    N.visibility = false;
+                    db1.Notifications.Add(N);
+                    db.SaveChanges();
+                }
+            }
+        }
+
+
+        public void CloseToEndProjectNotification()
+        {
+            var ListProject = db.projets.ToList();
+            for (int i = 0; i < ListProject.Count; i++)
+            {
+                //extract date from starting date 
+                DateTime date = Convert.ToDateTime(ListProject[i].DateFin_Projet);
+                if (date.Month == DateTime.Now.AddMonths(-2).Month)
+                {
+                    //add a new notification
+                    Notification N = new Notification();
+                    N.id_Project = ListProject[i].ID_Projet;
+                    N.type_notification = "Close";
+                    N.message_notification = "Project is close to end";
+                    N.visibility = false;
+                    db.Notifications.Add(N);
+                    db.SaveChanges();
+                }
+            }
+        }
+
+        public void NotificationItems()
          {
             JELOUANE_TRAVAUX2Entities db = new JELOUANE_TRAVAUX2Entities();
             var N = db.Notifications.Where(o => o.visibility == false).ToList();
@@ -381,6 +452,15 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         private void button4_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void FrmMainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ReadSettingfromJSon();
         }
     }
 }

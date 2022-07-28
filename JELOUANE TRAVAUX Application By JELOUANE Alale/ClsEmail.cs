@@ -15,22 +15,20 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         static string Name_client;
         static string Prenom_Client;
         static string Project_name;
-
         static DateTime Project_Starting_date;
-
         static int ID_salle;
         static string Nom_salle;
         static string ExpiryreminderBefore;
-
         static string KeyLang;
         static string theme;
-        public static string Theme { get => theme; set => theme = value; }
-        static string applan;
-        public static string Applan { get => applan; set => applan = value; }
-
         public static bool savelogininfo;
-        public static string Savelogininfo { set => savelogininfo = false; }
+        static string applan;
 
+
+
+        public static string Theme { get => theme; set => theme = value; }
+        public static string Applan { get => applan; set => applan = value; }
+        public static bool Savelogininfo { set => savelogininfo = false; }
 
 
         public ClsEmail() { }

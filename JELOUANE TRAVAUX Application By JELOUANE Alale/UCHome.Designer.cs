@@ -236,7 +236,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.panel4.Controls.Add(this.label1);
             this.panel4.Location = new System.Drawing.Point(3, 96);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(717, 186);
+            this.panel4.Size = new System.Drawing.Size(720, 186);
             this.panel4.TabIndex = 12;
             // 
             // bunifuChartCanvas1

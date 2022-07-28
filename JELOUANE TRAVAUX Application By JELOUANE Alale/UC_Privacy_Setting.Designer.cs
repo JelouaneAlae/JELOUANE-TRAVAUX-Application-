@@ -33,6 +33,7 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,10 +45,11 @@
             this.bunifuButton21 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuButton23 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.label9 = new System.Windows.Forms.Label();
-            this.bunifuRadioButton5 = new Bunifu.UI.WinForms.BunifuRadioButton();
+            this.Rdoff = new Bunifu.UI.WinForms.BunifuRadioButton();
             this.label10 = new System.Windows.Forms.Label();
-            this.bunifuRadioButton6 = new Bunifu.UI.WinForms.BunifuRadioButton();
+            this.rdOn = new Bunifu.UI.WinForms.BunifuRadioButton();
             this.label11 = new System.Windows.Forms.Label();
+            this.btnContactUs = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuButton24 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -71,6 +73,7 @@
             this.bunifuPanel1.ShowBorders = true;
             this.bunifuPanel1.Size = new System.Drawing.Size(542, 132);
             this.bunifuPanel1.TabIndex = 3;
+            this.bunifuPanel1.Click += new System.EventHandler(this.bunifuPanel1_Click);
             // 
             // label3
             // 
@@ -96,6 +99,7 @@
             this.label2.Size = new System.Drawing.Size(99, 20);
             this.label2.TabIndex = 21;
             this.label2.Text = "Date of birth";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // lblEmail
             // 
@@ -108,6 +112,7 @@
             this.lblEmail.Size = new System.Drawing.Size(134, 20);
             this.lblEmail.TabIndex = 19;
             this.lblEmail.Text = "Email@gmail.com";
+            this.lblEmail.Click += new System.EventHandler(this.lblEmail_Click);
             // 
             // lblName
             // 
@@ -132,9 +137,11 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 6;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // bunifuButton22
             // 
+            this.bunifuButton22.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
             this.bunifuButton22.AllowAnimations = true;
             this.bunifuButton22.AllowMouseEffects = true;
             this.bunifuButton22.AllowToggling = false;
@@ -221,6 +228,7 @@
             this.bunifuButton22.TextMarginLeft = 0;
             this.bunifuButton22.TextPadding = new System.Windows.Forms.Padding(0);
             this.bunifuButton22.UseDefaultRadiusAndThickness = true;
+            this.bunifuButton22.Click += new System.EventHandler(this.bunifuButton22_Click);
             // 
             // label1
             // 
@@ -233,6 +241,7 @@
             this.label1.Size = new System.Drawing.Size(127, 24);
             this.label1.TabIndex = 4;
             this.label1.Text = "Account info";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // bunifuButton21
             // 
@@ -322,6 +331,7 @@
             this.bunifuButton21.TextMarginLeft = 0;
             this.bunifuButton21.TextPadding = new System.Windows.Forms.Padding(0);
             this.bunifuButton21.UseDefaultRadiusAndThickness = true;
+            this.bunifuButton21.Click += new System.EventHandler(this.bunifuButton21_Click);
             // 
             // bunifuButton23
             // 
@@ -411,6 +421,7 @@
             this.bunifuButton23.TextMarginLeft = 0;
             this.bunifuButton23.TextPadding = new System.Windows.Forms.Padding(0);
             this.bunifuButton23.UseDefaultRadiusAndThickness = true;
+            this.bunifuButton23.Click += new System.EventHandler(this.bunifuButton23_Click);
             // 
             // label9
             // 
@@ -423,24 +434,27 @@
             this.label9.Size = new System.Drawing.Size(32, 20);
             this.label9.TabIndex = 41;
             this.label9.Text = "Off";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
-            // bunifuRadioButton5
+            // Rdoff
             // 
-            this.bunifuRadioButton5.AllowBindingControlLocation = false;
-            this.bunifuRadioButton5.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuRadioButton5.BindingControlPosition = Bunifu.UI.WinForms.BunifuRadioButton.BindingControlPositions.Right;
-            this.bunifuRadioButton5.BorderThickness = 1;
-            this.bunifuRadioButton5.Checked = false;
-            this.bunifuRadioButton5.Location = new System.Drawing.Point(339, 234);
-            this.bunifuRadioButton5.Name = "bunifuRadioButton5";
-            this.bunifuRadioButton5.OutlineColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuRadioButton5.OutlineColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.bunifuRadioButton5.OutlineColorUnchecked = System.Drawing.Color.DarkGray;
-            this.bunifuRadioButton5.RadioColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuRadioButton5.RadioColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.bunifuRadioButton5.Size = new System.Drawing.Size(21, 21);
-            this.bunifuRadioButton5.TabIndex = 40;
-            this.bunifuRadioButton5.Text = null;
+            this.Rdoff.AllowBindingControlLocation = false;
+            this.Rdoff.BackColor = System.Drawing.Color.Transparent;
+            this.Rdoff.BindingControl = this.bunifuButton22;
+            this.Rdoff.BindingControlPosition = Bunifu.UI.WinForms.BunifuRadioButton.BindingControlPositions.Right;
+            this.Rdoff.BorderThickness = 1;
+            this.Rdoff.Checked = false;
+            this.Rdoff.Location = new System.Drawing.Point(339, 234);
+            this.Rdoff.Name = "Rdoff";
+            this.Rdoff.OutlineColor = System.Drawing.Color.DodgerBlue;
+            this.Rdoff.OutlineColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.Rdoff.OutlineColorUnchecked = System.Drawing.Color.DarkGray;
+            this.Rdoff.RadioColor = System.Drawing.Color.DodgerBlue;
+            this.Rdoff.RadioColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.Rdoff.Size = new System.Drawing.Size(21, 21);
+            this.Rdoff.TabIndex = 40;
+            this.Rdoff.Text = null;
+            this.Rdoff.CheckedChanged2 += new System.EventHandler<Bunifu.UI.WinForms.BunifuRadioButton.CheckedChangedEventArgs>(this.bunifuRadioButton5_CheckedChanged2);
             // 
             // label10
             // 
@@ -453,24 +467,26 @@
             this.label10.Size = new System.Drawing.Size(29, 20);
             this.label10.TabIndex = 39;
             this.label10.Text = "On";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
-            // bunifuRadioButton6
+            // rdOn
             // 
-            this.bunifuRadioButton6.AllowBindingControlLocation = false;
-            this.bunifuRadioButton6.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuRadioButton6.BindingControlPosition = Bunifu.UI.WinForms.BunifuRadioButton.BindingControlPositions.Right;
-            this.bunifuRadioButton6.BorderThickness = 1;
-            this.bunifuRadioButton6.Checked = true;
-            this.bunifuRadioButton6.Location = new System.Drawing.Point(278, 233);
-            this.bunifuRadioButton6.Name = "bunifuRadioButton6";
-            this.bunifuRadioButton6.OutlineColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuRadioButton6.OutlineColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.bunifuRadioButton6.OutlineColorUnchecked = System.Drawing.Color.DarkGray;
-            this.bunifuRadioButton6.RadioColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuRadioButton6.RadioColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.bunifuRadioButton6.Size = new System.Drawing.Size(21, 21);
-            this.bunifuRadioButton6.TabIndex = 38;
-            this.bunifuRadioButton6.Text = null;
+            this.rdOn.AllowBindingControlLocation = false;
+            this.rdOn.BackColor = System.Drawing.Color.Transparent;
+            this.rdOn.BindingControlPosition = Bunifu.UI.WinForms.BunifuRadioButton.BindingControlPositions.Right;
+            this.rdOn.BorderThickness = 1;
+            this.rdOn.Checked = false;
+            this.rdOn.Location = new System.Drawing.Point(278, 233);
+            this.rdOn.Name = "rdOn";
+            this.rdOn.OutlineColor = System.Drawing.Color.DodgerBlue;
+            this.rdOn.OutlineColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.rdOn.OutlineColorUnchecked = System.Drawing.Color.DarkGray;
+            this.rdOn.RadioColor = System.Drawing.Color.DodgerBlue;
+            this.rdOn.RadioColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.rdOn.Size = new System.Drawing.Size(21, 21);
+            this.rdOn.TabIndex = 38;
+            this.rdOn.Text = null;
+            this.rdOn.CheckedChanged2 += new System.EventHandler<Bunifu.UI.WinForms.BunifuRadioButton.CheckedChangedEventArgs>(this.bunifuRadioButton6_CheckedChanged2);
             // 
             // label11
             // 
@@ -483,6 +499,97 @@
             this.label11.Size = new System.Drawing.Size(225, 21);
             this.label11.TabIndex = 37;
             this.label11.Text = "Save your login information";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
+            // btnContactUs
+            // 
+            this.btnContactUs.AllowAnimations = true;
+            this.btnContactUs.AllowMouseEffects = true;
+            this.btnContactUs.AllowToggling = false;
+            this.btnContactUs.AnimationSpeed = 200;
+            this.btnContactUs.AutoGenerateColors = false;
+            this.btnContactUs.AutoRoundBorders = false;
+            this.btnContactUs.AutoSizeLeftIcon = true;
+            this.btnContactUs.AutoSizeRightIcon = true;
+            this.btnContactUs.BackColor = System.Drawing.Color.Transparent;
+            this.btnContactUs.BackColor1 = System.Drawing.Color.White;
+            this.btnContactUs.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnContactUs.BackgroundImage")));
+            this.btnContactUs.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnContactUs.ButtonText = "Contact us";
+            this.btnContactUs.ButtonTextMarginLeft = 0;
+            this.btnContactUs.ColorContrastOnClick = 45;
+            this.btnContactUs.ColorContrastOnHover = 45;
+            this.btnContactUs.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.btnContactUs.CustomizableEdges = borderEdges4;
+            this.btnContactUs.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnContactUs.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnContactUs.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnContactUs.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnContactUs.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
+            this.btnContactUs.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.btnContactUs.ForeColor = System.Drawing.Color.Black;
+            this.btnContactUs.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnContactUs.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnContactUs.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btnContactUs.IconMarginLeft = 11;
+            this.btnContactUs.IconPadding = 10;
+            this.btnContactUs.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnContactUs.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnContactUs.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnContactUs.IconSize = 25;
+            this.btnContactUs.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnContactUs.IdleBorderRadius = 15;
+            this.btnContactUs.IdleBorderThickness = 1;
+            this.btnContactUs.IdleFillColor = System.Drawing.Color.White;
+            this.btnContactUs.IdleIconLeftImage = null;
+            this.btnContactUs.IdleIconRightImage = null;
+            this.btnContactUs.IndicateFocus = false;
+            this.btnContactUs.Location = new System.Drawing.Point(441, 174);
+            this.btnContactUs.Name = "btnContactUs";
+            this.btnContactUs.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnContactUs.OnDisabledState.BorderRadius = 15;
+            this.btnContactUs.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnContactUs.OnDisabledState.BorderThickness = 1;
+            this.btnContactUs.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnContactUs.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnContactUs.OnDisabledState.IconLeftImage = null;
+            this.btnContactUs.OnDisabledState.IconRightImage = null;
+            this.btnContactUs.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnContactUs.onHoverState.BorderRadius = 15;
+            this.btnContactUs.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnContactUs.onHoverState.BorderThickness = 1;
+            this.btnContactUs.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnContactUs.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnContactUs.onHoverState.IconLeftImage = null;
+            this.btnContactUs.onHoverState.IconRightImage = null;
+            this.btnContactUs.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnContactUs.OnIdleState.BorderRadius = 15;
+            this.btnContactUs.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnContactUs.OnIdleState.BorderThickness = 1;
+            this.btnContactUs.OnIdleState.FillColor = System.Drawing.Color.White;
+            this.btnContactUs.OnIdleState.ForeColor = System.Drawing.Color.Black;
+            this.btnContactUs.OnIdleState.IconLeftImage = null;
+            this.btnContactUs.OnIdleState.IconRightImage = null;
+            this.btnContactUs.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnContactUs.OnPressedState.BorderRadius = 15;
+            this.btnContactUs.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnContactUs.OnPressedState.BorderThickness = 1;
+            this.btnContactUs.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnContactUs.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnContactUs.OnPressedState.IconLeftImage = null;
+            this.btnContactUs.OnPressedState.IconRightImage = null;
+            this.btnContactUs.Size = new System.Drawing.Size(106, 39);
+            this.btnContactUs.TabIndex = 42;
+            this.btnContactUs.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnContactUs.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnContactUs.TextMarginLeft = 0;
+            this.btnContactUs.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnContactUs.UseDefaultRadiusAndThickness = true;
+            this.btnContactUs.Click += new System.EventHandler(this.bunifuButton24_Click);
             // 
             // bunifuButton24
             // 
@@ -495,26 +602,26 @@
             this.bunifuButton24.AutoSizeLeftIcon = true;
             this.bunifuButton24.AutoSizeRightIcon = true;
             this.bunifuButton24.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuButton24.BackColor1 = System.Drawing.Color.White;
+            this.bunifuButton24.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(44)))), ((int)(((byte)(131)))));
             this.bunifuButton24.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton24.BackgroundImage")));
             this.bunifuButton24.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.bunifuButton24.ButtonText = "Contact us";
+            this.bunifuButton24.ButtonText = "Apply";
             this.bunifuButton24.ButtonTextMarginLeft = 0;
             this.bunifuButton24.ColorContrastOnClick = 45;
             this.bunifuButton24.ColorContrastOnHover = 45;
             this.bunifuButton24.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges4.BottomLeft = true;
-            borderEdges4.BottomRight = true;
-            borderEdges4.TopLeft = true;
-            borderEdges4.TopRight = true;
-            this.bunifuButton24.CustomizableEdges = borderEdges4;
+            borderEdges5.BottomLeft = true;
+            borderEdges5.BottomRight = true;
+            borderEdges5.TopLeft = true;
+            borderEdges5.TopRight = true;
+            this.bunifuButton24.CustomizableEdges = borderEdges5;
             this.bunifuButton24.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuButton24.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton24.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.bunifuButton24.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.bunifuButton24.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.bunifuButton24.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.bunifuButton24.ForeColor = System.Drawing.Color.Black;
+            this.bunifuButton24.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuButton24.ForeColor = System.Drawing.Color.White;
             this.bunifuButton24.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuButton24.IconLeftCursor = System.Windows.Forms.Cursors.Default;
             this.bunifuButton24.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
@@ -527,11 +634,11 @@
             this.bunifuButton24.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.bunifuButton24.IdleBorderRadius = 15;
             this.bunifuButton24.IdleBorderThickness = 1;
-            this.bunifuButton24.IdleFillColor = System.Drawing.Color.White;
+            this.bunifuButton24.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(44)))), ((int)(((byte)(131)))));
             this.bunifuButton24.IdleIconLeftImage = null;
             this.bunifuButton24.IdleIconRightImage = null;
             this.bunifuButton24.IndicateFocus = false;
-            this.bunifuButton24.Location = new System.Drawing.Point(441, 174);
+            this.bunifuButton24.Location = new System.Drawing.Point(414, 285);
             this.bunifuButton24.Name = "bunifuButton24";
             this.bunifuButton24.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton24.OnDisabledState.BorderRadius = 15;
@@ -553,8 +660,8 @@
             this.bunifuButton24.OnIdleState.BorderRadius = 15;
             this.bunifuButton24.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.bunifuButton24.OnIdleState.BorderThickness = 1;
-            this.bunifuButton24.OnIdleState.FillColor = System.Drawing.Color.White;
-            this.bunifuButton24.OnIdleState.ForeColor = System.Drawing.Color.Black;
+            this.bunifuButton24.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(44)))), ((int)(((byte)(131)))));
+            this.bunifuButton24.OnIdleState.ForeColor = System.Drawing.Color.White;
             this.bunifuButton24.OnIdleState.IconLeftImage = null;
             this.bunifuButton24.OnIdleState.IconRightImage = null;
             this.bunifuButton24.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
@@ -565,13 +672,14 @@
             this.bunifuButton24.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.bunifuButton24.OnPressedState.IconLeftImage = null;
             this.bunifuButton24.OnPressedState.IconRightImage = null;
-            this.bunifuButton24.Size = new System.Drawing.Size(106, 39);
-            this.bunifuButton24.TabIndex = 42;
+            this.bunifuButton24.Size = new System.Drawing.Size(133, 39);
+            this.bunifuButton24.TabIndex = 43;
             this.bunifuButton24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuButton24.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.bunifuButton24.TextMarginLeft = 0;
             this.bunifuButton24.TextPadding = new System.Windows.Forms.Padding(0);
             this.bunifuButton24.UseDefaultRadiusAndThickness = true;
+            this.bunifuButton24.Click += new System.EventHandler(this.bunifuButton24_Click_1);
             // 
             // UC_Privacy_Setting
             // 
@@ -579,10 +687,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.bunifuButton24);
+            this.Controls.Add(this.btnContactUs);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.bunifuRadioButton5);
+            this.Controls.Add(this.Rdoff);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.bunifuRadioButton6);
+            this.Controls.Add(this.rdOn);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.bunifuButton23);
             this.Controls.Add(this.bunifuButton21);
@@ -591,6 +700,7 @@
             this.Controls.Add(this.bunifuButton22);
             this.Name = "UC_Privacy_Setting";
             this.Size = new System.Drawing.Size(562, 338);
+            this.Load += new System.EventHandler(this.UC_Privacy_Setting_Load);
             this.bunifuPanel1.ResumeLayout(false);
             this.bunifuPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -612,10 +722,11 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bunifuButton21;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bunifuButton23;
         private System.Windows.Forms.Label label9;
-        private Bunifu.UI.WinForms.BunifuRadioButton bunifuRadioButton5;
+        private Bunifu.UI.WinForms.BunifuRadioButton Rdoff;
         private System.Windows.Forms.Label label10;
-        private Bunifu.UI.WinForms.BunifuRadioButton bunifuRadioButton6;
+        private Bunifu.UI.WinForms.BunifuRadioButton rdOn;
         private System.Windows.Forms.Label label11;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnContactUs;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bunifuButton24;
     }
 }
