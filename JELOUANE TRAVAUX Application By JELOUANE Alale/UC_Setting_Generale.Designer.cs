@@ -256,7 +256,6 @@
             this.pnlDefault.Size = new System.Drawing.Size(175, 6);
             this.pnlDefault.TabIndex = 20;
             this.pnlDefault.UseWaitCursor = true;
-            this.pnlDefault.Click += new System.EventHandler(this.pnlDefault_Click);
             // 
             // pnldark
             // 
@@ -272,7 +271,6 @@
             this.pnldark.Size = new System.Drawing.Size(175, 6);
             this.pnldark.TabIndex = 21;
             this.pnldark.Visible = false;
-            this.pnldark.Click += new System.EventHandler(this.pnldark_Click);
             // 
             // pnlHighContrast
             // 

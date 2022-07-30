@@ -193,7 +193,6 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "UC_About_setting";
             this.Size = new System.Drawing.Size(571, 338);
-            this.Load += new System.EventHandler(this.UC_About_setting_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.bunifuPanel1.ResumeLayout(false);

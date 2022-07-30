@@ -33,11 +33,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             InitializeComponent();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             Application.Exit(); 
@@ -282,8 +277,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
 
         public void UC_controle(string name)
         {
-
-
             switch (name)
             {
                 case "Home":
@@ -437,25 +430,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.Controls.Remove(UCPS);
             this.Controls.Remove(UCGS);
             UC_seeting_Control("About");
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FrmMainForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
         }
 
         private void button2_Click(object sender, EventArgs e)

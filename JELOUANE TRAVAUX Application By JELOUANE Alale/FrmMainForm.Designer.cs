@@ -448,7 +448,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.flowLayoutPanel1.Size = new System.Drawing.Size(227, 67);
             this.flowLayoutPanel1.TabIndex = 27;
             this.flowLayoutPanel1.Visible = false;
-            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // n
             // 
@@ -471,8 +470,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmMainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmMainForm";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMainForm_FormClosing);
+            this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.FrmMainForm_Load);
             this.PnlMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

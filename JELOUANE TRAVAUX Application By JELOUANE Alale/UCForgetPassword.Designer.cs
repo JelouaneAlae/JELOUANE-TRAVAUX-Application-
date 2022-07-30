@@ -53,7 +53,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.txtEmailFP.Name = "txtEmailFP";
             this.txtEmailFP.Size = new System.Drawing.Size(196, 19);
             this.txtEmailFP.TabIndex = 25;
-            this.txtEmailFP.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
             // panelusername
             // 
@@ -83,7 +82,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.lblFP.Size = new System.Drawing.Size(261, 75);
             this.lblFP.TabIndex = 26;
             this.lblFP.Text = "Please enter your current \r\nEmail address to generate\r\nnew password";
-            this.lblFP.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblOR
             // 

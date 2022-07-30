@@ -294,7 +294,7 @@
             this.Controls.Add(this.txtProducer);
             this.Name = "frmNewEquipment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmNewEquipment";
+            this.Text = "Equipement";
             this.Load += new System.EventHandler(this.frmNewEquipment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picImageEquipement)).EndInit();
             this.panel1.ResumeLayout(false);

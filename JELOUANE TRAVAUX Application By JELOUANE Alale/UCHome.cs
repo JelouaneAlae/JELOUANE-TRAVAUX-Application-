@@ -57,8 +57,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             {
                 bunifuPieChart1.Data[0] = projectFin.ToList().Count();
             }
-
-            //MessageBox.Show((projectNotFin.ToList().Count().ToString() +"//"+ projectFin.ToList().Count().ToString()));
         }
 
 

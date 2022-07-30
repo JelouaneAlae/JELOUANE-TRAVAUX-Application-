@@ -18,11 +18,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-           
-        }
-
         private void btnSignUp_Click(object sender, EventArgs e)
         {
             var exist = db.utilisateurs.Find(txtEmailSI.Text);

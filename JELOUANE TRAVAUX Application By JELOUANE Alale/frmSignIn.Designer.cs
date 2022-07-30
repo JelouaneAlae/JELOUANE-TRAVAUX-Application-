@@ -85,7 +85,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.label1.Size = new System.Drawing.Size(102, 23);
             this.label1.TabIndex = 19;
             this.label1.Text = "First name";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // entityCommand1
             // 
@@ -337,6 +336,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.DtpDateOfBirthSI.DisabledColor = System.Drawing.Color.Gray;
             this.DtpDateOfBirthSI.DisplayWeekNumbers = false;
             this.DtpDateOfBirthSI.DPHeight = 0;
+            this.DtpDateOfBirthSI.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.DtpDateOfBirthSI.FillDatePicker = false;
             this.DtpDateOfBirthSI.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.DtpDateOfBirthSI.ForeColor = System.Drawing.Color.Black;
@@ -345,7 +345,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.DtpDateOfBirthSI.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.DtpDateOfBirthSI.LeftTextMargin = 5;
             this.DtpDateOfBirthSI.Location = new System.Drawing.Point(131, 199);
-            this.DtpDateOfBirthSI.MinimumSize = new System.Drawing.Size(0, 32);
+            this.DtpDateOfBirthSI.MinimumSize = new System.Drawing.Size(4, 32);
             this.DtpDateOfBirthSI.Name = "DtpDateOfBirthSI";
             this.DtpDateOfBirthSI.Size = new System.Drawing.Size(199, 32);
             this.DtpDateOfBirthSI.TabIndex = 44;

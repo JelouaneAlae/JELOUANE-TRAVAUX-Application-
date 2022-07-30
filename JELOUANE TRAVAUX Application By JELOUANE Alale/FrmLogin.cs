@@ -24,11 +24,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             InitializeComponent();
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
-
 
         private void FrmLogin_Load(object sender, EventArgs e)
         {

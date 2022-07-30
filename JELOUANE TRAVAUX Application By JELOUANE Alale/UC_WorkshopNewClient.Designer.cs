@@ -611,7 +611,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.rdExistingclientNo.Size = new System.Drawing.Size(21, 21);
             this.rdExistingclientNo.TabIndex = 61;
             this.rdExistingclientNo.Text = null;
-            this.rdExistingclientNo.CheckedChanged2 += new System.EventHandler<Bunifu.UI.WinForms.BunifuRadioButton.CheckedChangedEventArgs>(this.rdExistingclientNo_CheckedChanged2);
             // 
             // txtClientPhone
             // 

@@ -40,21 +40,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         }
 
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void button12_Click(object sender, EventArgs e)
         {
             OpenFileDialog fd = new OpenFileDialog();

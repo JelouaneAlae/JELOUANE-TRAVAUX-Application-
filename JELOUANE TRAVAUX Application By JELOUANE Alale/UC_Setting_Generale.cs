@@ -53,16 +53,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             }
         }
 
-        private void pnldark_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnlDefault_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             if (pnlHighContrast.Visible == true)

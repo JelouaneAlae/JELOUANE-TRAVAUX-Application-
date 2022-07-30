@@ -20,6 +20,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         int IDE;
         string NameE;
         string indexdatagv;
+
         SqlConnection cn = new SqlConnection("Data Source=DESKTOP-3PA9N2V;Initial Catalog=JELOUANE_TRAVAUX;Integrated Security=True");
         public UC_Equipements()
         {
@@ -56,13 +57,13 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             {
                 for (int i = 0; i < query.Count; i++)
                 {
-                    MemoryStream ms = new MemoryStream(query[i].Photo_Materiel);
-                    Image imageform = Image.FromStream(ms);
+                    //MemoryStream ms = new MemoryStream(query[i].Photo_Materiel);
+                    //Image imageform = Image.FromStream(ms);
 
-                    Image img = imageform;
+                    //Image img = imageform;
 
                     dgvEqupmenet.Rows.Add(query[i].Id_Materiel, query[i].Nom_Materiel, query[i].Fondateur_Materiel,
-                        query[i].Price_materiel, img, query[i].Color_Materiel, query[i].Genre_Materiel);
+                        query[i].Price_materiel, null, query[i].Color_Materiel, query[i].Genre_Materiel);
                 }
 
             }

@@ -261,5 +261,9 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             }
         }
 
+        private void pnlMaterial_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

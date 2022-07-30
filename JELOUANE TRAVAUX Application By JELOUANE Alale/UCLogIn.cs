@@ -118,7 +118,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             }
 
         }
-
         private void btnMaskPassword_Click(object sender, EventArgs e)
         {
             btnShowPassword.Visible = true;

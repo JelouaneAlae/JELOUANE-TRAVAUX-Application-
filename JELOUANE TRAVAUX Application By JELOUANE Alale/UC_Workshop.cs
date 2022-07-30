@@ -36,5 +36,10 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
                 form1.Show();
             }
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -149,7 +149,6 @@
             this.label1.Size = new System.Drawing.Size(246, 30);
             this.label1.TabIndex = 40;
             this.label1.Text = "Something went wrong";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel1
             // 
@@ -158,7 +157,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(769, 5);
             this.panel1.TabIndex = 43;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             // 
             // label3
             // 

@@ -16,10 +16,5 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
         {
             InitializeComponent();
         }
-
-        private void UC_About_setting_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

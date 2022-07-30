@@ -38,8 +38,8 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.panel5 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.bunifuButton21 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -187,14 +187,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(369, 370);
             this.panel2.TabIndex = 1;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel6.Location = new System.Drawing.Point(-2, 67);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(769, 5);
-            this.panel6.TabIndex = 44;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // bunifuButton21
             // 
@@ -287,6 +280,14 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.bunifuButton21.TextPadding = new System.Windows.Forms.Padding(0);
             this.bunifuButton21.UseDefaultRadiusAndThickness = true;
             this.bunifuButton21.Click += new System.EventHandler(this.bunifuButton21_Click_1);
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel6.Location = new System.Drawing.Point(-2, 67);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(769, 5);
+            this.panel6.TabIndex = 44;
             // 
             // UC_Workshop
             // 

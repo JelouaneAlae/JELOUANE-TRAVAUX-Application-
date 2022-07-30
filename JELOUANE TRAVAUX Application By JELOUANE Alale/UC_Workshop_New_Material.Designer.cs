@@ -267,6 +267,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.pnlMaterial.Size = new System.Drawing.Size(616, 244);
             this.pnlMaterial.TabIndex = 113;
             this.pnlMaterial.Visible = false;
+            this.pnlMaterial.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMaterial_Paint);
             // 
             // panel1
             // 

@@ -73,7 +73,6 @@
             this.bunifuPanel1.ShowBorders = true;
             this.bunifuPanel1.Size = new System.Drawing.Size(542, 132);
             this.bunifuPanel1.TabIndex = 3;
-            this.bunifuPanel1.Click += new System.EventHandler(this.bunifuPanel1_Click);
             // 
             // label3
             // 
@@ -86,7 +85,6 @@
             this.label3.Size = new System.Drawing.Size(76, 20);
             this.label3.TabIndex = 22;
             this.label3.Text = "Password";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -99,7 +97,6 @@
             this.label2.Size = new System.Drawing.Size(99, 20);
             this.label2.TabIndex = 21;
             this.label2.Text = "Date of birth";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // lblEmail
             // 
@@ -112,7 +109,6 @@
             this.lblEmail.Size = new System.Drawing.Size(134, 20);
             this.lblEmail.TabIndex = 19;
             this.lblEmail.Text = "Email@gmail.com";
-            this.lblEmail.Click += new System.EventHandler(this.lblEmail_Click);
             // 
             // lblName
             // 
@@ -125,7 +121,6 @@
             this.lblName.Size = new System.Drawing.Size(101, 25);
             this.lblName.TabIndex = 18;
             this.lblName.Text = "Full Name";
-            this.lblName.Click += new System.EventHandler(this.lblName_Click);
             // 
             // pictureBox3
             // 
@@ -137,7 +132,6 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 6;
             this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // bunifuButton22
             // 
@@ -241,7 +235,6 @@
             this.label1.Size = new System.Drawing.Size(127, 24);
             this.label1.TabIndex = 4;
             this.label1.Text = "Account info";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // bunifuButton21
             // 
@@ -434,7 +427,6 @@
             this.label9.Size = new System.Drawing.Size(32, 20);
             this.label9.TabIndex = 41;
             this.label9.Text = "Off";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // Rdoff
             // 
@@ -454,7 +446,6 @@
             this.Rdoff.Size = new System.Drawing.Size(21, 21);
             this.Rdoff.TabIndex = 40;
             this.Rdoff.Text = null;
-            this.Rdoff.CheckedChanged2 += new System.EventHandler<Bunifu.UI.WinForms.BunifuRadioButton.CheckedChangedEventArgs>(this.bunifuRadioButton5_CheckedChanged2);
             // 
             // label10
             // 
@@ -467,7 +458,6 @@
             this.label10.Size = new System.Drawing.Size(29, 20);
             this.label10.TabIndex = 39;
             this.label10.Text = "On";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // rdOn
             // 
@@ -486,7 +476,6 @@
             this.rdOn.Size = new System.Drawing.Size(21, 21);
             this.rdOn.TabIndex = 38;
             this.rdOn.Text = null;
-            this.rdOn.CheckedChanged2 += new System.EventHandler<Bunifu.UI.WinForms.BunifuRadioButton.CheckedChangedEventArgs>(this.bunifuRadioButton6_CheckedChanged2);
             // 
             // label11
             // 
@@ -499,7 +488,6 @@
             this.label11.Size = new System.Drawing.Size(225, 21);
             this.label11.TabIndex = 37;
             this.label11.Text = "Save your login information";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // btnContactUs
             // 

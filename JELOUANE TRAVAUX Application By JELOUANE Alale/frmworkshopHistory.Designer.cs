@@ -371,7 +371,7 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             this.Controls.Add(this.panel1);
             this.Name = "frmworkshopHistory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmworkshopHistory";
+            this.Text = "Workshop";
             this.Load += new System.EventHandler(this.frmworkshopHistory_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

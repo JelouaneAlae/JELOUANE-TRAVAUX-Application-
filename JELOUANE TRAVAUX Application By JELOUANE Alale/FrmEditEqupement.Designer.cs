@@ -277,7 +277,7 @@
             this.Controls.Add(this.label4);
             this.Name = "FrmEditEqupement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmEditEqupement";
+            this.Text = "Equipement";
             this.Load += new System.EventHandler(this.FrmEditEqupement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picImageEquipement)).EndInit();
             this.panel1.ResumeLayout(false);

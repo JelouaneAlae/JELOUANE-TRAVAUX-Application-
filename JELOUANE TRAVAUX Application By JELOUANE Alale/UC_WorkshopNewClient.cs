@@ -44,11 +44,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             }
         }
 
-        private void rdExistingclientNo_CheckedChanged2(object sender, Bunifu.UI.WinForms.BunifuRadioButton.CheckedChangedEventArgs e)
-        {
-
-        }
-
         public void fillDgExistingClient()
         {
             if (dgvExistingClient2.Columns.Count < 0)

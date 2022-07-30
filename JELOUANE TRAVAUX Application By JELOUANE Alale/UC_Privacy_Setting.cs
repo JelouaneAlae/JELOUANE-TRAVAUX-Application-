@@ -20,16 +20,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             InitializeComponent();
         }
 
-        private void lblName_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void bunifuButton21_Click(object sender, EventArgs e)
         {
             DialogResult dr = MessageBox.Show("Are you sur you want to remove "+ ClsEmail.Email + " Account definitively","Delete User" ,MessageBoxButtons.YesNo);
@@ -79,16 +69,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
             form1.btnAbout.PerformClick();
         }
 
-        private void bunifuRadioButton6_CheckedChanged2(object sender, Bunifu.UI.WinForms.BunifuRadioButton.CheckedChangedEventArgs e)
-        {
-
-        }
-
-        private void bunifuRadioButton5_CheckedChanged2(object sender, Bunifu.UI.WinForms.BunifuRadioButton.CheckedChangedEventArgs e)
-        {
-
-        }
-
         private void bunifuButton24_Click_1(object sender, EventArgs e)
         {
             if(rdOn.Checked == true)
@@ -116,46 +96,6 @@ namespace JELOUANE_TRAVAUX_Application_By_JELOUANE_Alale
                     File.WriteAllText(@"C:\Users\jelal\OneDrive\Desktop\JELOUANE-TRAVAUX-Application-\Setting.json", output);
                 }
             }
-        }
-
-        private void bunifuPanel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblEmail_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void UC_Privacy_Setting_Load(object sender, EventArgs e)
